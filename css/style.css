@@ -16,6 +16,9 @@
 .fontSize35{
 	font-size: 35px;
 }
+@media screen and (max-width: 600px) {
+  
+}
 .WidthHeight75Percent{
 	width: 75%; height: 75%;
 }
