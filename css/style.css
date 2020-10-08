@@ -1,0 +1,96 @@
+.blackText{
+	color: black;
+}
+.MarginTop150{
+	margin-top: 150px;
+}
+.MarginTop100{
+	margin-top: 100px;
+}
+.fontSize24{
+	font-size: 24px;
+}
+.fontSize20{
+	font-size: 20px;
+}
+.fontSize35{
+	font-size: 35px;
+}
+.WidthHeight75Percent{
+	width: 75%; height: 75%;
+}
+.iframeSetting{
+	width: 95%; height: 75%;
+}
+.list-group-item{
+	color: #00a6ff; font-size: 24px;
+}
+.card:hover{
+	box-shadow: 4px 8px 12px 4px rgba(0,0,0,0.2);
+}
+h{
+	padding: 50px;
+}
+.infoFooter{
+	text-align: left; line-height: 45px; padding-top: 50px;
+}
+.productFooter{
+	text-align: right; line-height: 0px; padding-right: 80px;
+}
+#footer{
+	padding: 15px; margin-top: 20px; background-color: #6873DD; color: white; text-align: center; letter-spacing: 2px;
+}
+.map{
+	padding-left: 100px; padding-top: 50px;
+}
+.twitterLogo{
+	padding-left: 40px;
+}
+.detail{
+	width: 1550px; height: 700px; background: #FFB964;
+}
+div {
+  	text-align: justify; text-justify: inter-word;
+}
+.colorSeeDetail{
+	background-color: #6873DD; display: flex; justify-content: center; height: 45px;
+}
+.customerAvatar{
+	border-radius: 50%; width: 110%; height: 100%;
+}
+.infoCustomerComment{
+	padding-left: 50px; margin-top: 20px;
+}
+.spaceRow{
+	margin: 100px;
+}
+.commentHeader{
+	text-align: center; font-size: 40px; color: #6873DD; margin-top: 50px;
+}
+.commentMore{
+	font-size: 40px; color: #6873DD;
+}
+.statisticTab{
+	width: 100%; height: 500px; background: #5ABDA1;
+}
+.WidthHeight9070Percent{
+	width: 90%; height: 75%;
+}
+.staticsInfo{
+	font-size: 70px; color: #6873DD;
+}
+.BenifitPicture{
+	width: 100%; height: 100%;
+}
+.infoBenifit{
+	padding-left: 50px; margin-top: 20px;
+}
+#ErrorMess{
+	color: red;
+}
+.getAdvices{
+	background-color: white; padding: 35px; border-radius: 10px; position: absolute; top: 50%; left: 80%; transform: translate(-50%, -50%);
+}
+.width100Percent{
+	width: 100%;
+}

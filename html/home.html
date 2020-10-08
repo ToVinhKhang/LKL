@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link blackText" href="#">Giới thiệu</a></li><p>&nbsp;&nbsp;</p>
+                <li class="nav-item"><a class="nav-link blackText" href="#">Giảng viên</a></li><p>&nbsp;&nbsp;</p>
+				<li class="nav-item"><a class="nav-link blackText" href="#">Khóa học</a></li><p>&nbsp;&nbsp;</p>
+                <button type="button" class="btn btn-info">Ghi danh</button><p>&nbsp;&nbsp;</p>
+                <button type="button" class="btn btn-danger">Đăng nhập</button>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Slide Show-->
+    <div id="demo" class="carousel slide" data-ride="carousel" style="position: relative; text-align: center;">
+        <!--Add Indicators-->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
+        </ul>
+        <!--Inner-->
+        <div class="carousel-inner">
+            <div class="carousel-item active"><img src="../images/slide1.jpg" alt="Picture" width="1550" height="650"></div>
+            <div class="carousel-item"><img src="../images/slide2.jpg" alt="Picture" width="1550" height="650"></div>
+            <div class="carousel-item"><img src="../images/slide3.jpg" alt="Picture" width="1550" height="650"></div>
+            <div class="carousel-item"><img src="../images/slide4.png" alt="Picture" width="1550" height="650"></div>
+            <div class="carousel-item"><img src="../images/slide5.jpg" alt="Picture" width="1550" height="650"></div>
+        </div>
+        <!--Control LEFT RIGHT-->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+        <a class="carousel-control-next" href="#demo" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+    </div>
+
+    <!--Get Advices-->
+    <div class="getAdvices">
+        <form action="" onsubmit="return CheckInput()" method="POST">
+            <div class="form-group"><input type="text" onclick="ClearErrorMess()" class="form-control" id="phone" placeholder="Số điện thoại" name="phone"></div>
+            <div class="form-group"><input type="text" onclick="ClearErrorMess()" class="form-control" id="name" placeholder="Tên" name="name"></div>
+            <select id="literacy" class="form-control">
+                <option disabled selected value>Trình độ học vấn</option>
+                <option value="Primary">Primary School</option>
+                <option value="Secondary">Secondary School</option>
+                <option value="High">High School</option>
+                <option value="College">College</option>
+                <option value="University">University</option>
+            </select>
+            <p id="ErrorMess"></p>
+            <button type="submit" class="btn btn-dark colorSeeDetail width100Percent">Nhận tư vấn</button>
+        </form>
+    </div>
+
+    <!--Detail-->
+    <div class="detail">
+        <div class="container">
+            <div class="row">
+                <!--See Details-->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card MarginTop150 WidthHeight75Percent">
+                        <div class="card-body">
+                            <p></p>
+                            <h4>LKL Edu</h4>
+                            <span class="card-text fontSize24">Là một trung tâm giáo dục chuyên nghiệp sáng tạo. Được thành lập bởi các chuyên viên và giảng viên hàng đầu của cả nước...</span>
+                            <p></p>
+                            <a class="btn btn-success colorSeeDetail" href="#">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Education Video-->
+                <div class="col-lg-6 col-md-6">
+                    <iframe class="iframeSetting MarginTop150" src="https://www.youtube.com/embed/1cu-tv2rJ-U"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Benefit-->
+    <div class="container">
+        <p class="spaceRow"></p>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="../images/benifit1.png" class="BenifitPicture">
+            </div>
+            <div class="col-lg-6 col-md-6 infoBenifit">
+                <h4>Tiện lợi, nhanh chóng, hiệu quả</h4>
+                <span class="card-text fontSize20">Dễ dàng tra cứu thông tin khóa học, giảng viên, sơ đồ đào tạo. Các thắc mắc của học viên được phản hồi nhanh chóng bởi các chuyên gia.</span>
+            </div>
+        </div>
+        <p class="spaceRow"></p>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 infoBenifit">
+                <h4>Môi trường thân thiện</h4>
+                <span class="card-text fontSize20">Trung tâm cam kết cung cấp đầy đủ các nhu cầu thiết yếu của học viên , tạo cho học viên những điều kiện thuận lợi nhất để học tập.</span>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <img src="../images/benifit2.png" class="BenifitPicture">
+            </div>
+        </div>
+        <p class="spaceRow"></p>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="../images/benifit3.png" class="BenifitPicture">
+            </div>
+            <div class="col-lg-6 col-md-6 infoBenifit">
+                <h4>Học không giới hạn</h4>
+                <span class="card-text fontSize20">Không giới hạn độ tuổi, không giới hạn trình độ, không giới hạn cấp bậc xã hội.</span>
+            </div>
+        </div>
+        <p class="spaceRow"></p>
+    </div>
+
+    <!--Statistics-->
+    <div class="statisticTab">
+        <div class="container">
+            <div class="row">
+                <!--Box1-->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card MarginTop100 WidthHeight9070Percent">
+                        <div class="card-body">
+                            <p class="staticsInfo">5-7</p>
+                            <p class="fontSize35">Dạy theo từng nhóm nhỏ</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Box2-->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card MarginTop100 WidthHeight9070Percent">
+                        <div class="card-body">
+                            <p class="staticsInfo">∞</p>
+                            <p class="fontSize35">Phát triển vượt trội</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Box3-->
+                <div class="col-lg-4 col-md-4">
+                    <div class="card MarginTop100 WidthHeight9070Percent">
+                        <div class="card-body">
+                            <p class="staticsInfo">70%</p>
+                            <p class="fontSize35">Tập trung thực hành</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Customer Comments-->
+    <div class="container">
+        <p class="commentHeader">Nhận xét</p>
+        <div class="row">
+            <div class="col-lg-2 col-md-3">
+                <img src="../images/ava1.png" class="customerAvatar">
+            </div>
+            <div class="col-lg-10 col-md-9 infoCustomerComment">
+                <h4>Nguyễn Ngọc Thảo , mẹ của Minh Đức , 11 tuổi</h4>
+                <span class="card-text fontSize20">Hồi học ở các trung tâm khác, con tôi chẳng chịu học hành gì cả. Nhưng kể từ khi tôi cho nó đăng ký học ở đây, mọi chuyện thay đổi rõ rệt. Không chỉ biết cách sử dụng máy tính hiệu quả, thằng bé còn nhiệt tình dạy cho mọi người trong gia đình sử dụng nữa.</span>
+            </div>
+        </div>
+        <p class="spaceRow"></p>
+        <div class="row">
+            <div class="col-lg-2 col-md-3">
+                <img src="../images/ava2.png" class="customerAvatar">
+            </div>
+            <div class="col-lg-10 col-md-9 infoCustomerComment">
+                <h4>Hoàng Anh , 20 tuổi</h4>
+                <span class="card-text fontSize20">Học ở trung tâm rất vui, em gặp được rất nhiều bạn mới. Mọi người cùng trao đổi làm cho buổi học vô cùng sôi động.</span>
+            </div>
+        </div>
+        <p class="spaceRow"></p>
+        <div class="row">
+            <div class="col-lg-2 col-md-3">
+                <img src="../images/ava3.png" class="customerAvatar">
+            </div>
+            <div class="col-lg-10 col-md-9 infoCustomerComment">
+                <h4>Công Đăng , 30 tuổi</h4>
+                <span class="card-text fontSize20">Cứ nghĩ ở cái tuổi này thì mình sẽ không phải học cái gì nữa, cũng không có nơi nào dạy người lớn tuổi. Nhưng thật may mắn, kiến thức ở trung tâm rất phù hợp với tôi, tôi có thể dễ dàng hiểu được nội dung mà giảng viên truyền tải. Gia đình tôi ủng hộ.</span>
+            </div>
+        </div>
+        
+        <!--More Comments-->
+        <div class="row">
+            <div class="col-lg-2 col-md-3"></div>
+            <div class="col-lg-10 col-md-9 infoCustomerComment">
+                <a class="commentMore" href="#">Thêm đánh giá>></a>
+            </div>
+        </div>
+        <p class="spaceRow"></p>
+    </div>
+
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển Phần mềm Quản lí trung tâm Tin học LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ, P.Tân Phong, Quận 07, TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../images/facebookLogo.png" width="60">
+                <img src="../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
