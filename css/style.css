@@ -4,9 +4,6 @@
 .MarginTop150{
 	margin-top: 150px;
 }
-.MarginTop100{
-	margin-top: 100px;
-}
 .fontSize24{
 	font-size: 24px;
 }
@@ -15,9 +12,6 @@
 }
 .fontSize35{
 	font-size: 35px;
-}
-@media screen and (max-width: 600px) {
-  
 }
 .WidthHeight75Percent{
 	width: 75%; height: 75%;
@@ -49,9 +43,13 @@ h{
 .twitterLogo{
 	padding-left: 40px;
 }
+
+
+
 .detail{
-	width: 1550px; height: 700px; background: #FFB964;
+	width: 100%; height: 700px; background: #FFB964;
 }
+
 div {
   	text-align: justify; text-justify: inter-word;
 }
@@ -91,6 +89,7 @@ div {
 #ErrorMess{
 	color: red;
 }
+
 .getAdvices{
 	background-color: white; padding: 35px; border-radius: 10px; position: absolute; top: 50%; left: 80%; transform: translate(-50%, -50%);
 }
