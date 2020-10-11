@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
+        </div>
+    </nav>
+
+    <!--DataView-->
+    <div>
+        <div class="row">
+            <!--Menu-->
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <nav class="navbar navbar-light" style="padding-top: 0px;">
+                    <ul class="navbar-nav nav nav-pills" >
+                        <div style="border-style: ridge;">
+                            <br><img src="../images/ava3.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentDeveloper</p></li>
+                        </div>
+                        <br>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationList.html">Thông báo</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="courseList.html">Khóa học</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Lịch học/Lịch thi</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="tuitionFee.html">Học phí</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="home.html">Đăng xuất</a></li>
+                        <div class="dropdown-divider"></div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                <h4 style="padding-left: 15px;"><img src="../images/studySchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Lịch học</h4>
+                <!--Study Schedule Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên khóa học</th>
+                            <th>Phòng</th>
+                            <th>Thời gian</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Monday-->
+                        <tr>
+                            <td>Lập trình Game cơ bản</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                        <!--Tuesday-->
+                        <tr>
+                            <td>Nhập môn Trí tuệ nhân tạo</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                        <!--Wednesday-->
+                        <tr>
+                            <td>Lập trình Web và ứng dụng</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                        <!--Thursday-->
+                        <tr>
+                            <td>Thiết kế UI/UX</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                        <!--Friday-->
+                        <tr>
+                            <td>Lập trình Web nâng cao</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                        <!--Saturday-->
+                        <tr>
+                            <td>Hệ cơ sở dữ liệu</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                        <!--Sunday-->
+                        <tr>
+                            <td>Nhập môn hệ điều hành</td>
+                            <td>A506</td>
+                            <td>12:30 - 14:55</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Change Page-->
+                <p style="border: 1px solid black;"></p><b>
+                <div style="padding-left: 12px;">
+                    <a href="" id='Previous' style="color: black; text-decoration: none;">Tuần trước</a>
+                    <p style="display: inline; padding-left: 15%;">12/10/2020 - 18/10/2020</p>
+                    <a href="" id='Next' style="color: black; text-decoration: none; position: absolute; right: 14%;">Tuần sau</a>
+                </div></b>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
+                <h4 style="padding-left: 15px;"><img src="../images/examSchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Lịch thi</h4>
+                <!--Exam Schedule Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên khóa học</th>
+                            <th>Phòng thi</th>
+                            <th>Ngày thi</th>
+                            <th>Thời gian</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Subject 1-->
+                        <tr>
+                            <td>Lập trình Game cơ bản</td>
+                            <td>A705</td>
+                            <td>01/12/2020</td>
+                            <td>90 phút</td>
+                        </tr>
+
+                        <!--Subject 2-->
+                        <tr>
+                            <td>Nhập môn Trí tuệ nhân tạo</td>
+                            <td>A709</td>
+                            <td>05/12/2020</td>
+                            <td>45 phút</td>
+                        </tr>
+
+                        <!--Subject 3-->
+                        <tr>
+                            <td>Lập trình Web và ứng dụng</td>
+                            <td>A508</td>
+                            <td>03/12/2020</td>
+                            <td>60 phút</td>
+                        </tr>
+
+                        <!--Subject 4-->
+                        <tr>
+                            <td>Thiết kế UI/UX</td>
+                            <td>A607</td>
+                            <td>06/12/2020</td>
+                            <td>45 phút</td>
+                        </tr>
+
+                        <!--Subject 5-->
+                        <tr>
+                            <td>Lập trình Web nâng cao</td>
+                            <td>A506</td>
+                            <td>11/12/2020</td>
+                            <td>90 phút</td>
+                        </tr>
+
+                        <!--Subject 6-->
+                        <tr>
+                            <td>Cấu trúc dữ liệu và giải thuật</td>
+                            <td>A502</td>
+                            <td>10/12/2020</td>
+                            <td>60 phút</td>
+                        </tr>
+
+                        <!--Subject 7-->
+                        <tr>
+                            <td>Hệ cơ sở dữ liệu</td>
+                            <td>A506</td>
+                            <td>09/12/2020</td>
+                            <td>45 phút</td>
+                        </tr>
+
+                        <!--Subject 7-->
+                        <tr>
+                            <td>Nhập môn Hệ điều hành</td>
+                            <td>A705</td>
+                            <td>01/12/2020</td>
+                            <td>45 phút</td>
+                        </tr>
+
+                        <!--Subject 8-->
+                        <tr>
+                            <td>Lập trình Game nâng cao</td>
+                            <td>A605</td>
+                            <td>07/12/2020</td>
+                            <td>90 phút</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <!-- Delete Confirm Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+                    <form action='' method='POST' style='display: inline;'>
+                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
+                        <button type="submit" class="btn btn-danger">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../images/facebookLogo.png" width="60">
+                <img src="../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
+
