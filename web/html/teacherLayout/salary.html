@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+        <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
+        </div> -->
+    </nav>
+
+    <!--DataView-->
+    <div>
+        <div class="row">
+            <!--Menu-->
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <nav class="navbar navbar-light" style="padding-top: 0px;">
+                    <ul class="navbar-nav nav nav-pills" >
+                        <div style="border-style: ridge;">
+                            <br><img src="../../images/ava1.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentTeacher</p></li>
+                        </div>
+                        <br>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationList.html">Thông báo</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="courseList.html">Khóa học</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingSchedule.html">Lịch dạy học</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Tiền lương</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
+                        <div class="dropdown-divider"></div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <h4 style="padding-left: 15px;"><img src="../../images/salary_icon.png" width="40" height="40" alt="folder icon">&thinsp;Tiền lương</h4>
+                <!--Tuitition Fee Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Thời gian</th>
+                            <th>Tổng tiền lương</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Salary 1-->
+                        <tr>
+                            <td>01/11/2020</td>
+                            <td>12.350.000</td>
+                            <td>Chưa nhận</td>
+                        </tr>
+
+                        <!--Salary 1-->
+                        <tr>
+                            <td>01/10/2020</td>
+                            <td>12.200.000</td>
+                            <td>Đã nhận</td>
+                        </tr>
+
+                        <!--Salary 1-->
+                        <tr>
+                            <td>01/09/2020</td>
+                            <td>12.000.000</td>
+                            <td>Đã nhận</td>
+                        </tr>
+
+                        <!--Salary 1-->
+                        <tr>
+                            <td>01/08/2020</td>
+                            <td>11.800.000</td>
+                            <td>Đã nhận</td>
+                        </tr>
+
+                        <!--Salary 1-->
+                        <tr>
+                            <td>01/07/2020</td>
+                            <td>11.500.000</td>
+                            <td>Đã nhận</td>
+                        </tr>
+
+                        <!--Salary 1-->
+                        <tr>
+                            <td>01/06/2020</td>
+                            <td>11.200.000</td>
+                            <td>Đã nhận</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../../images/facebookLogo.png" width="60">
+                <img src="../../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
+

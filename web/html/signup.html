@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/checkInputLoginSignup.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+    </nav>
+
+    <br><br><br><br>
+    <div class="container">
+        <form action='login.html'>
+            <button style='float: right;' type="submit" class="btn btn-dark">Back</button>
+        </form>
+        <form action="" onsubmit="return CheckInputSignUp()" method="POST">
+            <h2>Đăng ký tài khoản</h2>
+            <div class="form-group">
+                <label for="username">Tên tài khoản:</label>
+                <input type="text" onclick="ClearErrorMess()" class="form-control" id="username" placeholder="Nhập tên tài khoản" name="username">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Mật khẩu:</label>
+                <input type="password" onclick="ClearErrorMess()" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
+            </div>
+            <div class="form-group">
+                <label for="cfpwd">Xác nhận mật khẩu:</label>
+                <input type="password" onclick="ClearErrorMess()" class="form-control" id="cfpwd" placeholder="Nhập xác nhận mật khẩu" name="cfpwd">
+            </div>
+
+            <p id="ErrorMess"></p>
+            <button type="submit" class="btn btn-dark" style='width: 100px;'>Đăng ký</button>
+            <button type="reset" class="btn">Làm mới</button>
+        </form>
+        
+    </div>
+    <br><br><br>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../images/facebookLogo.png" width="60">
+                <img src="../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
+

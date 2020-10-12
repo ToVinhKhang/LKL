@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+
+        <!--Function Buttons-->
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-info">Thêm mới</button>
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-success">Cập nhật</button>
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-warning">Sắp xếp</button>
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-danger">Xóa bỏ</button>
+        </div>
+        
+        <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
+        </div> -->
+    </nav>
+
+    <!--DataView-->
+    <div>
+        <div class="row">
+            <!--Menu-->
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <nav class="navbar navbar-light" style="padding-top: 0px;">
+                    <ul class="navbar-nav nav nav-pills" >
+                        <div style="border-style: ridge;">
+                            <br><img src="../../images/ava2.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentStaffAdmin</p></li>
+                        </div>
+                        <br>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingScheduleM.html">Quản lý Lịch dạy</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Quản lý TT Giáo viên</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="staffInfoM.html">Quản lý TT Nhân viên</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="revenueNexpenditureM.html">Quản lý Thu chi</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="overallQualityM.html">Quản lý Chất lượng</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
+                        <div class="dropdown-divider"></div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <h4 style="padding-left: 15px;"><img src="../../images/teacher_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý TT Giáo viên</h4>
+                <!--Courses Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Họ tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Chuyên ngành</th>
+                            <th>Học hàm</th>
+                            <th>Quê quán</th>
+                            <th>Số CMND</th>
+                            <th>Ngày vào làm</th>
+                            <th>Kinh nghiệm</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Teacher 1-->
+                        <tr>
+                            <td>Mai Văn Mạnh</td>
+                            <td>01/02/1997</td>
+                            <td>Kỹ thuật phần mềm</td>
+                            <td>Thạc Sĩ</td>
+                            <td>Gia Lai</td>
+                            <td>7412654321</td>
+                            <td>02/08/2019</td>
+                            <td>1 năm</td>
+                        </tr>
+
+                        <!--Teacher 2-->
+                        <tr>
+                            <td>Phạm Văn Huy</td>
+                            <td>07/03/1998</td>
+                            <td>Khoa học máy tính</td>
+                            <td>PGS.Tiến Sĩ</td>
+                            <td>Long An</td>
+                            <td>0158745621</td>
+                            <td>21/10/2019</td>
+                            <td>1 năm</td>
+                        </tr>
+
+                        <!--Teacher 3-->
+                        <tr>
+                            <td>Vũ Đình Hồng</td>
+                            <td>14/08/1996</td>
+                            <td>Mạng máy tính</td>
+                            <td>Thạc Sĩ</td>
+                            <td>Bình Thuận</td>
+                            <td>0123004237</td>
+                            <td>11/10/2018</td>
+                            <td>2 năm</td>
+                        </tr>
+
+                        <!--Teacher 4-->
+                        <tr>
+                            <td>Trần Trung Tín</td>
+                            <td>28/06/1996</td>
+                            <td>Mạng máy tính</td>
+                            <td>Thạc Sĩ</td>
+                            <td>Đà Nẵng</td>
+                            <td>4561100321</td>
+                            <td>29/01/2020</td>
+                            <td>3 năm</td>
+                        </tr>
+
+                        <!--Teacher 5-->
+                        <tr>
+                            <td>Bùi Thần Tài</td>
+                            <td>02/08/1994</td>
+                            <td>Khoa học máy tính</td>
+                            <td>Thạc Sĩ</td>
+                            <td>TPHCM</td>
+                            <td>0111562321</td>
+                            <td>29/07/2020</td>
+                            <td>2 năm </td>
+                        </tr>
+
+                        <!--Teacher 6-->
+                        <tr>
+                            <td>Nguyễn Công Trí</td>
+                            <td>01/02/1978</td>
+                            <td>Kỹ thuật phần mềm</td>
+                            <td>Giáo Sư</td>
+                            <td>Lào Cai</td>
+                            <td>0996543321</td>
+                            <td>07/02/2019</td>
+                            <td>12 năm</td>
+                        </tr>
+
+                        <!--Teacher 7-->
+                        <tr>
+                            <td>Nguyễn Hữu Phước</td>
+                            <td>01/01/1988</td>
+                            <td>Khoa học máy tính</td>
+                            <td>Tiến Sĩ</td>
+                            <td>Đắk Nông</td>
+                            <td>3323543321</td>
+                            <td>01/02/2018</td>
+                            <td>2 năm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <!-- Delete Confirm Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+                    <form action='' method='POST' style='display: inline;'>
+                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
+                        <button type="submit" class="btn btn-danger">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../../images/facebookLogo.png" width="60">
+                <img src="../../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
+

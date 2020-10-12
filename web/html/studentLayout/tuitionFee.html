@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+        <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
+        </div> -->
+    </nav>
+
+    <!--DataView-->
+    <div>
+        <div class="row">
+            <!--Menu-->
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <nav class="navbar navbar-light" style="padding-top: 0px;">
+                    <ul class="navbar-nav nav nav-pills" >
+                        <div style="border-style: ridge;">
+                            <br><img src="../../images/ava3.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentDeveloper</p></li>
+                        </div>
+                        <br>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationList.html">Thông báo</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="courseList.html">Khóa học</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studyexamSchedule.html">Lịch học/Lịch thi</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Học phí</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
+                        <div class="dropdown-divider"></div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                <h4 style="padding-left: 15px;"><img src="../../images/tuitionFee_icon.png" width="40" height="40" alt="folder icon">&thinsp;Học phí</h4>
+                <!--Tuitition Fee Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên khóa học</th>
+                            <th>Học phí</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Subject 1-->
+                        <tr>
+                            <td>Lập trình Game cơ bản</td>
+                            <td>2.600.000</td>
+                        </tr>
+
+                        <!--Subject 2-->
+                        <tr>
+                            <td>Nhập môn Trí tuệ nhân tạo</td>
+                            <td>2.350.000</td>
+                        </tr>
+
+                        <!--Subject 3-->
+                        <tr>
+                            <td>Lập trình Web và ứng dụng</td>
+                            <td>2.600.000</td>
+                        </tr>
+
+                        <!--Subject 4-->
+                        <tr>
+                            <td>Thiết kế UI/UX</td>
+                            <td>2.800.000</td>
+                        </tr>
+
+                        <!--Subject 5-->
+                        <tr>
+                            <td>Lập trình Web nâng cao</td>
+                            <td>3.900.000</td>
+                        </tr>
+
+                        <!--Subject 6-->
+                        <tr>
+                            <td>Cấu trúc dữ liệu và giải thuật</td>
+                            <td>1.800.000</td>
+                        </tr>
+
+                        <!--Subject 7-->
+                        <tr>
+                            <td>Hệ cơ sở dữ liệu</td>
+                            <td>2.350.000</td>
+                        </tr>
+
+                        <!--Subject 7-->
+                        <tr>
+                            <td>Nhập môn Hệ điều hành</td>
+                            <td>2.350.000</td>
+                        </tr>
+
+                        <!--Subject 8-->
+                        <tr>
+                            <td>Lập trình Game nâng cao</td>
+                            <td>4.200.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <!-- Delete Confirm Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+
+                    <form action='' method='POST' style='display: inline;'>
+                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
+                        <button type="submit" class="btn btn-danger">Xác nhận</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../../images/facebookLogo.png" width="60">
+                <img src="../../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
+

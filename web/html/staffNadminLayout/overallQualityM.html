@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <nav class="navbar navbar-expand-md bg-white navbar-white">
+        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+
+        <!--Function Buttons-->
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-info">Thêm mới</button>
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-success">Cập nhật</button>
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-warning">Sắp xếp</button>
+            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-danger">Xóa bỏ</button>
+        </div>
+        
+        <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
+        </div> -->
+    </nav>
+
+    <!--DataView-->
+    <div>
+        <div class="row">
+            <!--Menu-->
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <nav class="navbar navbar-light" style="padding-top: 0px;">
+                    <ul class="navbar-nav nav nav-pills" >
+                        <div style="border-style: ridge;">
+                            <br><img src="../../images/ava2.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentStaffAdmin</p></li>
+                        </div>
+                        <br>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingScheduleM.html">Quản lý Lịch dạy</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="staffInfoM.html">Quản lý TT Nhân viên</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="revenueNexpenditureM.html">Quản lý Thu chi</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Quản lý Chất lượng</b></a></li>
+                        <div class="dropdown-divider"></div>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
+                        <div class="dropdown-divider"></div>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <h4 style="padding-left: 15px;"><img src="../../images/overallQuality_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Chất lượng đào tạo</h4>
+                <!--Study Schedule Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên khóa học</th>
+                            <th>Điểm TB</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Subject 1-->
+                        <tr>
+                            <td>Lập trình Game cơ bản</td>
+                            <td>7.1</td>
+                        </tr>
+
+                        <!--Subject 2-->
+                        <tr>
+                            <td>Nhập môn Trí tuệ nhân tạo</td>
+                            <td>6.8</td>
+                        </tr>
+
+                        <!--Subject 3-->
+                        <tr>
+                            <td>Lập trình Web và ứng dụng</td>
+                            <td>9.1</td>
+                        </tr>
+
+                        <!--Subject 4-->
+                        <tr>
+                            <td>Thiết kế UI/UX</td>
+                            <td>9.7</td>
+                        </tr>
+
+                        <!--Subject 5-->
+                        <tr>
+                            <td>Lập trình Web nâng cao</td>
+                            <td>8.4</td>
+                        </tr>
+
+                        <!--Subject 6-->
+                        <tr>
+                            <td>Cấu trúc dữ liệu và giải thuật</td>
+                            <td>7.7</td>
+                        </tr>
+
+                        <!--Subject 7-->
+                        <tr>
+                            <td>Hệ cơ sở dữ liệu</td>
+                            <td>6.1</td>
+                        </tr>
+
+                        <!--Subject 7-->
+                        <tr>
+                            <td>Nhập môn Hệ điều hành</td>
+                            <td>8.8</td>
+                        </tr>
+
+                        <!--Subject 8-->
+                        <tr>
+                            <td>Lập trình Game nâng cao</td>
+                            <td>6.3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--DataGridView-->
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <h4 style="padding-left: 15px;"><img src="../../images/device_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Thiết bị</h4>
+                <!--Exam Schedule Info-->
+                <table id="MyTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Tên thiết bị</th>
+                            <th>Số lượng</th>
+                            <th>Đánh giá mức độ</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table-body">
+                        <!--Deviece 1-->
+                        <tr>
+                            <td>Máy chiếu</td>
+                            <td>24</td>
+                            <td>Tốt</td>
+                        </tr>
+                        
+                        <!--Deviece 2-->
+                        <tr>
+                            <td>Bàn ghế</td>
+                            <td>450</td>
+                            <td>Khá tốt</td>
+                        </tr>
+
+                        <!--Deviece 3-->
+                        <tr>
+                            <td>Camera</td>
+                            <td>16</td>
+                            <td>Tốt</td>
+                        </tr>
+
+                        <!--Deviece 4-->
+                        <tr>
+                            <td>Máy tính</td>
+                            <td>300</td>
+                            <td>Trung Bình</td>
+                        </tr>
+
+                        <!--Deviece 5-->
+                        <tr>
+                            <td>Đèn</td>
+                            <td>85</td>
+                            <td>Tốt</td>
+                        </tr>
+
+                        <!--Deviece 6-->
+                        <tr>
+                            <td>Quạt</td>
+                            <td>30</td>
+                            <td>Tốt</td>
+                        </tr>
+
+                        <!--Deviece 7-->
+                        <tr>
+                            <td>Máy lạnh</td>
+                            <td>8</td>
+                            <td>Khá tốt</td>
+                        </tr>
+
+                        <!--Deviece 8-->
+                        <tr>
+                            <td>Wifi</td>
+                            <td>6</td>
+                            <td>Trung Bình</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="row">
+            <!--Map Picture-->
+            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
+            <!--Info Footer-->
+            <div class="infoFooter">
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                <h>Hotline: (+84) 0987654321</h><br>
+                <h>Email: lklsupport@gmail.com</h><br>
+                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <!--Some Other Media-->
+                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../../images/facebookLogo.png" width="60">
+                <img src="../../images/instagramLogo.png" width="55">
+            </div>
+        </div>
+        <!--Product Footer-->
+        <div class="productFooter">
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>Producted by LKL Software Team.</p>
+        </div>
+    </div>
+</body>
+</html>
+
