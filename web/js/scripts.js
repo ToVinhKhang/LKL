@@ -34,3 +34,9 @@ function CheckInput(){
 function ClearErrorMess(){
 	let errorTemp = document.getElementById('ErrorMess').innerHTML="";
 }
+function openForm(){
+	document.getElementById("popupForm").style.display = "block";
+}
+function closeForm(){
+	document.getElementById("popupForm").style.display = "none";
+}
