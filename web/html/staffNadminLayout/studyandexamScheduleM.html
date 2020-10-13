@@ -88,12 +88,12 @@
                 </table>
 
                 <!--Change Page-->
-                <p style="border: 1px solid black;"></p><b>
-                <div style="padding-left: 12px;">
-                    <a href="" id='Previous' style="color: black; text-decoration: none;">Tuần trước</a>
-                    <p style="display: inline; padding-left: 15%;">12/10/2020 - 18/10/2020</p>
-                    <a href="" id='Next' style="color: black; text-decoration: none; position: absolute; right: 14%;">Tuần sau</a>
-                </div></b>
+                <p style="border: 1px solid black;"></p>
+                <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                    <span id='Previous' class="btn-x">Tuần trước</span>
+                    <span id="show-date"></span>
+                    <span id='Next' class="btn-x">Tuần sau</span>
+                </div>
             </div>
 
             <!--DataGridView-->
@@ -139,7 +139,6 @@
             </div>
         </div>
     </div>
-    <br><br><br><br>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -189,6 +188,8 @@
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
+
+    <script src="../../js/index.js"></script>
 </body>
 </html>
 

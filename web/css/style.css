@@ -100,7 +100,8 @@ div {
 
 .fit-content-w {
 	width: fit-content;
-    min-width: 90vw;
+	min-width: 90vw;
+	min-height: 90vh;
 }
 
 .l-btn {
@@ -108,6 +109,11 @@ div {
 	margin: 1em 0 1em 0;
 	display: block;
 	color: #f88746;
+}
+
+.btn-x {
+	cursor: pointer;
+	margin: 1em 0 1em 0;
 }
 
 .l-icon {
