@@ -9,6 +9,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+
+    
+    <!-- icon -->
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- icon -->
 </head>
 
 <body>
@@ -30,7 +35,7 @@
     </nav>
 
     <!--DataView-->
-    <div>
+    <div class="fit-content-w">
         <div class="row">
             <!--Menu-->
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
@@ -45,19 +50,11 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingScheduleM.html">Quản lý Lịch dạy</a></li>
-                        <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Quản lý TT Giáo viên</b></a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="staffInfoM.html">Quản lý TT Nhân viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="revenueNexpenditureM.html">Quản lý Thu chi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="overallQualityM.html">Quản lý Chất lượng</a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -69,17 +66,16 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <h4 style="padding-left: 15px;"><img src="../../images/teacher_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý TT Giáo viên</h4>
                 <!--Courses Info-->
+                
                 <table id="MyTable" class="table table-hover">
                     <thead>
                         <tr>
                             <th>Họ tên</th>
                             <th>Ngày sinh</th>
-                            <th>Chuyên ngành</th>
-                            <th>Học hàm</th>
                             <th>Quê quán</th>
                             <th>Số CMND</th>
-                            <th>Ngày vào làm</th>
-                            <th>Kinh nghiệm</th>
+                            <th>Số Điện thoại</th>
+                            <th>Điều khiển</th>
                         </tr>
                     </thead>
 
@@ -88,84 +84,20 @@
                         <tr>
                             <td>Mai Văn Mạnh</td>
                             <td>01/02/1997</td>
-                            <td>Kỹ thuật phần mềm</td>
-                            <td>Thạc Sĩ</td>
                             <td>Gia Lai</td>
-                            <td>7412654321</td>
-                            <td>02/08/2019</td>
-                            <td>1 năm</td>
-                        </tr>
-
-                        <!--Teacher 2-->
-                        <tr>
-                            <td>Phạm Văn Huy</td>
-                            <td>07/03/1998</td>
-                            <td>Khoa học máy tính</td>
-                            <td>PGS.Tiến Sĩ</td>
-                            <td>Long An</td>
-                            <td>0158745621</td>
-                            <td>21/10/2019</td>
-                            <td>1 năm</td>
-                        </tr>
-
-                        <!--Teacher 3-->
-                        <tr>
-                            <td>Vũ Đình Hồng</td>
-                            <td>14/08/1996</td>
-                            <td>Mạng máy tính</td>
-                            <td>Thạc Sĩ</td>
-                            <td>Bình Thuận</td>
-                            <td>0123004237</td>
-                            <td>11/10/2018</td>
-                            <td>2 năm</td>
-                        </tr>
-
-                        <!--Teacher 4-->
-                        <tr>
-                            <td>Trần Trung Tín</td>
-                            <td>28/06/1996</td>
-                            <td>Mạng máy tính</td>
-                            <td>Thạc Sĩ</td>
-                            <td>Đà Nẵng</td>
-                            <td>4561100321</td>
-                            <td>29/01/2020</td>
-                            <td>3 năm</td>
-                        </tr>
-
-                        <!--Teacher 5-->
-                        <tr>
-                            <td>Bùi Thần Tài</td>
-                            <td>02/08/1994</td>
-                            <td>Khoa học máy tính</td>
-                            <td>Thạc Sĩ</td>
-                            <td>TPHCM</td>
-                            <td>0111562321</td>
-                            <td>29/07/2020</td>
-                            <td>2 năm </td>
-                        </tr>
-
-                        <!--Teacher 6-->
-                        <tr>
-                            <td>Nguyễn Công Trí</td>
-                            <td>01/02/1978</td>
-                            <td>Kỹ thuật phần mềm</td>
-                            <td>Giáo Sư</td>
-                            <td>Lào Cai</td>
-                            <td>0996543321</td>
-                            <td>07/02/2019</td>
-                            <td>12 năm</td>
-                        </tr>
-
-                        <!--Teacher 7-->
-                        <tr>
-                            <td>Nguyễn Hữu Phước</td>
-                            <td>01/01/1988</td>
-                            <td>Khoa học máy tính</td>
-                            <td>Tiến Sĩ</td>
-                            <td>Đắk Nông</td>
-                            <td>3323543321</td>
-                            <td>01/02/2018</td>
-                            <td>2 năm</td>
+                            <td>7412654321</td>                            
+                            <td>091239123</td>
+                            <td>
+                                <div class="d-flex">
+                                    <div>
+                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                    </div>
+                                    <div class="l-spacer"></div>
+                                    <div>
+                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

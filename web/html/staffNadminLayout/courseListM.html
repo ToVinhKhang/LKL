@@ -10,28 +10,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
     <script src="../js/scripts.js"></script>
+
+    
+    <!-- icon -->
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- icon -->
 </head>
 
 <body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
         <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
-
-        <!--Function Buttons-->
-        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-info">Thêm mới</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-success">Cập nhật</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-warning">Sắp xếp</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-danger">Xóa bỏ</button>
-        </div>
-
-        <!-- div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
-        </div> -->
     </nav>
 
     <!--DataView-->
-    <div>
+    <div class="fit-content-w">
         <div class="row">
             <!--Menu-->
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
@@ -44,21 +37,13 @@
                         <br>
                         <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Quản lý Khóa học</b></a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingScheduleM.html">Quản lý Lịch dạy</a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="">Quản lý Khóa học</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="staffInfoM.html">Quản lý TT Nhân viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="revenueNexpenditureM.html">Quản lý Thu chi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="overallQualityM.html">Quản lý Chất lượng</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -70,6 +55,8 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <h4 style="padding-left: 15px;"><img src="../../images/courseList_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Khóa học</h4>
 
+                
+                <span class="l-btn noselect">Thêm thông khóa học mới</span>
                 <!--Courses Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -79,8 +66,8 @@
                             <th>Thời gian</th>
                             <th>Thứ</th>
                             <th>Ngày bắt đầu</th>
-                            <th>Cập nhật lần cuối</th>
-                            <th>Mô tả</th>
+                            <th>Giảng viên</th>
+                            <th>Điều khiển</th>
                         </tr>
                     </thead>
 
@@ -92,96 +79,18 @@
                             <td>12:30 - 14:55</td>
                             <td>Sáu</td>
                             <td>02/08/2020</td>
-                            <td>10/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 2-->
-                        <tr>
-                            <td>Nhập môn Trí tuệ nhân tạo</td>
-                            <td>A709</td>
-                            <td>09:25 - 11:50</td>
-                            <td>Năm</td>
-                            <td>01/08/2020</td>
-                            <td>10/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 3-->
-                        <tr>
-                            <td>Lập trình Web và ứng dụng</td>
-                            <td>A508</td>
-                            <td>15:05 - 17:30</td>
-                            <td>Ba</td>
-                            <td>06/08/2020</td>
-                            <td>08/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 4-->
-                        <tr>
-                            <td>Thiết kế UI/UX</td>
-                            <td>A607</td>
-                            <td>12:30 - 14:55</td>
-                            <td>Ba</td>
-                            <td>06/08/2020</td>
-                            <td>08/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 5-->
-                        <tr>
-                            <td>Lập trình Web nâng cao</td>
-                            <td>A506</td>
-                            <td>15:05 - 17:30</td>
-                            <td>Tư</td>
-                            <td>07/08/2020</td>
-                            <td>04/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 6-->
-                        <tr>
-                            <td>Cấu trúc dữ liệu và giải thuật</td>
-                            <td>A502</td>
-                            <td>09:25 - 11:50</td>
-                            <td>Hai</td>
-                            <td>05/08/2020</td>
-                            <td>04/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 7-->
-                        <tr>
-                            <td>Hệ cơ sở dữ liệu</td>
-                            <td>A506</td>
-                            <td>09:25 - 11:50</td>
-                            <td>CN</td>
-                            <td>04/08/2020</td>
-                            <td>04/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 7-->
-                        <tr>
-                            <td>Nhập môn Hệ điều hành</td>
-                            <td>A705</td>
-                            <td>15:05 - 17:30</td>
-                            <td>Bảy</td>
-                            <td>03/08/2020</td>
-                            <td>10/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
-                        </tr>
-
-                        <!--Subject 8-->
-                        <tr>
-                            <td>Lập trình Game nâng cao</td>
-                            <td>A605</td>
-                            <td>12:30 - 14:55</td>
-                            <td>Bảy</td>
-                            <td>03/08/2020</td>
-                            <td>10/10/2020</td>
-                            <td><a href="">Xem chi tiết</a></td>
+                            <td>Tô Vĩnh Khang</td>
+                            <td>
+                                <div class="d-flex">
+                                    <div>
+                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                    </div>
+                                    <div class="l-spacer"></div>
+                                    <div>
+                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

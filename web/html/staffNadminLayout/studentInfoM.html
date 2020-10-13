@@ -9,28 +9,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+    
+    <!-- icon -->
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- icon -->
 </head>
 
 <body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
         <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
-
-        <!--Function Buttons-->
-        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-info">Thêm mới</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-success">Cập nhật</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-warning">Sắp xếp</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-danger">Xóa bỏ</button>
-        </div>
-        
-        <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
-        </div> -->
     </nav>
 
     <!--DataView-->
-    <div>
+    <div class="fit-content-w">
         <div class="row">
             <!--Menu-->
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
@@ -43,21 +35,13 @@
                         <br>
                         <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingScheduleM.html">Quản lý Lịch dạy</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Khóa học</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Quản lý TT Học viên</b></a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="staffInfoM.html">Quản lý TT Nhân viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="revenueNexpenditureM.html">Quản lý Thu chi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="overallQualityM.html">Quản lý Chất lượng</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -68,85 +52,41 @@
             <!--DataGridView-->
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <h4 style="padding-left: 15px;"><img src="../../images/student_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý TT Học viên</h4>
+                
+                
+                <span class="l-btn noselect">Thêm mới thông tin học viên</span>
                 <!--Courses Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
                         <tr>
                             <th>Họ tên</th>
                             <th>Ngày sinh</th>
-                            <th>Ngày vào học</th>
+                            <th>Quê quán</th>
+                            <th>Số CMND</th>
+                            <th>Số Điện thoại</th>
+                            <th>Điều khiển</th>
                         </tr>
                     </thead>
 
                     <tbody id="table-body">
-                        <!--Student 1-->
+                        <!--Teacher 1-->
                         <tr>
-                            <td>Trần Minh Tiến</td>
-                            <td>07/08/2001</td>
-                            <td>01/02/2020</td>
-                        </tr>
-
-                        <!--Student 2-->
-                        <tr>
-                            <td>Trần Hải Anh</td>
-                            <td>06/09/2001</td>
-                            <td>07/12/2019</td>
-                        </tr>
-
-                        <!--Student 3-->
-                        <tr>
-                            <td>Lai Ngọc Châu</td>
-                            <td>17/02/1999</td>
-                            <td>04/04/2020</td>
-                        </tr>
-
-                        <!--Student 4-->
-                        <tr>
-                            <td>Nguyễn Mạnh Hùng</td>
-                            <td>28/04/2002</td>
-                            <td>06/07/2020</td>
-                        </tr>
-
-                        <!--Student 5-->
-                        <tr>
-                            <td>Cao Bá Lợi</td>
-                            <td>07/08/2002</td>
-                            <td>04/08/2020</td>
-                        </tr>
-
-                        <!--Student 6-->
-                        <tr>
-                            <td>Thái Tấn Long</td>
-                            <td>01/01/2001</td>
-                            <td>09/03/2019</td>
-                        </tr>
-
-                        <!--Student 7-->
-                        <tr>
-                            <td>Dương Ái My</td>
-                            <td>07/08/2003</td>
-                            <td>01/08/2020</td>
-                        </tr>
-
-                        <!--Student 8-->
-                        <tr>
-                            <td>Nguyễn Kiều Tam</td>
-                            <td>07/05/1999</td>
-                            <td>09/10/2020</td>
-                        </tr>
-
-                        <!--Student 9-->
-                        <tr>
-                            <td>Võ Hoàng Anh</td>
-                            <td>07/06/2001</td>
-                            <td>08/11/2019</td>
-                        </tr>
-
-                        <!--Student 10-->
-                        <tr>
-                            <td>Lý Thái Bảo</td>
-                            <td>07/02/2001</td>
-                            <td>07/12/2020</td>
+                            <td>Mai Văn Mạnh</td>
+                            <td>01/02/1997</td>
+                            <td>Gia Lai</td>
+                            <td>7412654321</td>                            
+                            <td>091239123</td>
+                            <td>
+                                <div class="d-flex">
+                                    <div>
+                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                    </div>
+                                    <div class="l-spacer"></div>
+                                    <div>
+                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

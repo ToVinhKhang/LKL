@@ -95,3 +95,54 @@ div {
 	width: 100%;
 }
 
+
+/* linh css */
+
+.fit-content-w {
+	width: fit-content;
+    min-width: 90vw;
+}
+
+.l-btn {
+	cursor: pointer;
+	margin: 1em 0 1em 0;
+	display: block;
+	color: #f88746;
+}
+
+.l-icon {
+	cursor: pointer;
+}
+
+.l-icon-md {
+	font-size: larger;
+}
+
+.l-spacer {
+	height: 0px;
+	width: 10px;
+}
+
+.l-fill-red {
+	color: rgb(231, 38, 38);
+}
+
+.jus-bw {
+	justify-content: space-between;
+}
+
+.nav-item.active {
+	font-weight: bold;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* linh css */

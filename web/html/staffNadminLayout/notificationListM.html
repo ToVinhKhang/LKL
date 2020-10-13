@@ -9,28 +9,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+
+    <!-- icon -->
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- icon -->
 </head>
 
 <body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
         <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
-
-        <!--Function Buttons-->
-        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-info">Thêm mới</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-success">Cập nhật</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-warning">Sắp xếp</button>
-            <button style="margin-right: 20px; margin-left: 20px; width: 100px;" type="button" class="btn btn-danger">Xóa bỏ</button>
-        </div>
-        
         <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
         </div> -->
     </nav>
 
     <!--DataView-->
-    <div>
+    <div class="fit-content-w">
         <div class="row">
             <!--Menu-->
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
@@ -41,23 +36,15 @@
                             <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentStaffAdmin</p></li>
                         </div>
                         <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href=""><b>Quản lý Thông báo</b></a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teachingScheduleM.html">Quản lý Lịch dạy</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="staffInfoM.html">Quản lý TT Nhân viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="revenueNexpenditureM.html">Quản lý Thu chi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="overallQualityM.html">Quản lý Chất lượng</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -69,12 +56,16 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <h4 style="padding-left: 15px;"><img src="../../images/notificationList_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Thông báo</h4>
                 <!--Notification List-->
+
+                <span class="l-btn noselect">Thêm thông báo mới</span>
+
+
                 <table id="MyTable" class="table table-hover">
                     <thead>
                         <tr>
                             <th>Tên thông báo</th>
                             <th>Ngày đăng</th>
-                            <th>Tình trạng</th>
+                            <th>Điều khiển</th>
                         </tr>
                     </thead>
 
@@ -83,56 +74,17 @@
                         <tr>
                             <td><a href="" style="color: black; text-decoration: none;">[KHAI GIẢNG] Khóa học Phân tích thiết kế giải thuật</a></td>
                             <td>10/10/2020</td>
-                            <td>Chưa đọc</td>
-                        </tr>
-
-                        <!--Notification 2-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[GIẢM HỌC PHÍ] Giảm 15% học phí cho SV đăng ký nhóm 3 người trở lên</a></td>
-                            <td>02/10/2020</td>
-                            <td>Đã đọc</td>
-                        </tr>
-
-                        <!--Notification 0-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[GIẢM HỌC PHÍ] Giảm 25% học phí Trung thu rộn ràng trong ngày 1/10/2020</a></td>
-                            <td>29/09/2020</td>
-                            <td>Đã đọc</td>
-                        </tr>
-
-                        <!--Notification 3-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[LỊCH THI] Nhắc nhở lịch thi đợt 1 các khóa đăng ký trước tháng 9</a></td>
-                            <td>15/09/2020</td>
-                            <td>Chưa đọc</td>
-                        </tr>
-
-                        <!--Notification 4-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[GIẢM HỌC PHÍ] Giảm 10% học phí nhân dịp đầu năm học mới</a></td>
-                            <td>01/08/2020</td>
-                            <td>Đã đọc</td>
-                        </tr>
-
-                        <!--Notification 5-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[KHAI GIẢNG] Khóa học Lập trình Hướng đối tượng</a></td>
-                            <td>27/07/2020</td>
-                            <td>Đã đọc</td>
-                        </tr>
-
-                        <!--Notification 6-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[KHAI GIẢNG] Khóa học Nhập môn học máy</a></td>
-                            <td>24/07/2020</td>
-                            <td>Đã đọc</td>
-                        </tr>
-
-                        <!--Notification 7-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[GIẢM HỌC PHÍ] Giảm 20% học phí Hè cho SV đăng ký nhóm 4 người trở lên</a></td>
-                            <td>01/07/2020</td>
-                            <td>Đã đọc</td>
+                            <td>
+                                <div class="d-flex">
+                                    <div>
+                                        <i class="mdi mdi-comment-edit-outline l-icon l-icon-md"></i>
+                                    </div>
+                                    <div class="l-spacer"></div>
+                                    <div>
+                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
