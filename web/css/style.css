@@ -95,6 +95,31 @@ div {
 	width: 100%;
 }
 
+.open-button{
+    background-color: #555;color: white;padding: 16px 20px;border: none;cursor: pointer;opacity: 0.8;position: fixed;bottom: 23px;right: 28px;width: 280px;
+}
+.form-popup{
+    display: none;position: fixed;right:0; bottom: 0; border: 3px solid #f1f1f1;
+}
+.form-container{
+    max-width: 100%;padding: 10px;background-color: white;
+}
+.form-container input, .form-container textarea {width: 100%;padding: 15px;margin: 5px 0 22px 0;border: none;background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus{
+    background-color: #ddd;outline: none;
+}
+.form-container .btn {
+    background-color: #F88746;color: white;padding: 16px 20px;border: none;cursor: pointer;width: 100%;margin-bottom:10px;opacity: 1;
+}
+.form-container .cancel{
+    background-color: black;
+}
+.form-container .btn:hover, .open-button:hover {
+    opacity: 0.8;
+}
+
 
 /* linh css */
 
