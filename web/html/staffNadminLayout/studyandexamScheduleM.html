@@ -9,6 +9,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+    
+    <!-- icon -->
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- icon -->
 </head>
 
 <body>
@@ -48,6 +52,9 @@
             <!--DataGridView-->
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
                 <h4 style="padding-left: 15px;"><img src="../../images/studySchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Lịch học</h4>
+                
+                <span class="l-btn noselect">Thêm lịch học</span>
+                
                 <!--Study Schedule Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -55,6 +62,7 @@
                             <th>Tên khóa học</th>
                             <th>Phòng</th>
                             <th>Thời gian</th>
+                            <th>Điều khiển</th>
                         </tr>
                     </thead>
 
@@ -64,42 +72,17 @@
                             <td>Lập trình Game cơ bản</td>
                             <td>A506</td>
                             <td>12:30 - 14:55</td>
-                        </tr>
-                        <!--Tuesday-->
-                        <tr>
-                            <td>Nhập môn Trí tuệ nhân tạo</td>
-                            <td>A506</td>
-                            <td>12:30 - 14:55</td>
-                        </tr>
-                        <!--Wednesday-->
-                        <tr>
-                            <td>Lập trình Web và ứng dụng</td>
-                            <td>A506</td>
-                            <td>12:30 - 14:55</td>
-                        </tr>
-                        <!--Thursday-->
-                        <tr>
-                            <td>Thiết kế UI/UX</td>
-                            <td>A506</td>
-                            <td>12:30 - 14:55</td>
-                        </tr>
-                        <!--Friday-->
-                        <tr>
-                            <td>Lập trình Web nâng cao</td>
-                            <td>A506</td>
-                            <td>12:30 - 14:55</td>
-                        </tr>
-                        <!--Saturday-->
-                        <tr>
-                            <td>Hệ cơ sở dữ liệu</td>
-                            <td>A506</td>
-                            <td>12:30 - 14:55</td>
-                        </tr>
-                        <!--Sunday-->
-                        <tr>
-                            <td>Nhập môn hệ điều hành</td>
-                            <td>A506</td>
-                            <td>12:30 - 14:55</td>
+                            <td>
+                                <div class="d-flex">
+                                    <div>
+                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                    </div>
+                                    <div class="l-spacer"></div>
+                                    <div>
+                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -117,6 +100,10 @@
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
                 <h4 style="padding-left: 15px;"><img src="../../images/examSchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Lịch thi</h4>
                 <!--Exam Schedule Info-->
+
+                
+                <span class="l-btn noselect">Thêm mới thông tin thi</span>
+
                 <table id="MyTable" class="table table-hover">
                     <thead>
                         <tr>
@@ -124,6 +111,7 @@
                             <th>Phòng thi</th>
                             <th>Ngày thi</th>
                             <th>Thời gian</th>
+                            <th>Điều khiển</th>
                         </tr>
                     </thead>
 
@@ -134,70 +122,17 @@
                             <td>A705</td>
                             <td>01/12/2020</td>
                             <td>90 phút</td>
-                        </tr>
-
-                        <!--Subject 2-->
-                        <tr>
-                            <td>Nhập môn Trí tuệ nhân tạo</td>
-                            <td>A709</td>
-                            <td>05/12/2020</td>
-                            <td>45 phút</td>
-                        </tr>
-
-                        <!--Subject 3-->
-                        <tr>
-                            <td>Lập trình Web và ứng dụng</td>
-                            <td>A508</td>
-                            <td>03/12/2020</td>
-                            <td>60 phút</td>
-                        </tr>
-
-                        <!--Subject 4-->
-                        <tr>
-                            <td>Thiết kế UI/UX</td>
-                            <td>A607</td>
-                            <td>06/12/2020</td>
-                            <td>45 phút</td>
-                        </tr>
-
-                        <!--Subject 5-->
-                        <tr>
-                            <td>Lập trình Web nâng cao</td>
-                            <td>A506</td>
-                            <td>11/12/2020</td>
-                            <td>90 phút</td>
-                        </tr>
-
-                        <!--Subject 6-->
-                        <tr>
-                            <td>Cấu trúc dữ liệu và giải thuật</td>
-                            <td>A502</td>
-                            <td>10/12/2020</td>
-                            <td>60 phút</td>
-                        </tr>
-
-                        <!--Subject 7-->
-                        <tr>
-                            <td>Hệ cơ sở dữ liệu</td>
-                            <td>A506</td>
-                            <td>09/12/2020</td>
-                            <td>45 phút</td>
-                        </tr>
-
-                        <!--Subject 7-->
-                        <tr>
-                            <td>Nhập môn Hệ điều hành</td>
-                            <td>A705</td>
-                            <td>01/12/2020</td>
-                            <td>45 phút</td>
-                        </tr>
-
-                        <!--Subject 8-->
-                        <tr>
-                            <td>Lập trình Game nâng cao</td>
-                            <td>A605</td>
-                            <td>07/12/2020</td>
-                            <td>90 phút</td>
+                            <td>
+                                <div class="d-flex">
+                                    <div>
+                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                    </div>
+                                    <div class="l-spacer"></div>
+                                    <div>
+                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
