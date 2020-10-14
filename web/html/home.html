@@ -22,41 +22,48 @@
             </div>
 
             <!--Header-->
-            <div class="p-absolute container-w z-index-h">
-                <nav class="navbar navbar-expand-md navbar-white">
-                    <img id="logo" src="../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
-                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link blackText" href="#">
-                                    <b>
-                                        Giới thiệu
-                                    </b>
-                                </a>
-                            </li>
-                            <p>&nbsp;&nbsp;</p>
-                            <li class="nav-item"><a class="nav-link blackText" href="#">
+            <div class="p-absolute container-w z-index-h l-header">
+                <div class="l-logo">
+                    <a class="navbar-brand" href="#">
+                        <img id="logo" src="../images/LKLlogo.png">
+                    </a>
+                </div>
+                <div class="header-btn">
+                    <div class="d-flex header-btn-nor">
+                        <div>
+                            <a class="nav-link blackText" href="#">
+                                <b>
+                                    Giới thiệu
+                                </b>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-link blackText" href="#">
                                 <b>
                                     Giảng viên
                                 </b>
-                            </a></li><p>&nbsp;&nbsp;</p>
-                            <li class="nav-item"><a class="nav-link blackText" href="#">
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-link blackText" href="#">
                                 <b>
                                     Khóa học
                                 </b>
-                            </a></li><p>&nbsp;&nbsp;</p>
-                            <!--Enroll-->
-                            <a href="./signup.html">
-                                <button style="color: #D66324; border-color: #D66324; border-width: 3px;" type="button" class="btn">Ghi danh</button>
                             </a>
-                            <p style="padding-right: 20px;"></p>
-                            <!--Login-->
-                            <a href="./login.html">
-                                <button style="background-color: #D66324; color: white; border-color: #D66324; border-width: 3px;" type="submit" class="btn">Đăng nhập</button>
-                            </a>
-                        </ul>
+                        </div>
                     </div>
-                </nav>
+                    <div>
+                        <a href="./signup.html">
+                            <button style="color: #D66324; border-color: #D66324; border-width: 3px; margin: 0 10px 0 10px;" type="button" class="btn">Ghi danh</button>
+                        </a>
+                    </div>
+                    <div>
+                        <!--Login-->
+                        <a href="./login.html">
+                            <button style="background-color: #D66324; color: white; border-color: #D66324; border-width: 3px; margin: 0 10px 0 10px;" type="submit" class="btn">Đăng nhập</button>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="container-w centroid">
@@ -96,7 +103,7 @@
                         <h4>LKL Edu</h4>
                         <span class="card-text fontSize24">Là một trung tâm giáo dục chuyên nghiệp sáng tạo. Được thành lập bởi các chuyên viên và giảng viên hàng đầu của cả nước...</span>
                         <p></p>
-                        <a class="btn btn-success colorSeeDetail centroid" href="#">Xem chi tiết</a>
+                        <a class="btn btn-success colorSeeDetail centroid" href="">Xem chi tiết</a>
                     </div>
                     <div class="video centroid">
                         <iframe src="https://www.youtube.com/embed/1cu-tv2rJ-U"></iframe>
@@ -104,7 +111,6 @@
                 </div>
             </div>
         </div>
-
 
         <!--Benefit-->
         <div class="container">
