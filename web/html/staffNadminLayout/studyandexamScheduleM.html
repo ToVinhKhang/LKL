@@ -41,7 +41,7 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -53,7 +53,7 @@
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
                 <h4 style="padding-left: 15px;"><img src="../../images/studySchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Lịch học</h4>
                 
-                <span class="l-btn noselect">Thêm lịch học</span>
+                <span onclick="openFormS()" class="l-btn noselect">Thêm Lịch học</span>
                 
                 <!--Study Schedule Info-->
                 <table id="MyTable" class="table table-hover">
@@ -102,7 +102,7 @@
                 <!--Exam Schedule Info-->
 
                 
-                <span class="l-btn noselect">Thêm mới thông tin thi</span>
+                <span onclick="openFormE()" class="l-btn noselect">Thêm Lịch thi</span>
 
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -138,6 +138,47 @@
                 </table>
             </div>
         </div>
+    </div>
+
+    <script type="text/javascript">
+        function openFormS(){document.getElementById("popupFormS").style.display = "block";}
+        function closeFormS(){document.getElementById("popupFormS").style.display = "none";}
+        function openFormE(){document.getElementById("popupFormE").style.display = "block";}
+        function closeFormE(){document.getElementById("popupFormE").style.display = "none";}
+    </script>
+
+    <!--Popup Form StudySchedule-->
+    <div class="form-popup" id="popupFormS">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Thêm thông tin Lịch học<b></h1>
+            <label for="nameCouseS"><b>Tên khóa học</b></label>
+            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseS">
+            <label for="roomCourseS"><b>Phòng</b></label>
+            <input type="text" placeholder="Nhập phòng học" name="roomCourseS">
+            <label for="timeCourseS"><b>Thời gian</b></label>
+            <input type="text" placeholder="Nhập thời gian học" name="timeCourseS">
+
+            <button type="submit" class="btn">Thêm</button>
+            <button type="button" class="btn cancel" onclick="closeFormS()">Đóng</button>
+        </form>
+    </div>
+
+    <!--Popup Form ExamSchedule-->
+    <div class="form-popup" id="popupFormE">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Thêm thông tin Lịch thi<b></h1>
+            <label for="nameCouseE"><b>Tên khóa học</b></label>
+            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE">
+            <label for="roomCourseE"><b>Phòng thi</b></label>
+            <input type="text" placeholder="Nhập phòng thi" name="roomCourseE">
+            <label for="dateeCourseE"><b>Ngày thi</b></label>
+            <input type="text" placeholder="Nhập ngày thi" name="dateeCourseE">
+            <label for="timeCourseE"><b>Thời gian</b></label>
+            <input type="text" placeholder="Nhập thời gian thi" name="timeCourseE">
+
+            <button type="submit" class="btn">Thêm</button>
+            <button type="button" class="btn cancel" onclick="closeFormE()">Đóng</button>
+        </form>
     </div>
 
     <!-- Delete Confirm Modal -->

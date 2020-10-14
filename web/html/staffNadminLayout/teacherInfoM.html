@@ -42,7 +42,7 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -52,15 +52,15 @@
 
             <!--DataGridView-->
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <h4 style="padding-left: 15px;"><img src="../../images/teacher_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý TT Giáo viên</h4>
+                <h4 style="padding-left: 15px;"><img src="../../images/teacher_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý TT Giảng viên</h4>
                 <!--Courses Info-->
                 
-                <span class="l-btn noselect">Thêm mới thông tin giảng viên</span>
+                <span onclick="openForm()" class="l-btn noselect">Thêm mới thông tin giảng viên</span>
 
                 <table id="MyTable" class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Họ tên</th>
+                            <th>Họ và tên</th>
                             <th>Ngày sinh</th>
                             <th>Quê quán</th>
                             <th>Số CMND</th>
@@ -95,6 +95,29 @@
         </div>
     </div>
     <br><br><br><br>
+
+    <script type="text/javascript">
+        function openForm(){document.getElementById("popupForm").style.display = "block";}
+        function closeForm(){document.getElementById("popupForm").style.display = "none";}
+    </script>
+
+    <!--Popup Form-->
+    <div class="form-popup" id="popupForm">
+        <form action="" class="form-container">
+            <label for="nameStu"><b>Họ và tên</b></label>
+            <input type="text" placeholder="Nhập họ và tên" name="nameStu">
+            <label for="dateStu"><b>Ngày sinh</b></label>
+            <input type="text" placeholder="Nhập phòng học" name="dateStu">
+            <label for="hometownStu"><b>Quê quán</b></label>
+            <input type="text" placeholder="Nhập thời gian học" name="hometownStu">
+            <label for="idnumStu"><b>Số CMND</b></label>
+            <input type="text" placeholder="Nhập ngày bắt đầu khóa học" name="idnumStu">
+            <label for="phoneStu"><b>Số điện thoại</b></label>
+            <input type="text" placeholder="Nhập tên giảng viên giảng dạy" name="phoneStu">
+            <button type="submit" class="btn">Thêm</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
+    </div>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">

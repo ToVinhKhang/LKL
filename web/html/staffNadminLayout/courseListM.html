@@ -43,7 +43,7 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giáo viên</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -56,7 +56,7 @@
                 <h4 style="padding-left: 15px;"><img src="../../images/courseList_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Khóa học</h4>
 
                 
-                <span class="l-btn noselect">Thêm thông khóa học mới</span>
+                <span onclick="openForm()" class="l-btn noselect">Thêm thông khóa học mới</span>
                 <!--Courses Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -65,7 +65,6 @@
                             <th>Mô tả</th>
                             <th>Phòng</th>
                             <th>Thời gian</th>
-                            <th>Thứ</th>
                             <th>Ngày bắt đầu</th>
                             <th>Giảng viên</th>
                             <th>Điều khiển</th>
@@ -81,7 +80,6 @@
                             </td>
                             <td>A506</td>
                             <td>12:30 - 14:55</td>
-                            <td>Sáu</td>
                             <td>02/08/2020</td>
                             <td>Tô Vĩnh Khang</td>
                             <td>
@@ -101,6 +99,32 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function openForm(){document.getElementById("popupForm").style.display = "block";}
+        function closeForm(){document.getElementById("popupForm").style.display = "none";}
+    </script>
+
+    <!--Popup Form-->
+    <div class="form-popup" id="popupForm">
+        <form action="" class="form-container">
+            <label for="nameCourse"><b>Tên khóa học</b></label>
+            <input type="text" placeholder="Nhập tên khóa học" name="nameCourse">
+            <label for="roomCourse"><b>Phòng</b></label>
+            <input type="text" placeholder="Nhập phòng học" name="roomCourse">
+            <label for="timeCourse"><b>Thời gian</b></label>
+            <input type="text" placeholder="Nhập thời gian học" name="timeCourse">
+            <label for="daystartCourse"><b>Ngày bắt đầu</b></label>
+            <input type="text" placeholder="Nhập ngày bắt đầu khóa học" name="daystartCourse">
+            <label for="teacher"><b>Giảng viên</b></label>
+            <input type="text" placeholder="Nhập tên giảng viên giảng dạy" name="teacher">
+            <label for="descriptionCourse"><b>Mô tả<b></label>
+            <textarea type="text" id="descriptionCourse" name="descriptionCourse" placeholder="Nhập mô tả khóa học" style="height:180px"></textarea>
+            <button type="submit" class="btn">Thêm</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
+    </div>
+
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
