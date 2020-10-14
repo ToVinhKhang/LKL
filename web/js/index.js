@@ -27,6 +27,16 @@ function nextWeek() {
     getWeekDate()
 }
 
+
+function activeElement(elementId) {
+    document.getElementById(elementId).classList.add('active')
+}
+
+
+function inactiveElement(elementId) {
+document.getElementById(elementId).classList.remove('active')
+}
+
 Previous.onclick = () => {
     preWeek()
 }
