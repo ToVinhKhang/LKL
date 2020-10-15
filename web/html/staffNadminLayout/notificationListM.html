@@ -92,7 +92,7 @@
     <br><br><br><br>
 
     <!--Popup Form-->
-    <div class="form-popup" id="popupForm">
+    <div class="form-popup" id="popupForm" style="max-width: 500px;">
         <form action="" class="form-container">
             <h1 style="text-align: center;"><b>Thêm thông báo<b></h1>
             <label for="headNotif"><b>Tiêu đề</b></label>
@@ -104,7 +104,16 @@
         </form>
     </div>
 
-
+    <script>
+        $(document).ready(function () {
+            $(".mdi-delete").click(function () {
+                $('#myModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            });
+        });
+    </script>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -112,17 +121,17 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
+                    <h5 class="modal-title">Xóa</h5>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
+                    <p>Bạn có chắc chắn muốn xóa?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
 
                     <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
+                        <input id='deleteitem' type='hidden' name='confirm'>
                         <button type="submit" class="btn btn-danger">Xác nhận</button>
                     </form>
                 </div>
