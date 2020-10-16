@@ -42,7 +42,7 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học và thi</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
@@ -76,7 +76,7 @@
                             <td>
                                 <div class="d-flex">
                                     <div>
-                                        <i class="mdi mdi-comment-edit-outline l-icon l-icon-md"></i>
+                                        <i onclick="openFormEdit()" class="mdi mdi-comment-edit-outline l-icon l-icon-md"></i>
                                     </div>
                                     <div class="l-spacer"></div>
                                     <div>
@@ -92,7 +92,7 @@
     </div>
     <br><br><br><br>
 
-    <!--Popup Form-->
+    <!--PopupAdd Form-->
     <div class="form-popup" id="popupForm" style="max-width: 500px; max-height: 550px; overflow: scroll;">
         <form action="" class="form-container">
             <h1 style="text-align: center;"><b>Thêm thông báo<b></h1>
@@ -102,6 +102,23 @@
             <textarea type="text" id="contentNotif" name="contentNotif" placeholder="Nhập nội dung thông báo" style="height:180px"></textarea>
             <button type="submit" class="btn">Thêm</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function openFormEdit(){document.getElementById("popupEdit").style.display = "block";}
+        function closeFormEdit(){document.getElementById("popupEdit").style.display = "none";}
+    </script>
+    <!--PopupEdit Form-->
+    <div class="form-popup" id="popupEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Sửa TT thông báo<b></h1>
+            <label for="headNotif"><b>Tiêu đề</b></label>
+            <input type="text" placeholder="Nhập tiêu đề thông báo" name="headNotif">
+            <label for="contentNotif"><b>Nội dung<b></label>
+            <textarea type="text" id="contentNotif" name="contentNotif" placeholder="Nhập nội dung thông báo" style="height:180px"></textarea>
+            <button type="submit" class="btn">Xác nhận</button>
+            <button type="button" class="btn cancel" onclick="closeFormEdit()">Đóng</button>
         </form>
     </div>
 

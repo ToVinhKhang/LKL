@@ -39,7 +39,7 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học và thi</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
@@ -81,7 +81,7 @@
                             <td>
                                 <div class="d-flex">
                                     <div>
-                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                        <i onclick="openFormEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
                                     </div>
                                     <div class="l-spacer"></div>
                                     <div>
@@ -98,12 +98,14 @@
     <br><br><br><br>
 
     <script type="text/javascript">
-        function openForm(){document.getElementById("popupForm").style.display = "block";}
-        function closeForm(){document.getElementById("popupForm").style.display = "none";}
+        function openForm(){document.getElementById("popupAdd").style.display = "block";}
+        function closeForm(){document.getElementById("popupAdd").style.display = "none";}
+        function openFormEdit(){document.getElementById("popupEdit").style.display = "block";}
+        function closeFormEdit(){document.getElementById("popupEdit").style.display = "none";}
     </script>
 
-    <!--Popup Form-->
-    <div class="form-popup" id="popupForm" style="max-width: 500px; max-height: 550px; overflow: scroll;">
+    <!--PopupAdd Form-->
+    <div class="form-popup" id="popupAdd" style="max-width: 500px; max-height: 550px; overflow: scroll;">
         <form action="" class="form-container">
             <h1 style="text-align: center;"><b>Thêm TT giảng viên<b></h1>
             <label for="nameStu"><b>Họ và tên</b></label>
@@ -118,6 +120,25 @@
             <input type="text" placeholder="Nhập tên giảng viên giảng dạy" name="phoneStu">
             <button type="submit" class="btn">Thêm</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
+    </div>
+
+    <!--PopupEdit Form-->
+    <div class="form-popup" id="popupEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Sửa TT giảng viên<b></h1>
+            <label for="nameStu"><b>Họ và tên</b></label>
+            <input type="text" placeholder="Nhập họ và tên" name="nameStu">
+            <label for="dateStu"><b>Ngày sinh</b></label>
+            <input type="text" placeholder="Nhập phòng học" name="dateStu">
+            <label for="hometownStu"><b>Quê quán</b></label>
+            <input type="text" placeholder="Nhập thời gian học" name="hometownStu">
+            <label for="idnumStu"><b>Số CMND</b></label>
+            <input type="text" placeholder="Nhập ngày bắt đầu khóa học" name="idnumStu">
+            <label for="phoneStu"><b>Số điện thoại</b></label>
+            <input type="text" placeholder="Nhập tên giảng viên giảng dạy" name="phoneStu">
+            <button type="submit" class="btn">Xác nhận</button>
+            <button type="button" class="btn cancel" onclick="closeFormEdit()">Đóng</button>
         </form>
     </div>
 

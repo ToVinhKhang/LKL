@@ -38,7 +38,7 @@
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học/Lịch thi</a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học và thi</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
                         <div class="dropdown-divider"></div>
@@ -78,7 +78,7 @@
                             <td>
                                 <div class="d-flex">
                                     <div>
-                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                        <i onclick="openFormSEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
                                     </div>
                                     <div class="l-spacer"></div>
                                     <div>
@@ -103,10 +103,7 @@
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
                 <h4 style="padding-left: 15px;"><img src="../../images/examSchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Lịch thi</h4>
                 <!--Exam Schedule Info-->
-
-                
                 <span onclick="openFormE()" class="l-btn noselect">Thêm Lịch thi</span>
-
                 <table id="MyTable" class="table table-hover">
                     <thead>
                         <tr>
@@ -128,7 +125,7 @@
                             <td>
                                 <div class="d-flex">
                                     <div>
-                                        <i class="mdi mdi-pen l-icon l-icon-md"></i>
+                                        <i onclick="openFormEEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
                                     </div>
                                     <div class="l-spacer"></div>
                                     <div>
@@ -148,12 +145,18 @@
         function closeFormS(){document.getElementById("popupFormS").style.display = "none";}
         function openFormE(){document.getElementById("popupFormE").style.display = "block";}
         function closeFormE(){document.getElementById("popupFormE").style.display = "none";}
+
+        function openFormSEdit(){document.getElementById("popupFormSEdit").style.display = "block";}
+        function closeFormSEdit(){document.getElementById("popupFormSEdit").style.display = "none";}
+        function openFormEEdit(){document.getElementById("popupFormEEdit").style.display = "block";}
+        function closeFormEEdit(){document.getElementById("popupFormEEdit").style.display = "none";}
     </script>
 
+    <!--PopupAdd-->
     <!--Popup Form StudySchedule-->
     <div class="form-popup" id="popupFormS" style="max-width: 500px; max-height: 550px; overflow: scroll;">
         <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Thêm thông tin Lịch học<b></h1>
+            <h1 style="text-align: center;"><b>Thêm TT Lịch học<b></h1>
             <label for="nameCouseS"><b>Tên khóa học</b></label>
             <input type="text" placeholder="Nhập tên khóa học" name="nameCouseS">
             <label for="roomCourseS"><b>Phòng</b></label>
@@ -169,7 +172,7 @@
     <!--Popup Form ExamSchedule-->
     <div class="form-popup" id="popupFormE" style="max-width: 500px; max-height: 550px; overflow: scroll;">
         <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Thêm thông tin Lịch thi<b></h1>
+            <h1 style="text-align: center;"><b>Thêm TT Lịch thi<b></h1>
             <label for="nameCouseE"><b>Tên khóa học</b></label>
             <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE">
             <label for="roomCourseE"><b>Phòng thi</b></label>
@@ -181,6 +184,42 @@
 
             <button type="submit" class="btn">Thêm</button>
             <button type="button" class="btn cancel" onclick="closeFormE()">Đóng</button>
+        </form>
+    </div>
+
+
+    <!--PopupEdit-->
+    <!--Popup Form StudySchedule-->
+    <div class="form-popup" id="popupFormSEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Sửa TT Lịch học<b></h1>
+            <label for="nameCouseS"><b>Tên khóa học</b></label>
+            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseS">
+            <label for="roomCourseS"><b>Phòng</b></label>
+            <input type="text" placeholder="Nhập phòng học" name="roomCourseS">
+            <label for="timeCourseS"><b>Thời gian</b></label>
+            <input type="text" placeholder="Nhập thời gian học" name="timeCourseS">
+
+            <button type="submit" class="btn">Xác nhận</button>
+            <button type="button" class="btn cancel" onclick="closeFormSEdit()">Đóng</button>
+        </form>
+    </div>
+
+    <!--Popup Form ExamSchedule-->
+    <div class="form-popup" id="popupFormEEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Sửa TT Lịch thi<b></h1>
+            <label for="nameCouseE"><b>Tên khóa học</b></label>
+            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE">
+            <label for="roomCourseE"><b>Phòng thi</b></label>
+            <input type="text" placeholder="Nhập phòng thi" name="roomCourseE">
+            <label for="dateeCourseE"><b>Ngày thi</b></label>
+            <input type="text" placeholder="Nhập ngày thi" name="dateeCourseE">
+            <label for="timeCourseE"><b>Thời gian</b></label>
+            <input type="text" placeholder="Nhập thời gian thi" name="timeCourseE">
+
+            <button type="submit" class="btn">Xác nhận</button>
+            <button type="button" class="btn cancel" onclick="closeFormEEdit()">Đóng</button>
         </form>
     </div>
 

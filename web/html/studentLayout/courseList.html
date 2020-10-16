@@ -75,7 +75,7 @@
                             <td>02/08/2020</td>
                             <td>Tô Vĩnh Khang</td>
                             <td>
-                                <span class="btn-x" style="color: rgb(245, 108, 45);">
+                                <span onclick="openForm()"class="btn-x" style="color: rgb(245, 108, 45);">
                                     <i class="mdi mdi-clipboard-edit-outline"></i>
                                     Đăng ký
                                 </span>
@@ -88,29 +88,28 @@
     </div>
     <br><br><br><br>
 
-    <!-- Delete Confirm Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+    <script type="text/javascript">
+        function openForm(){document.getElementById("popupForm").style.display = "block";}
+        function closeForm(){document.getElementById("popupForm").style.display = "none";}
+    </script>
 
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
-                        <button type="submit" class="btn btn-danger">Xác nhận</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <!--Popup Form-->
+    <div class="form-popup" id="popupForm" style="max-width: 500px; max-height: 550px; overflow: scroll;">
+        <form action="" class="form-container">
+            <h1 style="text-align: center;"><b>Đăng ký khóa học<b></h1>
+            <label for="nameCourse"><b>Tên khóa học</b></label>
+            <input type="text" placeholder="Nhập tên khóa học" name="nameCourse">
+            <label for="teacher"><b>Giảng viên phụ trách</b></label>
+            <input type="text" placeholder="Nhập tên giảng viên" name="teacher">
+            <label for="daystartCourse"><b>Ngày bắt đầu khóa học</b></label>
+            <input type="text" placeholder="Nhập thời gian bắt đầu" name="daystartCourse">
+            <label for="tuitionFee"><b>Học phí</b></label>
+            <input type="text" placeholder="Nhập học phí" name="tuitionFee">
+            <button type="submit" class="btn">Xác nhận</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
+        </form>
     </div>
+
 
     <!--Footer-->
     <div id="footer">
