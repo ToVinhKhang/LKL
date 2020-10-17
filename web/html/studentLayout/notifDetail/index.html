@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel='icon' type="image/png" sizes="16x16" href="../../../images/favicon.png">
 
     <!-- icon -->
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
@@ -33,7 +34,7 @@
                             <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentDeveloper</p></li>
                         </div>  
                         <br>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="../courseList.html">Thông báo</a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="../notificationList.html">Thông báo</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="">Khóa học</a></li>
                         <div class="dropdown-divider"></div>
@@ -50,10 +51,12 @@
             <!--DataGridView-->
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
                 <div style="width: 100%; max-width: 750px;">
-                    <h2>Tên thông báo</h2>
+                    <h2 id="notif-title">Tên thông báo</h2>
+                    <p id="post_date">
+                        asd
+                    </p>
                     <br>
-                    <br>
-                    <div>
+                    <div id="notif-content">
                         Chi tiết thông báo
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi tempore doloremque debitis esse consequatur amet omnis voluptas ducimus, dolore voluptate magnam vero rem maiores nesciunt officiis sunt deserunt? Similique, id.
                     </div>
@@ -86,6 +89,7 @@
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
+    <script src="../../../js/getDetailNofify.js"></script>
 </body>
 </html>
 

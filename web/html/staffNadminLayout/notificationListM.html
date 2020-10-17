@@ -21,9 +21,6 @@
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
         <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
-        <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav ml-auto"><input class="form-control" type="text" name="searching" placeholder="Search..."></ul>
-        </div> -->
     </nav>
 
     <!--DataView-->
@@ -97,10 +94,10 @@
         <form action="" class="form-container">
             <h1 style="text-align: center;"><b>Thêm thông báo<b></h1>
             <label for="headNotif"><b>Tiêu đề</b></label>
-            <input type="text" placeholder="Nhập tiêu đề thông báo" name="headNotif">
+            <input id="notif-title" type="text" placeholder="Nhập tiêu đề thông báo" name="headNotif">
             <label for="contentNotif"><b>Nội dung<b></label>
             <textarea type="text" id="contentNotif" name="contentNotif" placeholder="Nhập nội dung thông báo" style="height:180px"></textarea>
-            <button type="submit" class="btn">Thêm</button>
+            <button type="submit" class="btn" onclick="handlePostNotify()">Thêm</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
         </form>
     </div>
@@ -182,6 +179,14 @@
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
+    <script src="../../js/postNotify.js"></script>
+    <script>
+        function handlePostNotify() {
+            var title = document.getElementById("notif-title").value
+            var content = document.getElementById("contentNotif").value
+            postNotify(title, content)
+        }
+    </script>
 </body>
 </html>
 
