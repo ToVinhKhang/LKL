@@ -20,15 +20,18 @@
             <img id="logo" src="../images/LKLlogo.png">
         </a>
     </nav>
-
     <br><br><br><br>
+
+    <!--Login Form-->
     <div class="container centroid">
-        <div class="login-form">
+        <div class="login-form" style="max-width: 400px;">
+            <!--Button Back Home-->
+            <a href="home.html" style='float: right;' type="submit" class="btn btn-dark">Back</a>
+            
+            <!--Form-->
             <form action="studentLayout/notificationList.html" onsubmit="return CheckInputUser()" method="POST">
                 <h2>Đăng nhập</h2>
-                <p>
-                    <br>
-                </p>
+                <br>
                 <div class="form-group">
                     <input type="text" onclick="ClearErrorMess()" class="form-control" id="username" placeholder="Nhập tên tài khoản" name="username">
                 </div>
@@ -37,9 +40,7 @@
                 </div>
                 <p id="ErrorMess"></p>
                 <div>
-                    <p>
-                        Chưa có tài khoản? <a href='./signup.html'>Tạo ngay</a>
-                    </p>
+                    <p>Chưa có tài khoản? <a href='./signup.html'>Tạo ngay</a></p>
                 </div>
                 <button type="submit" class="btn btn-primary width100Percent">Đăng nhập</button>
             </form>
