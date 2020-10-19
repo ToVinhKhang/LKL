@@ -44,4 +44,8 @@ router.use('/user', user);
 var notify = require('./notify');
 
 router.use('/notify', notify);
+
+var course = require('./course');
+
+router.use('/course', course);
 module.exports = router;

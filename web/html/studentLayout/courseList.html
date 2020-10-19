@@ -10,11 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
     <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
-    <script src="../js/scripts.js"></script>
-
-    <!-- icon -->
+    <script src="../../js/scripts.js"></script>
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-    <!-- icon -->
 </head>
 
 <body>
@@ -65,22 +62,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="table-body">
-                        <tr>
-                            <td style="min-width:200px; max-width: 250px;">Lập trình Game cơ bản</td>
-                            <td style="min-width:350px; max-width: 400px;">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam ipsum ex repudiandae enim? Tempora autem voluptatibus asperiores odio non, nemo aspernatur dolor mollitia repellat dignissimos veritatis sapiente quam ut voluptate.
-                            </td>
-                            <td>2 500 000</td>
-                            <td>02/08/2020</td>
-                            <td>Tô Vĩnh Khang</td>
-                            <td>
-                                <span onclick="openForm()"class="btn-x" style="color: rgb(245, 108, 45);">
-                                    <i class="mdi mdi-clipboard-edit-outline"></i>
-                                    Đăng ký
-                                </span>
-                            </td>
-                        </tr>
+                    <tbody id="course-list">
                     </tbody>
                 </table>
             </div>
@@ -88,10 +70,6 @@
     </div>
     <br><br><br><br>
 
-    <script type="text/javascript">
-        function openForm(){document.getElementById("popupForm").style.display = "block";}
-        function closeForm(){document.getElementById("popupForm").style.display = "none";}
-    </script>
 
     <!--Popup Form-->
     <div class="form-popup" id="popupForm" style="max-width: 500px; max-height: 550px; overflow: scroll;">
@@ -135,6 +113,10 @@
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
+    <script src="../../js/getCourse.js"></script>
+    <script>
+        getCourse()
+    </script>
 </body>
 </html>
 

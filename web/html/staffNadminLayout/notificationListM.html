@@ -65,23 +65,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="table-body">
-                        <!--Notification 1-->
-                        <tr>
-                            <td><a href="" style="color: black; text-decoration: none;">[KHAI GIẢNG] Khóa học Phân tích thiết kế giải thuật</a></td>
-                            <td>10/10/2020</td>
-                            <td>
-                                <div class="d-flex">
-                                    <div>
-                                        <i onclick="openFormEdit()" class="mdi mdi-comment-edit-outline l-icon l-icon-md"></i>
-                                    </div>
-                                    <div class="l-spacer"></div>
-                                    <div>
-                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                    <tbody id="notify-list">
                     </tbody>
                 </table>
             </div>
@@ -120,17 +104,6 @@
         </form>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $(".mdi-delete").click(function () {
-                $('#myModal').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            });
-        });
-    </script>
-
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -146,10 +119,8 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
 
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm'>
-                        <button type="submit" class="btn btn-danger">Xác nhận</button>
-                    </form>
+                    <input id='deleteitem' type='hidden' name='confirm'>
+                    <button onclick="handleDeleteNotify()" type="submit" class="btn btn-danger">Xác nhận</button>
                 </div>
             </div>
         </div>
@@ -178,9 +149,30 @@
             <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
             <p>Producted by LKL Software Team.</p>
         </div>
+        <th>Tình trạng</th>
+        <th>Tình trạng</th>
     </div>
+    <script src="../../js/getNotifyForModerator.js"></script>
     <script src="../../js/postNotify.js"></script>
+    <script src="../../js/deleteNotify.js"></script>
     <script>
+        let selectedNotify;
+
+        function handleDeleteNotify() {
+            deleteNotify(selectedNotify.id)
+            window.location.reload()
+        }
+
+        function makeClickDeleteEvent(notification_idx) {
+            selectedNotify = notifList[notification_idx]
+            $('#myModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+
+        getNofity()
+
         function handlePostNotify() {
             var title = document.getElementById("notif-title").value
             var content = document.getElementById("contentNotif").value

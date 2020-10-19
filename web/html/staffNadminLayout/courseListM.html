@@ -10,12 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel ="stylesheet" type="text/css" href="../../css/style.css">
     <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
-    <script src="../js/scripts.js"></script>
-
-    
-    <!-- icon -->
+    <script src="../../js/scripts.js"></script>
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-    <!-- icon -->
 </head>
 
 <body>
@@ -71,28 +67,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="table-body">
-                        <!--Subject 1-->
-                        <tr>
-                            <td style="min-width:200px; max-width: 250px;">Lập trình Game cơ bản</td>
-                            <td style="min-width:350px; max-width: 400px;">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam ipsum ex repudiandae enim? Tempora autem voluptatibus asperiores odio non, nemo aspernatur dolor mollitia repellat dignissimos veritatis sapiente quam ut voluptate.
-                            </td>
-                            <td>2 500 000</td>
-                            <td>02/08/2020</td>
-                            <td>Mai Văn Mạnh</td>
-                            <td>
-                                <div class="d-flex">
-                                    <div>
-                                        <i onclick="openFormEdit()"class="mdi mdi-pen l-icon l-icon-md"></i>
-                                    </div>
-                                    <div class="l-spacer"></div>
-                                    <div>
-                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                    <tbody id="course-list">
                     </tbody>
                 </table>
             </div>
@@ -102,7 +77,9 @@
     <script type="text/javascript">
         function openForm(){document.getElementById("popupAdd").style.display = "block";}
         function closeForm(){document.getElementById("popupAdd").style.display = "none";}
-        function openFormEdit(){document.getElementById("popupEdit").style.display = "block";}
+        function openFormEdit(){
+            document.getElementById("popupEdit").style.display = "block";
+        }
         function closeFormEdit(){document.getElementById("popupEdit").style.display = "none";}
     </script>
 
@@ -145,19 +122,6 @@
         </form>
     </div>
 
-
-
-    <script>
-        $(document).ready(function () {
-            $(".mdi-delete").click(function () {
-                $('#myModal').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            });
-        });
-    </script>
-
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -173,10 +137,8 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
 
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm'>
-                        <button type="submit" class="btn btn-danger">Xác nhận</button>
-                    </form>
+                    <input id='deleteitem' type='hidden' name='confirm'>
+                    <button onclick="handleDeleteCourse()" type="submit" class="btn btn-danger">Xác nhận</button>
                 </div>
             </div>
         </div>
@@ -206,6 +168,28 @@
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
+
+    <script src="../../js/getCourseForModerator.js"></script>
+    <script src="../../js/addCourse.js"></script>
+    <script>
+        getCourse()
+
+        let selectedCourse;
+        
+        function makeClickDeleteEvent(course_idx) {
+            selectedCourse = courseList[course_idx]
+            $('#myModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+
+        
+        function handleDeleteCourse() {
+            // deleteNotify(selectedCourse.id)
+            window.location.reload()
+        }
+    </script>
 </body>
 </html>
 

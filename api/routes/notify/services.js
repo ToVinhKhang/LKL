@@ -25,7 +25,14 @@ async function postNotify(title, content) {
     return notify
 }
 
+async function deleteNotify(id) {
+    await Notify.query().deleteById(id);
+
+    return { mess: "deleted" }
+}
+
 module.exports = {
     getNotify,
-    postNotify
+    postNotify,
+    deleteNotify
 };

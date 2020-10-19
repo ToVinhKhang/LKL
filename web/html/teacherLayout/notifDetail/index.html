@@ -8,14 +8,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
+    <link rel ="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel='icon' type="image/png" sizes="16x16" href="../../../images/favicon.png">
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 
 <body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+        <img id="logo" src="../../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
     </nav>
 
     <!--DataView-->
@@ -25,8 +26,8 @@
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <nav class="navbar navbar-light" style="padding-top: 0px;">
                     <ul class="navbar-nav nav nav-pills" >
-                        <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava1.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                        <div style="border-style: ridge;">
+                            <br><img src="../../../images/ava1.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
                             <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentTeacher</p></li>
                         </div>
                         <br>
@@ -44,52 +45,26 @@
 
             <!--DataGridView-->
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <h4 style="padding-left: 15px;"><img src="../../images/notificationList_icon.png" width="40" height="40" alt="folder icon">&thinsp;Thông báo</h4>
-                <!--Notification List-->
-                <table id="MyTable" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Tên thông báo</th>
-                            <th>Ngày đăng</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="notify-list">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <!-- Delete Confirm Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
-
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
-                        <button type="submit" class="btn btn-danger">Xác nhận</button>
-                    </form>
+                <div style="width: 100%; max-width: 750px;">
+                    <h2 id="notif-title">Tên thông báo</h2>
+                    <p id="post_date">
+                        asd
+                    </p>
+                    <br>
+                    <div id="notif-content">
+                        Chi tiết thông báo
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi tempore doloremque debitis esse consequatur amet omnis voluptas ducimus, dolore voluptate magnam vero rem maiores nesciunt officiis sunt deserunt? Similique, id.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <br><br><br><br>
     <!--Footer-->
     <div id="footer">
         <div class="row">
             <!--Map Picture-->
-            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
+            <img src="../../../images/map.png" width="400" heigh="400" class="flex map">
             <!--Info Footer-->
             <div class="infoFooter">
                 <h>Nhóm phát triển phần mềm LKL Edu</h><br>
@@ -98,9 +73,9 @@
                 <h>Email: lklsupport@gmail.com</h><br>
                 <h>Copyright © 2020 by lkledu.vn</h><br>
                 <!--Some Other Media-->
-                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
-                <img src="../../images/facebookLogo.png" width="60">
-                <img src="../../images/instagramLogo.png" width="55">
+                <img src="../../../images/twitterLogo.png" width="100" class="twitterLogo">
+                <img src="../../../images/facebookLogo.png" width="60">
+                <img src="../../../images/instagramLogo.png" width="55">
             </div>
         </div>
         <!--Product Footer-->
@@ -109,10 +84,7 @@
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
-    <script src="../../js/getNotify.js"></script>
-    <script>
-        getNofity()
-    </script>
+    <script src="../../../js/getDetailNofify.js"></script>
 </body>
 </html>
 

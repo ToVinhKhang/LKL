@@ -15,7 +15,7 @@ var notifList
 function buildNotify(result) {
     var notifTable = document.querySelector("#notify-list")
     notifList = JSON.parse(result)["notify"]
-    for (var i = 0; i < notifList.length; i++) {
+    for (var i = notifList.length - 1; i >= 0; i--) {
         var notif = notifList[i]
         var notifyHTML = `
             <td>

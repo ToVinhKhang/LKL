@@ -16,7 +16,6 @@ router.get('/', (req, res, ext) => {
     res.sendFile('index.html', { root: path.join(__dirname, '../public') });
 })
 
-
 router.post('/linhtqapi', (req, res, ext) => {
     console.log(req.body)
 
@@ -39,6 +38,8 @@ router.use('/user', user);
 const notify = require('./notify');
 router.use('/notify', notify);
 
+const course = require('./course');
+router.use('/course', course);
 
 
 
