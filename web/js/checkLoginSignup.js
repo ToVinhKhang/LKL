@@ -21,15 +21,15 @@ function CheckInputUser(){
 	return true;
 }
 function CheckInputSignUp(){
-	let fullnameTemp = document.getElementById('fullname');
-	let phoneTemp = document.getElementById('phone');
-	let birthTemp = document.getElementById('birth');
-	let addressTemp = document.getElementById('address');
-	let idnumTemp = document.getElementById('idnum');
-	let usernameTemp = document.getElementById('username');
-	let passwordTemp = document.getElementById('pwd');
-	let cfpasswordTemp = document.getElementById('cfpwd');
-	let errorTemp = document.getElementById('ErrorMess');
+	let fullnameTemp = document.querySelector("#fullname");
+	let phoneTemp = document.querySelector("#phone");
+	let birthTemp = document.querySelector("#birth");
+	let addressTemp = document.querySelector("#address");
+	let idnumTemp = document.querySelector("#idnum");
+	let usernameTemp = document.querySelector("#username");
+	let passwordTemp = document.querySelector("#pwd");
+	let cfpasswordTemp = document.querySelector("#cfpwd");
+	let errorTemp = document.querySelector("#ErrorMess");
 
 	let fullname = fullnameTemp.value;
 	let phone = phoneTemp.value;
@@ -86,6 +86,7 @@ function CheckInputSignUp(){
 		return false;
 	}
 	errorTemp.innerHTML="";
+	signIn(fullname, phone, birth, address, idnum, name, pwd)
 	return true;
 }
 function ClearErrorMess(){
