@@ -1,195 +1,413 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../images/favicon.png"
+    />
     <script src="../../js/scripts.js"></script>
-    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+      <img id="logo" src="../../images/LKLlogo.png" /><a
+        class="navbar-brand"
+        href="#"
+      ></a>
     </nav>
 
     <!--DataView-->
     <div class="fit-content-w">
-        <div class="row">
-            <!--Menu-->
-            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <nav class="navbar navbar-light" style="padding-top: 0px;">
-                    <ul class="navbar-nav nav nav-pills" >
-                        <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava2.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
-                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentStaffAdmin</p></li>
-                        </div>
-                        <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="">Quản lý Khóa học</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học và thi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
-                        <div class="dropdown-divider"></div>
-                    </ul>
-                </nav>
-            </div>
-
-            <!--DataGridView-->
-            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <h4 style="padding-left: 15px;"><img src="../../images/courseList_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Khóa học</h4>
-
-                
-                <span onclick="openForm()" class="l-btn noselect">Thêm thông khóa học mới</span>
-                <!--Courses Info-->
-                <table id="MyTable" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Tên khóa học</th>
-                            <th>Mô tả</th>
-                            <th>Học phí</th>
-                            <th>Ngày bắt đầu</th>
-                            <th>Giảng viên</th>
-                            <th>Điều khiển</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="course-list">
-                    </tbody>
-                </table>
-            </div>
+      <div class="row">
+        <!--Menu-->
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+          <nav class="navbar navbar-light" style="padding-top: 0px">
+            <ul class="navbar-nav nav nav-pills">
+              <div style="border-style: ridge; border-radius: 10px">
+                <br /><img
+                  src="../../images/ava2.png"
+                  style="
+                    border-radius: 50%;
+                    height: 50%;
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+                <li id="menu" class="nav-item">
+                  <p class="nav-link" style="text-align: center">
+                    KentStaffAdmin
+                  </p>
+                </li>
+              </div>
+              <br />
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="notificationListM.html"
+                  >Quản lý Thông báo</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item active">
+                <a class="nav-link" href="">Quản lý Khóa học</a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="studyandexamScheduleM.html"
+                  >Quản lý Lịch học và thi</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="studentInfoM.html"
+                  >Quản lý TT Học viên</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="teacherInfoM.html"
+                  >Quản lý TT Giảng viên</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="../home.html">Đăng xuất</a>
+              </li>
+              <div class="dropdown-divider"></div>
+            </ul>
+          </nav>
         </div>
+
+        <!--DataGridView-->
+        <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <h4 style="padding-left: 15px">
+            <img
+              src="../../images/courseList_icon.png"
+              width="40"
+              height="40"
+              alt="folder icon"
+            />&thinsp;Quản lý Khóa học
+          </h4>
+
+          <span onclick="openForm()" class="l-btn noselect"
+            >Thêm thông khóa học mới</span
+          >
+          <!--Courses Info-->
+          <table id="MyTable" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Tên khóa học</th>
+                <th>Mô tả</th>
+                <th>Học phí</th>
+                <th>Ngày bắt đầu</th>
+                <th>Giảng viên</th>
+                <th>Điều khiển</th>
+              </tr>
+            </thead>
+
+            <tbody id="course-list"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
-        function openForm(){document.getElementById("popupAdd").style.display = "block";}
-        function closeForm(){document.getElementById("popupAdd").style.display = "none";}
-        function openFormEdit(){
-            document.getElementById("popupEdit").style.display = "block";
-        }
-        function closeFormEdit(){document.getElementById("popupEdit").style.display = "none";}
+      function openForm() {
+        document.getElementById("popupAdd").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("popupAdd").style.display = "none";
+      }
+
+      function openFormEdit(course_idx) {
+        document.getElementById("popupEdit").style.display = "block";
+        setEditCourseValue(course_idx);
+      }
+
+      function closeFormEdit() {
+        document.getElementById("popupEdit").style.display = "none";
+      }
     </script>
 
     <!--PopupAdd Form-->
-    <div class="form-popup" id="popupAdd" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Thêm khóa học</b></h1>
-            <label for="nameCourse"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCourse">
-            <label for="tuitionFees"><b>Học phí</b></label>
-            <input type="text" placeholder="Nhập học phí khóa học" name="tuitionFees">
-            <label for="daystartCourse"><b>Ngày bắt đầu</b></label>
-            <input type="text" placeholder="Nhập ngày bắt đầu khóa học" name="daystartCourse">
-            <label for="teacher"><b>Giảng viên</b></label>
-            <input type="text" placeholder="Nhập tên giảng viên giảng dạy" name="teacher">
-            <label for="descriptionCourse"><b>Mô tả</b></label>
-            <textarea type="text" id="descriptionCourse" name="descriptionCourse" placeholder="Nhập mô tả khóa học" style="height:180px"></textarea>
-            <button type="submit" class="btn">Thêm</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
-        </form>
+    <div
+      class="form-popup"
+      id="popupAdd"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Thêm khóa học</b></h1>
+        <label for="nameCourse"><b>Tên khóa học</b></label>
+        <input
+          id="course-name"
+          type="text"
+          placeholder="Nhập tên khóa học"
+          name="nameCourse"
+        />
+        <label for="tuitionFees"><b>Học phí</b></label>
+        <input
+          id="course-fee"
+          type="text"
+          placeholder="Nhập học phí khóa học"
+          name="tuitionFees"
+        />
+        <label for="daystartCourse"><b>Ngày bắt đầu</b></label>
+        <input
+          id="course-startdate"
+          type="text"
+          placeholder="Nhập ngày bắt đầu khóa học"
+          name="daystartCourse"
+        />
+        <label for="teacher"><b>Giảng viên</b></label>
+        <input
+          id="course-teacher"
+          type="text"
+          placeholder="Nhập tên giảng viên giảng dạy"
+          name="teacher"
+        />
+        <label for="course-des"><b>Mô tả</b></label>
+        <textarea
+          type="text"
+          id="course-des"
+          name="descriptionCourse"
+          placeholder="Nhập mô tả khóa học"
+          style="height: 180px"
+        ></textarea>
+        <button type="submit" class="btn" onclick="handleAddCourse()">
+          Thêm
+        </button>
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Đóng
+        </button>
+      </div>
     </div>
 
     <!--PopupEdit Form-->
-    <div class="form-popup" id="popupEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Sửa đổi TT khóa học</b></h1>
-            <label for="nameCourse"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCourse" value="Lập trình Game cơ bản">
-            <label for="tuitionFees"><b>Học phí</b></label>
-            <input type="text" placeholder="Nhập học phí khóa học" name="tuitionFees" value="2 500 000">
-            <label for="daystartCourse"><b>Ngày bắt đầu</b></label>
-            <input type="text" placeholder="Nhập ngày bắt đầu khóa học" name="daystartCourse" value="02/08/2020">
-            <label for="teacher"><b>Giảng viên</b></label>
-            <input type="text" placeholder="Nhập tên giảng viên giảng dạy" name="teacher" value="Mai Văn Mạnh">
-            <label for="descriptionCourse"><b>Mô tả</b></label>
-            <textarea type="text" id="descriptionCourse" name="descriptionCourse" placeholder="Nhập mô tả khóa học" style="height:180px">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam ipsum ex repudiandae enim? Tempora autem voluptatibus asperiores odio non, nemo aspernatur dolor mollitia repellat dignissimos veritatis sapiente quam ut voluptate.
-            </textarea>
-            <button type="submit" class="btn">Xác nhận</button>
-            <button type="button" class="btn cancel" onclick="closeFormEdit()">Đóng</button>
-        </form>
+    <div
+      class="form-popup"
+      id="popupEdit"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Sửa đổi TT khóa học</b></h1>
+        <label for="nameCourse"><b>Tên khóa học</b></label>
+        <input
+          id="course-edit-name"
+          type="text"
+          placeholder="Nhập tên khóa học"
+          name="nameCourse"
+        />
+        <label for="tuitionFees"><b>Học phí</b></label>
+        <input
+          id="course-edit-fee"
+          type="text"
+          placeholder="Nhập học phí khóa học"
+          name="tuitionFees"
+        />
+        <label for="daystartCourse"><b>Ngày bắt đầu</b></label>
+        <input
+          id="course-edit-startdate"
+          type="text"
+          placeholder="Nhập ngày bắt đầu khóa học"
+          name="daystartCourse"
+        />
+        <label for="teacher"><b>Giảng viên</b></label>
+        <input
+          id="course-edit-teacher"
+          type="text"
+          placeholder="Nhập tên giảng viên giảng dạy"
+          name="teacher"
+        />
+        <label for="course-edit-des"><b>Mô tả</b></label>
+        <textarea
+          type="text"
+          id="course-edit-des"
+          name="descriptionCourse"
+          placeholder="Nhập mô tả khóa học"
+          style="height: 180px"
+        >
+        </textarea>
+        <button type="submit" onclick="handleEditCourse()" class="btn">
+          Xác nhận
+        </button>
+        <button type="button" class="btn cancel" onclick="closeFormEdit()">
+          Đóng
+        </button>
+      </div>
     </div>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Xóa</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Xóa</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Đóng
+            </button>
 
-                    <input id='deleteitem' type='hidden' name='confirm'>
-                    <button onclick="handleDeleteCourse()" type="submit" class="btn btn-danger">Xác nhận</button>
-                </div>
-            </div>
+            <input id="deleteitem" type="hidden" name="confirm" />
+            <button
+              onclick="handleDeleteCourse()"
+              type="submit"
+              class="btn btn-danger"
+            >
+              Xác nhận
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--Footer-->
     <div id="footer">
-        <div class="row">
-            <!--Map Picture-->
-            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
-            <!--Info Footer-->
-            <div class="infoFooter">
-                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
-                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
-                <h>Hotline: (+84) 0987654321</h><br>
-                <h>Email: lklsupport@gmail.com</h><br>
-                <h>Copyright © 2020 by lkledu.vn</h><br>
-                <!--Some Other Media-->
-                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
-                <img src="../../images/facebookLogo.png" width="60">
-                <img src="../../images/instagramLogo.png" width="55">
-            </div>
+      <div class="row">
+        <!--Map Picture-->
+        <img
+          src="../../images/map.png"
+          width="400"
+          heigh="400"
+          class="flex map"
+        />
+        <!--Info Footer-->
+        <div class="infoFooter">
+          <h>Nhóm phát triển phần mềm LKL Edu</h><br />
+          <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br />
+          <h>Hotline: (+84) 0987654321</h><br />
+          <h>Email: lklsupport@gmail.com</h><br />
+          <h>Copyright © 2020 by lkledu.vn</h><br />
+          <!--Some Other Media-->
+          <img
+            src="../../images/twitterLogo.png"
+            width="100"
+            class="twitterLogo"
+          />
+          <img src="../../images/facebookLogo.png" width="60" />
+          <img src="../../images/instagramLogo.png" width="55" />
         </div>
-        <!--Product Footer-->
-        <div class="productFooter">
-            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
-            <p>Producted by LKL Software Team.</p>
-        </div>
+      </div>
+      <!--Product Footer-->
+      <div class="productFooter">
+        <p>
+          <img
+            src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"
+          />
+        </p>
+        <p>Producted by LKL Software Team.</p>
+      </div>
     </div>
 
     <script src="../../js/getCourseForModerator.js"></script>
     <script src="../../js/addCourse.js"></script>
+    <script src="../../js/deleteCourse.js"></script>
+    <script src="../../js/updateCourse.js"></script>
     <script>
-        getCourse()
+      getCourse();
 
-        let selectedCourse;
-        
-        function makeClickDeleteEvent(course_idx) {
-            selectedCourse = courseList[course_idx]
-            $('#myModal').modal({
-                backdrop: 'static',
-                keyboard: false
-            });
-        }
+      let selectedCourse;
 
-        
-        function handleDeleteCourse() {
-            // deleteNotify(selectedCourse.id)
-            window.location.reload()
-        }
+      function makeClickDeleteEvent(course_idx) {
+        selectedCourse = courseList[course_idx];
+        $("#myModal").modal({
+          backdrop: "static",
+          keyboard: false,
+        });
+      }
+
+      function handleDeleteCourse() {
+        console.log(selectedCourse);
+        deleteCourse(selectedCourse.id);
+      }
+
+      function handleAddCourse() {
+        var courseName =
+          document.querySelector("#course-name").value || "Chưa đặt";
+        var courseDes =
+          document.querySelector("#course-des").value || "Chưa đặt";
+        var courseFee =
+          document.querySelector("#course-fee").value || "Chưa đặt";
+        var courseStartDate =
+          document.querySelector("#course-startdate").value || "Chưa đặt";
+        var courseTeacher =
+          document.querySelector("#course-teacher").value || "Chưa đặt";
+
+        addCourse(
+          courseName,
+          courseDes,
+          courseFee,
+          courseStartDate,
+          courseTeacher
+        );
+
+        window.location.reload();
+      }
+
+      function setEditCourseValue(course_idx) {
+        selectedCourse = courseList[course_idx];
+        document.querySelector("#course-edit-name").value =
+          selectedCourse.course_name;
+        document.querySelector("#course-edit-des").value =
+          selectedCourse.course_des;
+        document.querySelector("#course-edit-fee").value =
+          selectedCourse.course_fee;
+        document.querySelector("#course-edit-teacher").value =
+          selectedCourse.course_teacher;
+        document.querySelector("#course-edit-startdate").value =
+          selectedCourse.course_startdate;
+      }
+
+      function handleEditCourse() {
+        var id = selectedCourse.id;
+        var courseName =
+          document.querySelector("#course-edit-name").value || "Chưa đặt";
+        var courseDes =
+          document.querySelector("#course-edit-des").value || "Chưa đặt";
+        var courseFee =
+          document.querySelector("#course-edit-fee").value || "Chưa đặt";
+        var courseStartDate =
+          document.querySelector("#course-edit-startdate").value || "Chưa đặt";
+        var courseTeacher =
+          document.querySelector("#course-edit-teacher").value || "Chưa đặt";
+
+        updateCourse(
+          id,
+          courseName,
+          courseDes,
+          courseFee,
+          courseStartDate,
+          courseTeacher
+        );
+
+        window.location.reload();
+      }
     </script>
-</body>
+  </body>
 </html>
-

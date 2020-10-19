@@ -1,6 +1,7 @@
 require('module-alias/register')
 require('dotenv').config()
 require('express-async-errors')
+const helmet = require("helmet")
 
 var express = require('express')
 var Routering = require('./routes/index')
@@ -24,6 +25,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use('/', Routering)
 app.use([notfoundapi, errorHandler])
+app.use(helmet())
 
 app.listen(PORT)
 

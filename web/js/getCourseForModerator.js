@@ -36,11 +36,11 @@ function buildCourse(result) {
             <td>
                 <div class="d-flex">
                     <div>
-                        <i onclick="openFormEdit()"class="mdi mdi-pen l-icon l-icon-md"></i>
+                        <i onclick="openFormEdit(${i})" class="mdi mdi-pen l-icon l-icon-md"></i>
                     </div>
                     <div class="l-spacer"></div>
                     <div>
-                        <i onclick="makeClickDeleteEvent()" class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
+                        <i onclick="makeClickDeleteEvent('${i}')" class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
                     </div>
                 </div>
             </td>

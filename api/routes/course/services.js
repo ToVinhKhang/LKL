@@ -22,14 +22,28 @@ async function addCourse(courseName, courseDes, courseFee, courseStartDate, cour
   return course;
 }
 
-async function deleteNotify(id) {
-  await Notify.query().deleteById(id);
+async function deleteCourse(id) {
+  await Course.query().deleteById(id);
 
   return { mess: "deleted" };
+}
+
+async function updateCourse(id, courseName, courseDes, courseFee, courseStartDate, courseTeacher) {
+  await Course.query().findById(id)
+  .patch({
+    course_name: courseName,
+    course_des: courseDes,
+    course_fee: courseFee,
+    course_startdate: courseStartDate,
+    course_teacher: courseTeacher,
+  });
+
+  return { mess: "updated" };
 }
 
 module.exports = {
   getCourse,
   addCourse,
-  deleteNotify,
+  deleteCourse,
+  updateCourse
 };

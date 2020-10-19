@@ -6,6 +6,8 @@ require('dotenv').config();
 
 require('express-async-errors');
 
+var helmet = require("helmet");
+
 var express = require('express');
 
 var Routering = require('./routes/index');
@@ -35,5 +37,6 @@ app.use(express.urlencoded({
 }));
 app.use('/', Routering);
 app.use([notfoundapi, errorHandler]);
+app.use(helmet());
 app.listen(PORT);
 module.exports = app;

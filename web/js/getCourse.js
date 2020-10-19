@@ -34,7 +34,7 @@ function buildCourse(result) {
                 ${course.course_teacher}
             </td>
             <td>
-                <span class="btn-x" style="color: rgb(245, 108, 45);">
+                <span class="btn-x" style="color: rgb(245, 108, 45);" onclick="courseSignIn(${i})">
                     <i class="mdi mdi-clipboard-edit-outline"></i>
                     Đăng ký
                 </span>

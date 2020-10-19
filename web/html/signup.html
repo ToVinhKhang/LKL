@@ -25,8 +25,8 @@
     <!--Signup Form-->
     <div class="container">
         <!--Format Form-->
-        <form action="" onsubmit="return CheckInputSignUp()" method="POST" style="-ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); top: 50%; margin-bottom: 50px; margin-top: 150px; min-width: 400px;left: 50%; position: absolute;">
+        <div style="-ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); top: 50%; margin-bottom: 50px; margin-top: 150px; min-width: 700px;left: 50%; position: absolute;">
             <!--Form-->
             <h2>Đăng ký tài khoản</h2>
             <div class="form-group">
@@ -64,12 +64,27 @@
 
             <!--Buttons-->
             <p id="ErrorMess"></p>
-            <button type="submit" class="btn btn-dark" style='width: 120px;'>Đăng ký</button>
+            <button onclick="handleSignIn()" type="submit" class="btn btn-dark" style='width: 120px;'>Đăng ký</button>
             <button type="reset" class="btn">Làm mới</button>
             <a href="login.html" style='float: right;' type="submit" class="btn btn-dark">Back</a>
-        </form>
+        </div>
     </div>
     <br><br><br>
+    <br><br><br>
+    <script src="../js/signin.js"></script>
+    <script>
+        function handleSignIn() {
+            var name = document.querySelector("#fullname").value
+            var phone = document.querySelector("#phone").value
+            var birth = document.querySelector("#birth").value
+            var address = document.querySelector("#address").value
+            var idnum = document.querySelector("#idnum").value
+            var username = document.querySelector("#username").value
+            var password = document.querySelector("#pwd").value
+
+            signIn(name, phone, birth, address, idnum, username, password)
+        }
+    </script>
 </body>
 </html>
 
