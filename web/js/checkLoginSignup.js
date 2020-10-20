@@ -23,7 +23,7 @@ function CheckInputUser(){
 function CheckInputSignUp(){
 	let fullnameTemp = document.querySelector("#fullname");
 	let phoneTemp = document.querySelector("#phone");
-	let birthTemp = document.querySelector("#birth");
+	let birthTemp = document.getElementById("birth");
 	let addressTemp = document.querySelector("#address");
 	let idnumTemp = document.querySelector("#idnum");
 	let usernameTemp = document.querySelector("#username");
@@ -54,6 +54,12 @@ function CheckInputSignUp(){
 	else if(birth === ""){
 		errorTemp.innerHTML='Vui lòng nhập năm sinh';
 		birthTemp.focus();
+		return false;
+	}
+	else if(birth.length!=4 || birth!=parseInt(birth)){
+		errorTemp.innerHTML='Năm sinh không hợp lệ';
+		birthTemp.focus();
+		return false;
 	}
 	else if(address === ""){
 		errorTemp.innerHTML='Vui lòng nhập địa chỉ';
@@ -62,6 +68,11 @@ function CheckInputSignUp(){
 	}
 	else if(idnum === ""){
 		errorTemp.innerHTML='Vui lòng nhập số CMND';
+		idnumTemp.focus();
+		return false;
+	}
+	else if(idnum!=parseInt(idnum)){
+		errorTemp.innerHTML='CMND không hợp lệ';
 		idnumTemp.focus();
 		return false;
 	}
@@ -92,3 +103,5 @@ function CheckInputSignUp(){
 function ClearErrorMess(){
 	let errorTemp = document.getElementById('ErrorMess').innerHTML="";
 }
+
+
