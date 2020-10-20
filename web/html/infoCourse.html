@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>LKL Edu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel ="stylesheet" type="text/css" href="../css/style.css">
+    <link rel='icon' type="image/png" sizes="16x16" href="../images/favicon.png">
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="first-eye">
+            <div class="p-absolute" style="width: 100%;background-color: #00000024;"></div>
+
+            <!--Header-->
+            <div class="p-absolute container-w z-index-h l-header">
+                <div class="l-logo">
+                    <a class="navbar-brand" href="#">
+                        <img id="logo" src="../images/LKLlogo.png">
+                    </a>
+                </div>
+                <div class="header-btn">
+                    <div class="d-flex header-btn-nor">
+                        <div><a class="nav-link blackText" href="home.html"><b>Giới thiệu</b></a></div>
+                        <div><a class="nav-link blackText" href="infoTeacher.html"><b>Giảng viên</b></a></div>
+                        <div><a class="nav-link" style="color: white;" href="#"><b>Khóa học</b></a></div>
+                    </div>
+                    <div>
+                        <a href="./signup.html">
+                            <button style="color: #D66324; border-color: #D66324; border-width: 3px; margin: 0 10px 0 10px;" type="button" class="btn">Ghi danh</button>
+                        </a>
+                    </div>
+                    <div>
+                        <!--Login-->
+                        <a href="./login.html">
+                            <button style="background-color: #D66324; color: white; border-color: #D66324; border-width: 3px; margin: 0 10px 0 10px;" type="submit" class="btn">Đăng nhập</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-w centroid">
+                <div class="flex-h">
+                    <div>
+                        <br>
+                    </div>
+        
+                    <!--Get Advices-->
+                    <div class="getAdvices" style="border-radius: 10px;">
+                        <form action="" onsubmit="return CheckInput()" method="POST">
+                            <div class="form-group"><input type="text" onclick="ClearErrorMess()" class="form-control" id="phone" placeholder="Số điện thoại" name="phone"></div>
+                            <div class="form-group"><input type="text" onclick="ClearErrorMess()" class="form-control" id="name" placeholder="Tên" name="name"></div>
+                            <select id="literacy" class="form-control">
+                                <option disabled selected value>Trình độ học vấn</option>
+                                <option value="Primary">Tiểu học</option>
+                                <option value="Secondary">Trung học cơ sở</option>
+                                <option value="High">Trung học phổ thông</option>
+                                <option value="College">Cao đẳng</option>
+                                <option value="University">Đại học</option>
+                                <option value="Other">Khác</option>
+                            </select>
+                            <p id="ErrorMess"></p>
+                            <button type="submit" class="btn btn-success colorSeeDetail width100Percent centroid">Nhận tư vấn</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Footer-->
+        <div id="footer" class="centroid">
+            <div class="container-w">
+                <div class="row">
+                    <!--Map Picture-->
+                    <img src="../images/map.png" width="400" heigh="400" class="flex map">
+                    <!--Info Footer-->
+                    <div class="infoFooter">
+                        <h>Nhóm phát triển phần mềm LKL Edu</h><br>
+                        <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
+                        <h>Hotline: (+84) 0987654321</h><br>
+                        <h>Email: lklsupport@gmail.com</h><br>
+                        <h>Copyright © 2020 by lkledu.vn</h><br>
+                        <!--Some Other Media-->
+                        <img src="../images/twitterLogo.png" width="100" class="twitterLogo">
+                        <img src="../images/facebookLogo.png" width="60">
+                        <img src="../images/instagramLogo.png" width="55">
+                    </div>
+                </div>
+                <!--Product Footer-->
+                <div class="productFooter">
+                    <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+                    <p>Producted by LKL Software Team.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
