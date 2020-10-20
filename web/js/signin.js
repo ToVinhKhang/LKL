@@ -1,4 +1,5 @@
-function signIn(name, phone, birth, address, idnum, username, password) {
+function signIn(name, phone, birth, address, idnum, username, password, next) {
+  activeElement("loading");
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -21,6 +22,11 @@ function signIn(name, phone, birth, address, idnum, username, password) {
 
   fetch("http://localhost:4000/user/signin", requestOptions)
     .then((response) => response.text())
-    .then((result) => console.log(result))
+    .then((result) => {
+      if (next === "#")
+        window.location.reload()
+      else
+        window.location.href= next
+    })
     .catch((error) => console.log("error", error));
 }

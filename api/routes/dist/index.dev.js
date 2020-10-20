@@ -4,8 +4,7 @@ var express = require('express');
 
 var router = express.Router();
 
-var path = require('path'); // var request = require('request')
-// check status
+var path = require('path'); // check status
 
 
 router.get('/', function (req, res, ext) {
@@ -29,14 +28,6 @@ router.post('/linhtqapi', function (req, res, ext) {
   res.send(message); // res.sendFile(path.join(__dirname + '/public/index.html')) 
 });
 
-var sensor = require('./mobile');
-
-router.use('/sendgps', sensor);
-
-var model = require('./model');
-
-router.use('/model', model);
-
 var user = require('./user');
 
 router.use('/user', user);
@@ -48,4 +39,8 @@ router.use('/notify', notify);
 var course = require('./course');
 
 router.use('/course', course);
+
+var student = require('./student');
+
+router.use('/student', student);
 module.exports = router;

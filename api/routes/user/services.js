@@ -70,9 +70,8 @@ async function signIn(username, password, role, detail) {
       phone: detail.phone,
       birth: detail.birth,
       CMND: detail.idnum,
-      address: detail.address
-    })
-
+      address: detail.address,
+    });
 
     trx.commit();
 

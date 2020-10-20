@@ -1,6 +1,7 @@
 "use strict";
 
-function signIn(name, phone, birth, address, idnum, username, password) {
+function signIn(name, phone, birth, address, idnum, username, password, next) {
+  activeElement("loading");
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
@@ -21,7 +22,7 @@ function signIn(name, phone, birth, address, idnum, username, password) {
   fetch("http://localhost:4000/user/signin", requestOptions).then(function (response) {
     return response.text();
   }).then(function (result) {
-    return console.log(result);
+    if (next === "#") window.location.reload();else window.location.href = next;
   })["catch"](function (error) {
     return console.log("error", error);
   });

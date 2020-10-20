@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="EN">
+
 <head>
     <meta charset="UTF-8">
     <title>LKL Edu</title>
@@ -8,9 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
-    
+
     <!-- icon -->
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
     <!-- icon -->
@@ -28,21 +29,29 @@
             <!--Menu-->
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                 <nav class="navbar navbar-light" style="padding-top: 0px;">
-                    <ul class="navbar-nav nav nav-pills" >
+                    <ul class="navbar-nav nav nav-pills">
                         <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava2.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
-                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentStaffAdmin</p></li>
+                            <br><img src="../../images/ava2.png"
+                                style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
+                            <li id="menu" class="nav-item">
+                                <p class="nav-link" style="text-align: center;">KentStaffAdmin</p>
+                            </li>
                         </div>
                         <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông
+                                báo</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a>
+                        </li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học và thi</a></li>
+                        <li id="menu" class="nav-item active"><a class="nav-link" href="studyandexamScheduleM.html">Quản
+                                lý Lịch học và thi</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học
+                                viên</a></li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng viên</a></li>
+                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng
+                                viên</a></li>
                         <div class="dropdown-divider"></div>
                         <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
                         <div class="dropdown-divider"></div>
@@ -52,10 +61,11 @@
 
             <!--DataGridView-->
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                <h4 style="padding-left: 15px;"><img src="../../images/studySchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Lịch học</h4>
-                
+                <h4 style="padding-left: 15px;"><img src="../../images/studySchedule_icon.png" width="40" height="40"
+                        alt="folder icon">&thinsp;Quản lý Lịch học</h4>
+
                 <span onclick="openFormS()" class="l-btn noselect">Thêm Lịch học</span>
-                
+
                 <!--Study Schedule Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -101,7 +111,8 @@
 
             <!--DataGridView-->
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                <h4 style="padding-left: 15px;"><img src="../../images/examSchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý Lịch thi</h4>
+                <h4 style="padding-left: 15px;"><img src="../../images/examSchedule_icon.png" width="40" height="40"
+                        alt="folder icon">&thinsp;Quản lý Lịch thi</h4>
                 <!--Exam Schedule Info-->
                 <span onclick="openFormE()" class="l-btn noselect">Thêm Lịch thi</span>
                 <table id="MyTable" class="table table-hover">
@@ -141,15 +152,15 @@
     </div>
 
     <script type="text/javascript">
-        function openFormS(){document.getElementById("popupFormS").style.display = "block";}
-        function closeFormS(){document.getElementById("popupFormS").style.display = "none";}
-        function openFormE(){document.getElementById("popupFormE").style.display = "block";}
-        function closeFormE(){document.getElementById("popupFormE").style.display = "none";}
+        function openFormS() { document.getElementById("popupFormS").style.display = "block"; }
+        function closeFormS() { document.getElementById("popupFormS").style.display = "none"; }
+        function openFormE() { document.getElementById("popupFormE").style.display = "block"; }
+        function closeFormE() { document.getElementById("popupFormE").style.display = "none"; }
 
-        function openFormSEdit(){document.getElementById("popupFormSEdit").style.display = "block";}
-        function closeFormSEdit(){document.getElementById("popupFormSEdit").style.display = "none";}
-        function openFormEEdit(){document.getElementById("popupFormEEdit").style.display = "block";}
-        function closeFormEEdit(){document.getElementById("popupFormEEdit").style.display = "none";}
+        function openFormSEdit() { document.getElementById("popupFormSEdit").style.display = "block"; }
+        function closeFormSEdit() { document.getElementById("popupFormSEdit").style.display = "none"; }
+        function openFormEEdit() { document.getElementById("popupFormEEdit").style.display = "block"; }
+        function closeFormEEdit() { document.getElementById("popupFormEEdit").style.display = "none"; }
     </script>
 
     <!--PopupAdd-->
@@ -282,12 +293,15 @@
         </div>
         <!--Product Footer-->
         <div class="productFooter">
-            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png" /></p>
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
 
     <script src="../../js/index.js"></script>
+    <script>
+        getWeekDate();
+    </script>
 </body>
-</html>
 
+</html>

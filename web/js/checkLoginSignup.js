@@ -86,7 +86,7 @@ function CheckInputSignUp(){
 		return false;
 	}
 	errorTemp.innerHTML="";
-	signIn(fullname, phone, birth, address, idnum, name, pwd)
+	signIn(fullname, phone, birth, address, idnum, name, pwd, "./home.html")
 	return true;
 }
 function ClearErrorMess(){

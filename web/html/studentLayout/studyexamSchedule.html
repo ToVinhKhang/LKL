@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="EN">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png" />
 </head>
 
 <body>
     <div id="loading" class="loading">
-        <div class="loading-overlay"> </div>
+        <div class="loading-overlay"></div>
         <div class="spinner"></div>
     </div>
 
-
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+        <img id="logo" src="../../images/LKLlogo.png" /><a class="navbar-brand" href="#"></a>
     </nav>
 
     <!--DataView-->
@@ -29,22 +29,43 @@
         <div class="row">
             <!--Menu-->
             <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <nav class="navbar navbar-light" style="padding-top: 0px;">
-                    <ul class="navbar-nav nav nav-pills" >
-                        <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava3.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
-                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentDeveloper</p></li>
+                <nav class="navbar navbar-light" style="padding-top: 0px">
+                    <ul class="navbar-nav nav nav-pills">
+                        <div style="border-style: ridge; border-radius: 10px">
+                            <br /><img src="../../images/ava3.png" style="
+                    border-radius: 50%;
+                    height: 50%;
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  " />
+                            <li id="menu" class="nav-item">
+                                <p class="nav-link" style="text-align: center">
+                                    KentDeveloper
+                                </p>
+                            </li>
                         </div>
-                        <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationList.html">Thông báo</a></li>
+                        <br />
+                        <li id="menu" class="nav-item">
+                            <a class="nav-link" href="notificationList.html">Thông báo</a>
+                        </li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="courseList.html">Khóa học</a></li>
+                        <li id="menu" class="nav-item">
+                            <a class="nav-link" href="courseList.html">Khóa học</a>
+                        </li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="">Lịch học/Lịch thi</a></li>
+                        <li id="menu" class="nav-item active">
+                            <a class="nav-link" href="">Lịch học/Lịch thi</a>
+                        </li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="tuitionFee.html">Học phí</a></li>
+                        <li id="menu" class="nav-item">
+                            <a class="nav-link" href="tuitionFee.html">Học phí</a>
+                        </li>
                         <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
+                        <li id="menu" class="nav-item">
+                            <a class="nav-link" href="../home.html">Đăng xuất</a>
+                        </li>
                         <div class="dropdown-divider"></div>
                     </ul>
                 </nav>
@@ -52,7 +73,10 @@
 
             <!--DataGridView-->
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                <h4 style="padding-left: 15px;"><img src="../../images/studySchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Lịch học</h4>
+                <h4 style="padding-left: 15px">
+                    <img src="../../images/studySchedule_icon.png" width="40" height="40"
+                        alt="folder icon" />&thinsp;Lịch học
+                </h4>
                 <!--Study Schedule Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -90,18 +114,21 @@
                 </table>
 
                 <!--Change Page-->
-                <p style="border: 1px solid black;"></p>
-            
-                <div class="d-flex" style="justify-content: space-between; align-items: center;">
-                    <span id='Previous' class="btn-x noselect">Tuần trước</span>
+                <p style="border: 1px solid black"></p>
+
+                <div class="d-flex" style="justify-content: space-between; align-items: center">
+                    <span id="Previous" class="btn-x noselect">Tuần trước</span>
                     <span id="show-date"></span>
-                    <span id='Next' class="btn-x noselect">Tuần sau</span>
+                    <span id="Next" class="btn-x noselect">Tuần sau</span>
                 </div>
             </div>
 
             <!--DataGridView-->
             <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                <h4 style="padding-left: 15px;"><img src="../../images/examSchedule_icon.png" width="40" height="40" alt="folder icon">&thinsp;Lịch thi</h4>
+                <h4 style="padding-left: 15px">
+                    <img src="../../images/examSchedule_icon.png" width="40" height="40"
+                        alt="folder icon" />&thinsp;Lịch thi
+                </h4>
                 <!--Exam Schedule Info-->
                 <table id="MyTable" class="table table-hover">
                     <thead>
@@ -142,7 +169,7 @@
             </div>
         </div>
     </div>
-    <br><br><br><br>
+    <br /><br /><br /><br />
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -150,17 +177,23 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 id='nameheader' class="modal-title">Modal Header</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 id="nameheader" class="modal-title">Modal Header</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa <b><span id='namequestion'></span></b>?</p>
+                    <p>
+                        Bạn có chắc chắn muốn xóa <b><span id="namequestion"></span></b>?
+                    </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Đóng
+                    </button>
 
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm' value='??'>
+                    <form action="" method="POST" style="display: inline">
+                        <input id="deleteitem" type="hidden" name="confirm" value="??" />
                         <button type="submit" class="btn btn-danger">Xác nhận</button>
                     </form>
                 </div>
@@ -172,27 +205,32 @@
     <div id="footer">
         <div class="row">
             <!--Map Picture-->
-            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
+            <img src="../../images/map.png" width="400" heigh="400" class="flex map" />
             <!--Info Footer-->
             <div class="infoFooter">
-                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
-                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
-                <h>Hotline: (+84) 0987654321</h><br>
-                <h>Email: lklsupport@gmail.com</h><br>
-                <h>Copyright © 2020 by lkledu.vn</h><br>
+                <h>Nhóm phát triển phần mềm LKL Edu</h><br />
+                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br />
+                <h>Hotline: (+84) 0987654321</h><br />
+                <h>Email: lklsupport@gmail.com</h><br />
+                <h>Copyright © 2020 by lkledu.vn</h><br />
                 <!--Some Other Media-->
-                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
-                <img src="../../images/facebookLogo.png" width="60">
-                <img src="../../images/instagramLogo.png" width="55">
+                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo" />
+                <img src="../../images/facebookLogo.png" width="60" />
+                <img src="../../images/instagramLogo.png" width="55" />
             </div>
         </div>
         <!--Product Footer-->
         <div class="productFooter">
-            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
+            <p>
+                <img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png" />
+            </p>
             <p>Producted by LKL Software Team.</p>
         </div>
     </div>
     <script src="../../js/index.js"></script>
+    <script>
+        getWeekDate();
+    </script>
 </body>
-</html>
 
+</html>

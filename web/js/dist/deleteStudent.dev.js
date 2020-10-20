@@ -1,22 +1,22 @@
 "use strict";
 
-function deleteCourse(id) {
+function deleteStudent(id) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
-    "id": id
+    id: id
   });
   var requestOptions = {
-    method: 'POST',
+    method: "POST",
     headers: myHeaders,
     body: raw,
-    redirect: 'follow'
+    redirect: "follow"
   };
-  fetch("http://localhost:4000/course/delete", requestOptions).then(function (response) {
+  fetch("http://localhost:4000/student/delete", requestOptions).then(function (response) {
     return response.text();
   }).then(function (result) {
-    return window.location.reload();
+    return console.log(result);
   })["catch"](function (error) {
-    return console.log('error', error);
+    return console.log("error", error);
   });
 }
