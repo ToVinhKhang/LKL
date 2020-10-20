@@ -67,6 +67,7 @@
                 </div>
             </div>
 
+
             <div class="container-w centroid">
                 <div class="flex-h">
                     <div>
@@ -94,6 +95,20 @@
                 </div>
             </div>
         </div>
+
+
+        <!--Alert-->
+            <!--Message Success-->
+            <div onclick="closeMessage()" id="messageFromSignup" class="alert alert-success" style="width: 600px; text-align: center; margin: auto; position: fixed;right:0; bottom: 0; display: block;">
+                <a class="close" data-dismiss="alert" aria-label="close" >&times;</a>
+                <span>Đăng ký tài khoản thành công</span>
+            </div>
+            <!--Message Fail-->
+            <div onclick="closeMessage()" id="messageFromSignup" class="alert alert-danger" style="width: 600px; text-align: center; margin: auto; position: fixed;right:0; bottom: 0; display: none;">
+                <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <span>Đăng ký thất bại. Hệ thống đang quá tải vui lòng quay lại sau</span>
+            </div>
+
 
         <!--Detail-->
         <div class="detail centroid">
@@ -255,3 +270,4 @@
     </div>
 </body>
 </html>
+
