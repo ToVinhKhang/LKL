@@ -1,21 +1,27 @@
 "use strict";
 
-function deleteStudent(id) {
+function addTeacher(name, phone, birth, address, idnum, username, password) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   var raw = JSON.stringify({
-    id: id
+    name: name,
+    birth: birth,
+    phone: phone,
+    CMND: idnum,
+    address: address,
+    username: username,
+    password: password
   });
   var requestOptions = {
-    method: "POST",
+    method: "PUT",
     headers: myHeaders,
     body: raw,
     redirect: "follow"
   };
-  fetch("http://localhost:4000/student/delete", requestOptions).then(function (response) {
+  fetch("http://localhost:4000/teacher/add", requestOptions).then(function (response) {
     return response.text();
   }).then(function (result) {
-    return console.log(result);
+    return window.location.reload();
   })["catch"](function (error) {
     return console.log("error", error);
   });

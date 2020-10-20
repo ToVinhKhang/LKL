@@ -1,13 +1,32 @@
 var express = require("express");
 var router = express.Router();
-const { getStudent, deleteStudent, updateStudentInfor } = require("./services");
+const {
+  getTeacher,
+  addTeacher,
+  deleteTeacher,
+  updateTeacherInfor,
+} = require("./services");
 
 router.get("/", async (req, res, ext) => {
-  res.send(await getStudent());
+  res.send(await getTeacher());
+});
+
+router.put("/add", async (req, res, ext) => {
+  const name = req.body.name;
+  const birth = req.body.birth;
+  const phone = req.body.phone;
+  const CMND = req.body.CMND;
+  const address = req.body.address;
+  const username = req.body.username;
+  const password = req.body.password;
+
+  res.send(
+    await addTeacher(name, birth, phone, CMND, address, username, password)
+  );
 });
 
 router.post("/delete", async (req, res, ext) => {
-  res.send(await deleteStudent(req.body.id));
+  res.send(await deleteTeacher(req.body.id));
 });
 
 router.post("/update", async (req, res, ext) => {
@@ -21,7 +40,7 @@ router.post("/update", async (req, res, ext) => {
   var password = req.body.password;
 
   res.send(
-    await updateStudentInfor(
+    await updateTeacherInfor(
       id,
       name,
       birth,

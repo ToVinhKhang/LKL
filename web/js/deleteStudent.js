@@ -13,6 +13,6 @@ function deleteStudent(id) {
 
   fetch("http://localhost:4000/student/delete", requestOptions)
     .then((response) => response.text())
-    .then((result) => console.log(result))
+    .then((result) => window.location.reload())
     .catch((error) => console.log("error", error));
 }

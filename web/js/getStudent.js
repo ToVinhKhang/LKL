@@ -26,7 +26,7 @@ function buildStudent(result) {
             <td>
                 <div class="d-flex">
                     <div>
-                        <i onclick="openFormEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
+                        <i onclick="handleOpenFormEditStudentInfor(${i})" class="mdi mdi-pen l-icon l-icon-md"></i>
                     </div>
                     <div class="l-spacer"></div>
                     <div>
