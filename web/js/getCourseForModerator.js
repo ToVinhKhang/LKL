@@ -1,10 +1,19 @@
 var courseList;
 
 function getCourse() {
-  var requestOptions = {
-    method: "GET",
-    redirect: "follow",
-  };
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+  
+    var raw = JSON.stringify({
+      student_id: undefined,
+    });
+  
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
 
   fetch("http://localhost:4000/course", requestOptions)
     .then((response) => response.text())

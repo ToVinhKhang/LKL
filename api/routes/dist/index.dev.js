@@ -47,4 +47,8 @@ router.use("/student", student);
 var teacher = require("./teacher");
 
 router.use("/teacher", teacher);
+
+var student_course = require("./student_course");
+
+router.use("/student_course", student_course);
 module.exports = router;

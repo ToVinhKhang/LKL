@@ -2,35 +2,36 @@ const { User } = require("@models/user");
 const { Student } = require("@models/student");
 const { hashPassword } = require("@utils/helper");
 const { v4: uuidv4 } = require("uuid");
+const { Token } = require("@models/token");
 
-async function login({ body }) {
+async function login(username, password) {
   const trx = await User.startTransaction();
+  const trx2 = await Token.startTransaction();
   try {
-    user = await User.findByCredentials(
-      body.username,
-      body.password.toString()
-    );
+    const user = await User.findByCredentials(username, password.toString());
 
-    if (!user) {
-      const err = new Error("Login failed! Check authentication credentials");
-      err.status = 401;
-
-      throw err;
-    }
-
-    if (user.disabled) {
-      const err = new Error("Tài khoản người dùng đã bị khóa");
-      err.status = 401;
-
-      throw err;
-    }
-
+    const id = user.id;
     const token = await user.generateAuthToken(trx, "web");
+    const token_i = await Token.query().findById("id");
+
+    if (!token_i) {
+      await Token.query().findById(id).patch({
+        token: token,
+      });
+    } else {
+      await Token.query().insert({
+        id: id,
+        token: token,
+      });
+    }
+
     trx.commit();
+    trx2.commit();
 
     return { user, token };
   } catch (error) {
     trx.rollback();
+    trx2.rollback();
     throw error;
   }
 }

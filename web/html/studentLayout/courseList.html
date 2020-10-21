@@ -1,122 +1,187 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../images/favicon.png"
+    />
     <script src="../../js/scripts.js"></script>
-    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-</head>
+    <link
+      href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="../../js/index.js"></script>
+  </head>
 
-<body>
+  <body>
+    <!-- loading -->
+    <div id="loading" class="loading">
+      <div class="loading-overlay"></div>
+      <div class="spinner"></div>
+    </div>
+
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+      <img id="logo" src="../../images/LKLlogo.png" /><a
+        class="navbar-brand"
+        href="#"
+      ></a>
     </nav>
 
     <!--DataView-->
     <div class="fit-content-w">
-        <div class="row">
-            <!--Menu-->
-            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <nav class="navbar navbar-light" style="padding-top: 0px;">
-                    <ul class="navbar-nav nav nav-pills" >
-                        <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava3.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
-                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentDeveloper</p></li>
-                        </div>  
-                        <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationList.html">Thông báo</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="">Khóa học</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studyexamSchedule.html">Lịch học/Lịch thi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="tuitionFee.html">Học phí</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
-                        <div class="dropdown-divider"></div>
-                    </ul>
-                </nav>
-            </div>
-
-            <!--DataGridView-->
-            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <h4 style="padding-left: 15px;"><img src="../../images/courseList_icon.png" width="40" height="40" alt="folder icon">&thinsp;Danh sách khóa học</h4>
-                <!--Courses Info-->
-                <table id="MyTable" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Tên khóa học</th>
-                            <th>Mô tả</th>
-                            <th>Học phí</th>
-                            <th>Ngày bắt đầu</th>
-                            <th>Giảng viên</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="course-list">
-                    </tbody>
-                </table>
-            </div>
+      <div class="row">
+        <!--Menu-->
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+          <nav class="navbar navbar-light" style="padding-top: 0px">
+            <ul class="navbar-nav nav nav-pills">
+              <div style="border-style: ridge; border-radius: 10px">
+                <br /><img
+                  src="../../images/ava3.png"
+                  style="
+                    border-radius: 50%;
+                    height: 50%;
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+                <li id="menu" class="nav-item">
+                  <p class="nav-link" style="text-align: center">
+                    {{ Tên học viên }}
+                  </p>
+                </li>
+              </div>
+              <br />
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="notificationList.html">
+                  Thông báo
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item active">
+                <a class="nav-link" href="">
+                  Khóa học
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="studyexamSchedule.html">
+                  Lịch học / Lịch thi
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="tuitionFee.html">
+                  Học phí
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="../home.html">
+                  Đăng xuất
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+            </ul>
+          </nav>
         </div>
+
+        <!--DataGridView-->
+        <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <h4 style="padding-left: 15px">
+            <img
+              src="../../images/courseList_icon.png"
+              width="40"
+              height="40"
+              alt="folder icon"
+            />&thinsp;Danh sách khóa học
+          </h4>
+          <!--Courses Info-->
+          <table id="MyTable" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Tên khóa học</th>
+                <th>Mô tả</th>
+                <th>Học phí</th>
+                <th>Ngày bắt đầu</th>
+                <th>Giảng viên</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody id="course-list"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <br><br><br><br>
-
-
-    <!--Popup Form-->
-    <div class="form-popup" id="popupForm" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Đăng ký khóa học</b></h1>
-            <label for="nameCourse"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCourse">
-            <label for="teacher"><b>Giảng viên phụ trách</b></label>
-            <input type="text" placeholder="Nhập tên giảng viên" name="teacher">
-            <label for="daystartCourse"><b>Ngày bắt đầu khóa học</b></label>
-            <input type="text" placeholder="Nhập thời gian bắt đầu" name="daystartCourse">
-            <label for="tuitionFee"><b>Học phí</b></label>
-            <input type="text" placeholder="Nhập học phí" name="tuitionFee">
-            <button type="submit" class="btn">Xác nhận</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
-        </form>
-    </div>
-
+    <br /><br /><br /><br />
 
     <!--Footer-->
     <div id="footer">
-        <div class="row">
-            <!--Map Picture-->
-            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
-            <!--Info Footer-->
-            <div class="infoFooter">
-                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
-                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
-                <h>Hotline: (+84) 0987654321</h><br>
-                <h>Email: lklsupport@gmail.com</h><br>
-                <h>Copyright © 2020 by lkledu.vn</h><br>
-                <!--Some Other Media-->
-                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
-                <img src="../../images/facebookLogo.png" width="60">
-                <img src="../../images/instagramLogo.png" width="55">
-            </div>
+      <div class="row">
+        <!--Map Picture-->
+        <img
+          src="../../images/map.png"
+          width="400"
+          heigh="400"
+          class="flex map"
+        />
+        <!--Info Footer-->
+        <div class="infoFooter">
+          <h>Nhóm phát triển phần mềm LKL Edu</h><br />
+          <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br />
+          <h>Hotline: (+84) 0987654321</h><br />
+          <h>Email: lklsupport@gmail.com</h><br />
+          <h>Copyright © 2020 by lkledu.vn</h><br />
+          <!--Some Other Media-->
+          <img
+            src="../../images/twitterLogo.png"
+            width="100"
+            class="twitterLogo"
+          />
+          <img src="../../images/facebookLogo.png" width="60" />
+          <img src="../../images/instagramLogo.png" width="55" />
         </div>
-        <!--Product Footer-->
-        <div class="productFooter">
-            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
-            <p>Producted by LKL Software Team.</p>
-        </div>
+      </div>
+      <!--Product Footer-->
+      <div class="productFooter">
+        <p>
+          <img
+            src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"
+          />
+        </p>
+        <p>Producted by LKL Software Team.</p>
+      </div>
     </div>
     <script src="../../js/getCourse.js"></script>
+    <script src="../../js/courseSignIn.js"></script>
     <script>
-        getCourse()
-    </script>
-</body>
-</html>
+      getCourse(JSON.parse(localStorage.getItem("userInfor"))["user"]["id"]);
+      
+      let selectedCourse;
 
+      function handleCourseSignIn(idx) {
+        activeElement("loading")
+        selectedCourse = courseList[idx]
+        const courseId = selectedCourse.id
+        const studentId = JSON.parse(localStorage.getItem("userInfor"))["user"]["id"]
+        courseSignIn(studentId, courseId) 
+      }
+    </script>
+  </body>
+</html>

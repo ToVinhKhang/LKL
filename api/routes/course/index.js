@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 const { getCourse,  deleteCourse, addCourse, updateCourse } = require('./services');
 
-router.get("/", async (req, res, ext) => {
-  res.send(await getCourse ()) 
+router.post("/", async (req, res, ext) => {
+  res.send(await getCourse (req.body.student_id)) 
 })
 
 router.post("/add", async (req, res, ext) => {

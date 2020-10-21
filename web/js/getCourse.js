@@ -1,8 +1,17 @@
 var courseList;
 
-function getCourse() {
+function getCourse(student_id) {
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    student_id: student_id,
+  });
+
   var requestOptions = {
-    method: "GET",
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
     redirect: "follow",
   };
 
@@ -34,10 +43,18 @@ function buildCourse(result) {
                 ${course.course_teacher}
             </td>
             <td>
-                <span class="btn-x" style="color: rgb(245, 108, 45);" onclick="courseSignIn(${i})">
+                ${
+                course.isSigned?
+                `<span class="btn-x noselect" style="color: rgb(255 0 0);">
+                    <i class="mdi mdi-delete"></i>
+                    Hủy
+                </span>`
+                :
+                `<span class="btn-x noselect" style="color: rgb(21 160 47);" onclick="handleCourseSignIn(${i})">
                     <i class="mdi mdi-clipboard-edit-outline"></i>
                     Đăng ký
-                </span>
+                </span>`
+                }
             </td>
         `;
     var courseHTMLDIV = document.createElement("tr");

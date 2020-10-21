@@ -40,4 +40,7 @@ router.use("/student", student);
 const teacher = require("./teacher");
 router.use("/teacher", teacher);
 
+const student_course = require("./student_course");
+router.use("/student_course", student_course);
+
 module.exports = router;
