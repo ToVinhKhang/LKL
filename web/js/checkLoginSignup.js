@@ -18,19 +18,6 @@ function CheckInputUser() {
   errorTemp.innerHTML = "";
   return true;
 }
-<<<<<<< HEAD
-function CheckInputSignUp(){
-	let fullnameTemp = document.querySelector("#fullname");
-	let phoneTemp = document.querySelector("#phone");
-	let birthTemp = document.getElementById("birth");
-	let addressTemp = document.querySelector("#address");
-	let idnumTemp = document.querySelector("#idnum");
-	let usernameTemp = document.querySelector("#username");
-	let passwordTemp = document.querySelector("#pwd");
-	let cfpasswordTemp = document.querySelector("#cfpwd");
-	let errorTemp = document.querySelector("#ErrorMess");
-=======
->>>>>>> 89f7815... course sign
 
 function CheckInputSignUp() {
   let fullnameTemp = document.querySelector("#fullname");
@@ -52,66 +39,6 @@ function CheckInputSignUp() {
   let pwd = passwordTemp.value;
   let cfpwd = cfpasswordTemp.value;
 
-<<<<<<< HEAD
-	if(fullname === ""){
-		errorTemp.innerHTML='Vui lòng nhập họ và tên';
-		fullnameTemp.focus();
-		return false;
-	}
-	else if(phone === ""){
-		errorTemp.innerHTML='Vui lòng số điện thoại';
-		phoneTemp.focus();
-		return false;
-	}
-	else if(birth === ""){
-		errorTemp.innerHTML='Vui lòng nhập năm sinh';
-		birthTemp.focus();
-		return false;
-	}
-	else if(birth.length!=4 || birth!=parseInt(birth)){
-		errorTemp.innerHTML='Năm sinh không hợp lệ';
-		birthTemp.focus();
-		return false;
-	}
-	else if(address === ""){
-		errorTemp.innerHTML='Vui lòng nhập địa chỉ';
-		addressTemp.focus();
-		return false;
-	}
-	else if(idnum === ""){
-		errorTemp.innerHTML='Vui lòng nhập số CMND';
-		idnumTemp.focus();
-		return false;
-	}
-	else if(idnum!=parseInt(idnum)){
-		errorTemp.innerHTML='CMND không hợp lệ';
-		idnumTemp.focus();
-		return false;
-	}
-	else if(name === ""){
-		errorTemp.innerHTML='Vui lòng nhập tên tài khoản';
-		usernameTemp.focus();
-		return false;
-	}
-	else if(pwd === ""){
-		errorTemp.innerHTML='Vui lòng nhập mật khẩu';
-		passwordTemp.focus();
-		return false;
-	}
-	else if(cfpwd === ""){
-		errorTemp.innerHTML='Vui lòng nhập xác nhận mật khẩu';
-		cfpasswordTemp.focus();
-		return false;
-	}
-	else if(cfpwd != pwd){
-		errorTemp.innerHTML='Mật khẩu không khớp';
-		cfpasswordTemp.focus();
-		return false;
-	}
-	errorTemp.innerHTML="";
-	signIn(fullname, phone, birth, address, idnum, name, pwd, "./home.html")
-	return true;
-=======
   if (fullname === "") {
     errorTemp.innerHTML = "Vui lòng nhập họ và tên";
     fullnameTemp.focus();
@@ -151,7 +78,6 @@ function CheckInputSignUp() {
   errorTemp.innerHTML = "";
   signIn(fullname, phone, birth, address, idnum, name, pwd, "./home.html");
   return true;
->>>>>>> 89f7815... course sign
 }
 
 function ClearErrorMess() {
