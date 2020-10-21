@@ -1,8 +1,15 @@
 const { Course } = require("../../db/models/course");
+const { StudentCourse } = require("../../db/models/student_course");
+const { addCourseStatus } = require("./method")
 const { v4: uuidv4 } = require("uuid");
 
-async function getCourse() {
+async function getCourse(student_id) {
   const course = await Course.query();
+
+  if (student_id) {
+    const signedCourse = await StudentCourse.query().where('student_id', student_id)
+    addCourseStatus(course, signedCourse)
+  }
 
   return {
     course: course,

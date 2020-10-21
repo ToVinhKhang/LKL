@@ -11,12 +11,12 @@ router.get("/", function (req, res, next) {
   });
 });
 
-router.post("/login", [loginSchema], async function (req, res, next) {
+router.post("/login", async function (req, res, next) {
   try {
-    const data = {
-      body: req.body,
-    };
-    return res.send(await login(data));
+    const username = req.body.username
+    const password = req.body.password
+
+    return res.send(await login(username, password));
   } catch (error) {
     return next(error);
   }

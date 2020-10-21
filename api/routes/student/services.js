@@ -1,6 +1,7 @@
 const { Student } = require("../../db/models/student");
 const { User } = require("@models/user");
 const { v4: uuidv4 } = require("uuid");
+const { hashPassword } = require("@utils/helper");
 
 async function getStudent() {
   const student = await Student.query();
@@ -14,10 +15,8 @@ async function deleteStudent(id) {
   const trx = await Student.startTransaction();
   const trx2 = await User.startTransaction();
   try {
-    
     await Student.query().deleteById(id);
     await User.query().deleteById(id);
-
 
     trx.commit();
     trx2.commit();
@@ -30,26 +29,53 @@ async function deleteStudent(id) {
   }
 }
 
-async function updateCourse(
+async function updateStudentInfor(
   id,
-  courseName,
-  courseDes,
-  courseFee,
-  courseStartDate,
-  courseTeacher
+  name,
+  birth,
+  phone,
+  CMND,
+  address,
+  username,
+  password
 ) {
-  await Course.query().findById(id).patch({
-    course_name: courseName,
-    course_des: courseDes,
-    course_fee: courseFee,
-    course_startdate: courseStartDate,
-    course_teacher: courseTeacher,
-  });
+  const trx = await Student.startTransaction();
+  const trx2 = await User.startTransaction();
+  try {
+    await Student.query().findById(id).patch({
+      name: name,
+      birth: birth,
+      phone: phone,
+      CMND: CMND,
+      address: address,
+    });
 
-  return { mess: "updated" };
+    if (username !== "...") {
+      await User.query().findById(id).patch({
+        username: username,
+      });
+    }
+
+    if (password != "...") {
+      password = await hashPassword(password);
+      await User.query().findById(id).patch({
+        password: password,
+      });
+    }
+
+    trx.commit();
+    trx2.commit();
+
+    return { mess: "updated" };
+  } catch (error) {
+    trx.rollback();
+    trx2.rollback();
+    throw error;
+  }
 }
 
 module.exports = {
   getStudent,
   deleteStudent,
+  updateStudentInfor,
 };

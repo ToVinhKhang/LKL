@@ -1,216 +1,440 @@
 <!DOCTYPE html>
 <html lang="EN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../images/favicon.png"
+    />
+    <link
+      href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="../../js/index.js"></script>
+  </head>
 
-    
-    <!-- icon -->
-    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-    <!-- icon -->
-</head>
+  <body>
+    <!-- loading -->
+    <div id="loading" class="loading">
+      <div class="loading-overlay"></div>
+      <div class="spinner"></div>
+    </div>
 
-<body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+      <img id="logo" src="../../images/LKLlogo.png" />
+      <a class="navbar-brand" href="#"></a>
     </nav>
 
     <!--DataView-->
     <div class="fit-content-w">
-        <div class="row">
-            <!--Menu-->
-            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <nav class="navbar navbar-light" style="padding-top: 0px;">
-                    <ul class="navbar-nav nav nav-pills" >
-                        <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava2.png" style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
-                            <li id="menu" class="nav-item"><p class="nav-link" style="text-align: center;">KentStaffAdmin</p></li>
-                        </div>
-                        <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông báo</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studyandexamScheduleM.html">Quản lý Lịch học và thi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
-                        <div class="dropdown-divider"></div>
-                    </ul>
-                </nav>
-            </div>
-
-            <!--DataGridView-->
-            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                <h4 style="padding-left: 15px;"><img src="../../images/teacher_icon.png" width="40" height="40" alt="folder icon">&thinsp;Quản lý TT Giảng viên</h4>
-                <!--Courses Info-->
-                
-                <span onclick="openForm()" class="l-btn noselect">Thêm mới thông tin giảng viên</span>
-
-                <table id="MyTable" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Họ và tên</th>
-                            <th>Số CMND</th>
-                            <th>Năm sinh</th>
-                            <th>Số Điện thoại</th>
-                            <th>Địa chỉ</th>
-                            <th>Điều khiển</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="table-body">
-                        <!--Teacher 1-->
-                        <tr>
-                            <td>Mai Văn Mạnh</td>
-                            <td>7412654321</td>   
-                            <td>1997</td>                     
-                            <td>091239123</td>
-                            <td>Gia Lai</td>    
-                            <td>
-                                <div class="d-flex">
-                                    <div>
-                                        <i onclick="openFormEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
-                                    </div>
-                                    <div class="l-spacer"></div>
-                                    <div>
-                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="row">
+        <!--Menu-->
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+          <nav class="navbar navbar-light" style="padding-top: 0px">
+            <ul class="navbar-nav nav nav-pills">
+              <div style="border-style: ridge; border-radius: 10px">
+                <br /><img
+                  src="../../images/ava2.png"
+                  style="
+                    border-radius: 50%;
+                    height: 50%;
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+                <li id="menu" class="nav-item">
+                  <p class="nav-link" style="text-align: center">
+                    KentStaffAdmin
+                  </p>
+                </li>
+              </div>
+              <br />
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="notificationListM.html">
+                  Quản lý Thông báo
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="courseListM.html">
+                  Quản lý Khóa học
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="studyandexamScheduleM.html">
+                  Quản lý Lịch học và thi
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="studentInfoM.html">
+                  Quản lý TT Học viên
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item active">
+                <a class="nav-link" href="teacherInfoM.html">
+                  Quản lý TT Giảng viên
+                </a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="../home.html">Đăng xuất</a>
+              </li>
+              <div class="dropdown-divider"></div>
+            </ul>
+          </nav>
         </div>
+
+        <!--DataGridView-->
+        <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10">
+          <h4 style="padding-left: 15px">
+            <img
+              src="../../images/student_icon.png"
+              width="40"
+              height="40"
+              alt="folder icon"
+            />
+            Quản lý TT Giảng viên
+          </h4>
+
+          <span onclick="openForm()" class="l-btn noselect">
+            Thêm mới thông tin giảng viên
+          </span>
+          <!--Courses Info-->
+          <table id="MyTable" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Họ và tên</th>
+                <th>Số CMND</th>
+                <th>Năm sinh</th>
+                <th>Số Điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Điều khiển</th>
+              </tr>
+            </thead>
+
+            <tbody id="teacher-list"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    <br><br><br><br>
 
     <script type="text/javascript">
-        function openForm(){document.getElementById("popupAdd").style.display = "block";}
-        function closeForm(){document.getElementById("popupAdd").style.display = "none";}
-        function openFormEdit(){document.getElementById("popupEdit").style.display = "block";}
-        function closeFormEdit(){document.getElementById("popupEdit").style.display = "none";}
+      function openForm() {
+        document.getElementById("popupAdd").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("popupAdd").style.display = "none";
+      }
+
+      function closeFormEdit() {
+        document.getElementById("popupEdit").style.display = "none";
+      }
     </script>
 
     <!--PopupAdd Form-->
-    <div class="form-popup" id="popupAdd" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Thêm TT giảng viên</b></h1>
-            <label for="nameTeacher"><b>Họ và tên</b></label>
-            <input type="text" placeholder="Nhập họ và tên" name="nameTeacher">
-            <label for="yearTeacher"><b>Năm sinh</b></label>
-            <input type="text" placeholder="Nhập năm sinh" name="yearTeacher">
-            <label for="hometownTeacher"><b>Địa chỉ</b></label>
-            <input type="text" placeholder="Nhập địa chỉ hiện tại" name="hometownTeacher">
-            <label for="idnumTeacher"><b>Số CMND</b></label>
-            <input type="text" placeholder="Nhập số CMND" name="idnumTeacher">
-            <label for="phoneTeacher"><b>Số điện thoại</b></label>
-            <input type="text" placeholder="Nhập số điện thoại" name="phoneTeacher">
-            <label for="accountTeacher"><b>Tên tài khoản</b></label>
-            <input type="text" placeholder="Nhập tên tài khoản đăng nhập" name="accountTeacher">
-            <label for="passTeacher"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Nhập mật khẩu đăng nhập" name="passTeacher">
+    <div
+      class="form-popup"
+      id="popupAdd"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Thêm TT giảng viên</b></h1>
+        <label for="nameStu"><b>Họ và tên</b></label>
+        <input
+          id="fullname"
+          type="text"
+          placeholder="Nhập họ và tên"
+          name="nameStu"
+        />
+        <label for="yearStu"><b>Năm sinh</b></label>
+        <input
+          id="birth"
+          type="text"
+          placeholder="Nhập năm sinh"
+          name="yearStu"
+        />
+        <label for="hometownStu"><b>Địa chỉ</b></label>
+        <input
+          id="address"
+          type="text"
+          placeholder="Nhập địa chỉ hiện tại"
+          name="hometownStu"
+        />
+        <label for="idnumStu"><b>Số CMND</b></label>
+        <input
+          id="idnum"
+          type="text"
+          placeholder="Nhập số CMND"
+          name="idnumStu"
+        />
+        <label for="phoneStu"><b>Số điện thoại</b></label>
+        <input
+          id="phone"
+          type="text"
+          placeholder="Nhập số điện thoại"
+          name="phoneStu"
+        />
+        <label for="accountStu"><b>Tên tài khoản</b></label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Nhập tên tài khoản đăng nhập"
+          name="accountStu"
+        />
+        <label for="passStu"><b>Mật khẩu</b></label>
+        <input
+          id="pwd"
+          type="password"
+          placeholder="Nhập mật khẩu đăng nhập"
+          name="passStu"
+        />
 
-            <button type="submit" class="btn">Thêm</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Đóng</button>
-        </form>
+        <button onclick="handleSignIn()" type="submit" class="btn">Thêm</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">
+          Đóng
+        </button>
+      </div>
     </div>
 
     <!--PopupEdit Form-->
-    <div class="form-popup" id="popupEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Sửa TT giảng viên</b></h1>
-            <label for="nameTeacher"><b>Họ và tên</b></label>
-            <input type="text" placeholder="Nhập họ và tên" name="nameTeacher" value="Mai Văn Mạnh">
-            <label for="yearTeacher"><b>Năm sinh</b></label>
-            <input type="text" placeholder="Nhập năm sinh" name="yearTeacher" value="1997">
-            <label for="hometownTeacher"><b>Địa chỉ</b></label>
-            <input type="text" placeholder="Nhập địa chỉ hiện tại" name="hometownTeacher" value="Gia Lai">
-            <label for="idnumTeacher"><b>Số CMND</b></label>
-            <input type="text" placeholder="Nhập số CMND" name="idnumTeacher" value="7412654321">
-            <label for="phoneTeacher"><b>Số điện thoại</b></label>
-            <input type="text" placeholder="Nhập số điện thoại" name="phoneTeacher" value="091239123">
-            <label for="accountTeacher"><b>Tên tài khoản</b></label>
-            <input type="text" placeholder="Nhập tên tài khoản đăng nhập" name="accountTeacher" value="maivanmanh@tdtu.edu.vn">
-            <label for="passTeacher"><b>Mật khẩu</b></label>
-            <input type="password" placeholder="Nhập mật khẩu đăng nhập" name="passTeacher" value="123456">
+    <div
+      class="form-popup"
+      id="popupEdit"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Sửa TT giảng viên</b></h1>
+        <label for="nameStu"><b>Họ và tên</b></label>
+        <input
+          id="edit-name"
+          type="text"
+          placeholder="Nhập họ và tên"
+          name="nameStu"
+        />
+        <label for="yearStu"><b>Năm sinh</b></label>
+        <input
+          id="edit-birth"
+          type="text"
+          placeholder="Nhập năm sinh"
+          name="yearStu"
+        />
+        <label for="hometownStu"><b>Địa chỉ</b></label>
+        <input
+          id="edit-address"
+          type="text"
+          placeholder="Nhập địa chỉ hiện tại"
+          name="hometownStu"
+        />
+        <label for="idnumStu"><b>Số CMND</b></label>
+        <input
+          id="edit-cmnd"
+          type="text"
+          placeholder="Nhập số CMND"
+          name="idnumStu"
+        />
+        <label for="phoneStu"><b>Số điện thoại</b></label>
+        <input
+          id="edit-phone"
+          type="text"
+          placeholder="Nhập số điện thoại"
+          name="phoneStu"
+        />
+        <label for="accountStu"><b>Tên tài khoản</b></label>
+        <input
+          id="edit-username"
+          type="text"
+          placeholder="Nhập tên tài khoản đăng nhập"
+          name="accountStu"
+        />
+        <label for="passStu"><b>Mật khẩu</b></label>
+        <input
+          id="edit-pwd"
+          type="password"
+          placeholder="Nhập mật khẩu đăng nhập"
+          name="passStu"
+        />
 
-            <button type="submit" class="btn">Xác nhận</button>
-            <button type="button" class="btn cancel" onclick="closeFormEdit()">Đóng</button>
-        </form>
+        <button type="submit" class="btn" onclick="handleEditTeacherInfor()">
+          Xác nhận
+        </button>
+        <button
+          id="cancel-edit"
+          type="button"
+          class="btn cancel"
+          onclick="closeFormEdit()"
+        >
+          Đóng
+        </button>
+      </div>
     </div>
-
-   <script>
-        $(document).ready(function () {
-            $(".mdi-delete").click(function () {
-                $('#myModal').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            });
-        });
-    </script>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Xóa</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Xóa</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa?</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="cancel-delete"
+              type="button"
+              class="btn btn-default"
+              data-dismiss="modal"
+            >
+              Đóng
+            </button>
 
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm'>
-                        <button type="submit" class="btn btn-danger">Xác nhận</button>
-                    </form>
-                </div>
+            <div style="display: inline">
+              <input id="deleteitem" type="hidden" name="confirm" />
+              <button
+                onclick="handleDeleteTeacher()"
+                type="submit"
+                class="btn btn-danger"
+              >
+                Xác nhận
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--Footer-->
     <div id="footer">
-        <div class="row">
-            <!--Map Picture-->
-            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
-            <!--Info Footer-->
-            <div class="infoFooter">
-                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
-                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
-                <h>Hotline: (+84) 0987654321</h><br>
-                <h>Email: lklsupport@gmail.com</h><br>
-                <h>Copyright © 2020 by lkledu.vn</h><br>
-                <!--Some Other Media-->
-                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
-                <img src="../../images/facebookLogo.png" width="60">
-                <img src="../../images/instagramLogo.png" width="55">
-            </div>
+      <div class="row">
+        <!--Map Picture-->
+        <img
+          src="../../images/map.png"
+          width="400"
+          heigh="400"
+          class="flex map"
+        />
+        <!--Info Footer-->
+        <div class="infoFooter">
+          <h>Nhóm phát triển phần mềm LKL Edu</h><br />
+          <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br />
+          <h>Hotline: (+84) 0987654321</h><br />
+          <h>Email: lklsupport@gmail.com</h><br />
+          <h>Copyright © 2020 by lkledu.vn</h><br />
+          <!--Some Other Media-->
+          <img
+            src="../../images/twitterLogo.png"
+            width="100"
+            class="twitterLogo"
+          />
+          <img src="../../images/facebookLogo.png" width="60" />
+          <img src="../../images/instagramLogo.png" width="55" />
         </div>
-        <!--Product Footer-->
-        <div class="productFooter">
-            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"/></p>
-            <p>Producted by LKL Software Team.</p>
-        </div>
+      </div>
+      <!--Product Footer-->
+      <div class="productFooter">
+        <p>
+          <img
+            src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"
+          />
+        </p>
+        <p>Producted by LKL Software Team.</p>
+      </div>
     </div>
-</body>
-</html>
+    <script src="../../js/getTeacher.js"></script>
+    <script src="../../js/addTeacher.js"></script>
+    <script src="../../js/deleteTeacher.js"></script>
+    <script src="../../js/updateTeacherInfor.js"></script>
+    <script>
+      getTeacher();
 
+      function handleSignIn() {
+        activeElement("loading");
+        var name = document.querySelector("#fullname").value || "...";
+        var phone = document.querySelector("#phone").value || "...";
+        var birth = document.querySelector("#birth").value || "...";
+        var address = document.querySelector("#address").value || "...";
+        var idnum = document.querySelector("#idnum").value || "...";
+        var username = document.querySelector("#username").value || "...";
+        var password = document.querySelector("#pwd").value || "123456";
+
+        addTeacher(name, phone, birth, address, idnum, username, password);
+      }
+
+      let selectedTeacher;
+
+      function handleConfirmDelete(idx) {
+        selectedTeacher = teacherList[idx];
+
+        $("#myModal").modal({
+          backdrop: "static",
+          keyboard: false,
+        });
+      }
+
+      function handleDeleteTeacher() {
+        document.querySelector("#cancel-delete").click();
+        activeElement("loading");
+        deleteTeacher(selectedTeacher.id);
+      }
+
+      function handleOpenFormEditTeacherInfor(idx) {
+        selectedTeacher = teacherList[idx];
+        document.getElementById("popupEdit").style.display = "block";
+
+        document.getElementById("edit-name").value = selectedTeacher.name;
+        document.getElementById("edit-birth").value = selectedTeacher.birth;
+        document.getElementById("edit-address").value = selectedTeacher.address;
+        document.getElementById("edit-cmnd").value = selectedTeacher.CMND;
+        document.getElementById("edit-phone").value = selectedTeacher.phone;
+      }
+
+      function handleEditTeacherInfor() {
+        document.querySelector("#cancel-edit").click();
+        activeElement("loading");
+
+        var id = selectedTeacher.id;
+        var name = document.getElementById("edit-name").value;
+        var birth = document.getElementById("edit-birth").value;
+        var address = document.getElementById("edit-address").value;
+        var CMND = document.getElementById("edit-cmnd").value;
+        var phone = document.getElementById("edit-phone").value;
+        var username = document.getElementById("edit-username").value || "...";
+        var password = document.getElementById("edit-pwd").value || "...";
+
+        updateTeacherInfor(
+          id,
+          name,
+          birth,
+          phone,
+          CMND,
+          address,
+          username,
+          password
+        );
+      }
+    </script>
+  </body>
+</html>

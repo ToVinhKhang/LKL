@@ -142,10 +142,6 @@
         document.getElementById("popupAdd").style.display = "none";
       }
 
-      function openFormEdit() {
-        document.getElementById("popupEdit").style.display = "block";
-      }
-
       function closeFormEdit() {
         document.getElementById("popupEdit").style.display = "none";
       }
@@ -222,63 +218,70 @@
       id="popupEdit"
       style="max-width: 500px; max-height: 550px; overflow: scroll"
     >
-      <form action="" class="form-container">
+      <div class="form-container">
         <h1 style="text-align: center"><b>Sửa TT học viên</b></h1>
         <label for="nameStu"><b>Họ và tên</b></label>
         <input
+          id="edit-name"
           type="text"
           placeholder="Nhập họ và tên"
           name="nameStu"
-          value="Tô Vĩnh Khang"
         />
         <label for="yearStu"><b>Năm sinh</b></label>
         <input
+          id="edit-birth"
           type="text"
           placeholder="Nhập năm sinh"
           name="yearStu"
-          value="2000"
         />
         <label for="hometownStu"><b>Địa chỉ</b></label>
         <input
+          id="edit-address"
           type="text"
           placeholder="Nhập địa chỉ hiện tại"
           name="hometownStu"
-          value="TPHCM"
         />
         <label for="idnumStu"><b>Số CMND</b></label>
         <input
+          id="edit-cmnd"
           type="text"
           placeholder="Nhập số CMND"
           name="idnumStu"
-          value="7412434321"
         />
         <label for="phoneStu"><b>Số điện thoại</b></label>
         <input
+          id="edit-phone"
           type="text"
           placeholder="Nhập số điện thoại"
           name="phoneStu"
-          value="099239123"
         />
         <label for="accountStu"><b>Tên tài khoản</b></label>
         <input
+          id="edit-username"
           type="text"
           placeholder="Nhập tên tài khoản đăng nhập"
           name="accountStu"
-          value="kentkhang@gmail.com"
         />
         <label for="passStu"><b>Mật khẩu</b></label>
         <input
+          id="edit-pwd"
           type="password"
           placeholder="Nhập mật khẩu đăng nhập"
           name="passStu"
-          value="123456"
         />
 
-        <button type="submit" class="btn">Xác nhận</button>
-        <button type="button" class="btn cancel" onclick="closeFormEdit()">
+        <button type="submit" class="btn" onclick="handleEditStudentInfor()">
+          Xác nhận
+        </button>
+        <button
+          id="cancel-edit"
+          type="button"
+          class="btn cancel"
+          onclick="closeFormEdit()"
+        >
           Đóng
         </button>
-      </form>
+      </div>
     </div>
 
     <!-- Delete Confirm Modal -->
@@ -296,7 +299,12 @@
             <p>Bạn có chắc chắn muốn xóa?</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
+            <button
+              id="cancel-delete"
+              type="button"
+              class="btn btn-default"
+              data-dismiss="modal"
+            >
               Đóng
             </button>
 
@@ -355,6 +363,7 @@
     <script src="../../js/getStudent.js"></script>
     <script src="../../js/signin.js"></script>
     <script src="../../js/deleteStudent.js"></script>
+    <script src="../../js/updateStudentInfor.js"></script>
     <script>
       getStudent();
 
@@ -382,8 +391,45 @@
       }
 
       function handleDeleteStudent() {
+        document.querySelector("#cancel-delete").click();
         activeElement("loading");
         deleteStudent(selectedStudent.id);
+      }
+
+      function handleOpenFormEditStudentInfor(idx) {
+        selectedStudent = studentList[idx];
+        document.getElementById("popupEdit").style.display = "block";
+
+        document.getElementById("edit-name").value = selectedStudent.name;
+        document.getElementById("edit-birth").value = selectedStudent.birth;
+        document.getElementById("edit-address").value = selectedStudent.address;
+        document.getElementById("edit-cmnd").value = selectedStudent.CMND;
+        document.getElementById("edit-phone").value = selectedStudent.phone;
+      }
+
+      function handleEditStudentInfor() {
+        document.querySelector("#cancel-edit").click();
+        activeElement("loading");
+
+        var id = selectedStudent.id;
+        var name = document.getElementById("edit-name").value;
+        var birth = document.getElementById("edit-birth").value;
+        var address = document.getElementById("edit-address").value;
+        var CMND = document.getElementById("edit-cmnd").value;
+        var phone = document.getElementById("edit-phone").value;
+        var username = document.getElementById("edit-username").value || "...";
+        var password = document.getElementById("edit-pwd").value || "...";
+
+        updateStudentInfor(
+          id,
+          name,
+          birth,
+          phone,
+          CMND,
+          address,
+          username,
+          password
+        );
       }
     </script>
   </body>
