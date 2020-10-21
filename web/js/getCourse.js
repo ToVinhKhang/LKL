@@ -45,7 +45,7 @@ function buildCourse(result) {
             <td>
                 ${
                 course.isSigned?
-                `<span class="btn-x noselect" style="color: rgb(255 0 0);">
+                `<span class="btn-x noselect" style="color: rgb(255 0 0);" onclick="handleCancelSignIn(${i})">
                     <i class="mdi mdi-delete"></i>
                     Hủy
                 </span>`

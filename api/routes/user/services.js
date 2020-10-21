@@ -1,5 +1,6 @@
 const { User } = require("@models/user");
 const { Student } = require("@models/student");
+const { Teacher } = require("@models/teacher")
 const { hashPassword } = require("@utils/helper");
 const { v4: uuidv4 } = require("uuid");
 const { Token } = require("@models/token");
@@ -12,9 +13,9 @@ async function login(username, password) {
 
     const id = user.id;
     const token = await user.generateAuthToken(trx, "web");
-    const token_i = await Token.query().findById("id");
+    const token_i = await Token.query().findById(id);
 
-    if (!token_i) {
+    if (token_i) {
       await Token.query().findById(id).patch({
         token: token,
       });
@@ -25,10 +26,15 @@ async function login(username, password) {
       });
     }
 
+    let infor = await Student.query().findById(id)
+    if (!infor) infor = await Teacher.query().findById(id)
+
+    const name = infor? infor.name : "admin"
+
     trx.commit();
     trx2.commit();
 
-    return { user, token };
+    return { user, token, name };
   } catch (error) {
     trx.rollback();
     trx2.rollback();

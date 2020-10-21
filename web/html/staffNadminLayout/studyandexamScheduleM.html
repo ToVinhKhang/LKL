@@ -1,307 +1,540 @@
 <!DOCTYPE html>
 <html lang="EN">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../images/favicon.png"
+    />
+    <link
+      href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-    <!-- icon -->
-    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-    <!-- icon -->
-</head>
+  <body>
+    <!-- loading -->
+    <div id="loading" class="loading">
+      <div class="loading-overlay"></div>
+      <div class="spinner"></div>
+    </div>
 
-<body>
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <img id="logo" src="../../images/LKLlogo.png"><a class="navbar-brand" href="#"></a>
+      <img id="logo" src="../../images/LKLlogo.png" /><a
+        class="navbar-brand"
+        href="#"
+      ></a>
     </nav>
 
     <!--DataView-->
     <div class="fit-content-w">
-        <div class="row">
-            <!--Menu-->
-            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                <nav class="navbar navbar-light" style="padding-top: 0px;">
-                    <ul class="navbar-nav nav nav-pills">
-                        <div style="border-style: ridge; border-radius: 10px;">
-                            <br><img src="../../images/ava2.png"
-                                style="border-radius: 50%; height: 50%; width: 50%; display: block; margin-left: auto; margin-right: auto;">
-                            <li id="menu" class="nav-item">
-                                <p class="nav-link" style="text-align: center;">KentStaffAdmin</p>
-                            </li>
-                        </div>
-                        <br>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="notificationListM.html">Quản lý Thông
-                                báo</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="courseListM.html">Quản lý Khóa học</a>
-                        </li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item active"><a class="nav-link" href="studyandexamScheduleM.html">Quản
-                                lý Lịch học và thi</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="studentInfoM.html">Quản lý TT Học
-                                viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="teacherInfoM.html">Quản lý TT Giảng
-                                viên</a></li>
-                        <div class="dropdown-divider"></div>
-                        <li id="menu" class="nav-item"><a class="nav-link" href="../home.html">Đăng xuất</a></li>
-                        <div class="dropdown-divider"></div>
-                    </ul>
-                </nav>
-            </div>
-
-            <!--DataGridView-->
-            <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                <h4 style="padding-left: 15px;"><img src="../../images/studySchedule_icon.png" width="40" height="40"
-                        alt="folder icon">&thinsp;Quản lý Lịch học</h4>
-
-                <span onclick="openFormS()" class="l-btn noselect">Thêm Lịch học</span>
-
-                <!--Study Schedule Info-->
-                <table id="MyTable" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Tên khóa học</th>
-                            <th>Phòng</th>
-                            <th>Thứ</th>
-                            <th>Thời gian</th>
-                            <th>Điều khiển</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="table-body">
-                        <!--Monday-->
-                        <tr>
-                            <td>Lập trình Game cơ bản</td>
-                            <td>A506</td>
-                            <td>Ba</td>
-                            <td>12:30 - 14:55</td>
-                            <td>
-                                <div class="d-flex">
-                                    <div>
-                                        <i onclick="openFormSEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
-                                    </div>
-                                    <div class="l-spacer"></div>
-                                    <div>
-                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!--Change Page-->
-                <div style="box-shadow: 0px 0px 1px 1px gray;"></div>
-                <div class="d-flex" style="justify-content: space-between; align-items: center;">
-                    <span id='Previous' class="btn-x noselect">Tuần trước</span>
-                    <span id="show-date"></span>
-                    <span id='Next' class="btn-x noselect">Tuần sau</span>
-                </div>
-            </div>
-
-            <!--DataGridView-->
-            <div class="col-sm-5 col-md-5 col-lg-5 col-xl-5">
-                <h4 style="padding-left: 15px;"><img src="../../images/examSchedule_icon.png" width="40" height="40"
-                        alt="folder icon">&thinsp;Quản lý Lịch thi</h4>
-                <!--Exam Schedule Info-->
-                <span onclick="openFormE()" class="l-btn noselect">Thêm Lịch thi</span>
-                <table id="MyTable" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Tên khóa học</th>
-                            <th>Phòng thi</th>
-                            <th>Ngày thi</th>
-                            <th>Thời gian</th>
-                            <th>Điều khiển</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="table-body">
-                        <!--Subject 1-->
-                        <tr>
-                            <td>Lập trình Game cơ bản</td>
-                            <td>A705</td>
-                            <td>01/12/2020</td>
-                            <td>90 phút</td>
-                            <td>
-                                <div class="d-flex">
-                                    <div>
-                                        <i onclick="openFormEEdit()" class="mdi mdi-pen l-icon l-icon-md"></i>
-                                    </div>
-                                    <div class="l-spacer"></div>
-                                    <div>
-                                        <i class="mdi mdi-delete l-icon l-icon-md l-fill-red"></i>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="row">
+        <!--Menu-->
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+          <nav class="navbar navbar-light" style="padding-top: 0px">
+            <ul class="navbar-nav nav nav-pills">
+              <div style="border-style: ridge; border-radius: 10px">
+                <br /><img
+                  src="../../images/ava2.png"
+                  style="
+                    border-radius: 50%;
+                    height: 50%;
+                    width: 50%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                  "
+                />
+                <li id="menu" class="nav-item">
+                  <p class="nav-link" style="text-align: center">
+                    KentStaffAdmin
+                  </p>
+                </li>
+              </div>
+              <br />
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="notificationListM.html"
+                  >Quản lý Thông báo</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="courseListM.html">Quản lý Khóa học</a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item active">
+                <a class="nav-link" href="studyandexamScheduleM.html"
+                  >Quản lý Lịch học và thi</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="studentInfoM.html"
+                  >Quản lý TT Học viên</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="teacherInfoM.html"
+                  >Quản lý TT Giảng viên</a
+                >
+              </li>
+              <div class="dropdown-divider"></div>
+              <li id="menu" class="nav-item">
+                <a class="nav-link" href="../home.html">Đăng xuất</a>
+              </li>
+              <div class="dropdown-divider"></div>
+            </ul>
+          </nav>
         </div>
+
+        <!--DataGridView-->
+        <div class="col-sm-5 col-md-5 col-lg-5 col-xl-10">
+          <div>
+            <h4 style="padding-left: 15px">
+              <img
+                src="../../images/studySchedule_icon.png"
+                width="40"
+                height="40"
+                alt="folder icon"
+              />&thinsp;Quản lý Lịch học
+            </h4>
+
+            <span onclick="openFormS()" class="l-btn noselect"
+              >Thêm Lịch học</span
+            >
+
+            <!--Study Schedule Info-->
+            <table id="MyTable" class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Tên khóa học</th>
+                  <th>Phòng</th>
+                  <th>Thứ</th>
+                  <th>Thời gian</th>
+                  <th>Điều khiển</th>
+                </tr>
+              </thead>
+
+              <tbody id="schedule-list"></tbody>
+            </table>
+
+            <!--Change Page-->
+            <div style="box-shadow: 0px 0px 1px 1px gray"></div>
+            <div
+              class="d-flex"
+              style="justify-content: space-between; align-items: center"
+            >
+              <span id="Previous" class="btn-x noselect">Tuần trước</span>
+              <span id="show-date"></span>
+              <span id="Next" class="btn-x noselect">Tuần sau</span>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+
+          <!--DataGridView-->
+          <div>
+            <h4 style="padding-left: 15px">
+              <img
+                src="../../images/examSchedule_icon.png"
+                width="40"
+                height="40"
+                alt="folder icon"
+              />&thinsp;Quản lý Lịch thi
+            </h4>
+            <!--Exam Schedule Info-->
+            <span onclick="openFormE()" class="l-btn noselect"
+              >Thêm Lịch thi</span
+            >
+            <table id="MyTable" class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Tên khóa học</th>
+                  <th>Phòng thi</th>
+                  <th>Ngày thi</th>
+                  <th>Thời gian</th>
+                  <th>Điều khiển</th>
+                </tr>
+              </thead>
+
+              <tbody id="table-body">
+                <!--Subject 1-->
+                <tr>
+                  <td>Lập trình Game cơ bản</td>
+                  <td>A705</td>
+                  <td>01/12/2020</td>
+                  <td>90 phút</td>
+                  <td>
+                    <div class="d-flex">
+                      <div>
+                        <i
+                          onclick="openFormEEdit()"
+                          class="mdi mdi-pen l-icon l-icon-md"
+                        ></i>
+                      </div>
+                      <div class="l-spacer"></div>
+                      <div>
+                        <i
+                          class="mdi mdi-delete l-icon l-icon-md l-fill-red"
+                        ></i>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript">
-        function openFormS() { document.getElementById("popupFormS").style.display = "block"; }
-        function closeFormS() { document.getElementById("popupFormS").style.display = "none"; }
-        function openFormE() { document.getElementById("popupFormE").style.display = "block"; }
-        function closeFormE() { document.getElementById("popupFormE").style.display = "none"; }
+      function openFormS() {
+        document.getElementById("popupFormS").style.display = "block";
+      }
+      function closeFormS() {
+        document.getElementById("popupFormS").style.display = "none";
+      }
+      function openFormE() {
+        document.getElementById("popupFormE").style.display = "block";
+      }
+      function closeFormE() {
+        document.getElementById("popupFormE").style.display = "none";
+      }
 
-        function openFormSEdit() { document.getElementById("popupFormSEdit").style.display = "block"; }
-        function closeFormSEdit() { document.getElementById("popupFormSEdit").style.display = "none"; }
-        function openFormEEdit() { document.getElementById("popupFormEEdit").style.display = "block"; }
-        function closeFormEEdit() { document.getElementById("popupFormEEdit").style.display = "none"; }
+      function openFormSEdit() {
+        document.getElementById("popupFormSEdit").style.display = "block";
+      }
+      function closeFormSEdit() {
+        document.getElementById("popupFormSEdit").style.display = "none";
+      }
+      function openFormEEdit() {
+        document.getElementById("popupFormEEdit").style.display = "block";
+      }
+      function closeFormEEdit() {
+        document.getElementById("popupFormEEdit").style.display = "none";
+      }
     </script>
 
     <!--PopupAdd-->
     <!--Popup Form StudySchedule-->
-    <div class="form-popup" id="popupFormS" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Thêm TT Lịch học</b></h1>
-            <label for="nameCouseS"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseS">
-            <label for="roomCourseS"><b>Phòng</b></label>
-            <input type="text" placeholder="Nhập phòng học" name="roomCourseS">
-            <label for="day"><b>Thứ</b></label>
-            <input type="text" placeholder="Nhập thứ" name="day">
-            <label for="timeCourseS"><b>Thời gian</b></label>
-            <input type="text" placeholder="Nhập thời gian học" name="timeCourseS">
+    <div
+      class="form-popup"
+      id="popupFormS"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Thêm TT Lịch học</b></h1>
+        <label for="nameCouseS"><b>Tên khóa học</b></label>
+        <input
+          id="schedule-course-name"
+          type="text"
+          placeholder="Nhập tên khóa học"
+          name="nameCouseS"
+        />
+        <label for="roomCourseS"><b>Phòng</b></label>
+        <input
+          id="schedule-room"
+          type="text"
+          placeholder="Nhập phòng học"
+          name="roomCourseS"
+        />
+        <label for="day"><b>Thứ</b></label>
+        <input
+          id="schedule-week_date"
+          type="text"
+          placeholder="Nhập thứ"
+          name="day"
+        />
+        <label for="timeCourseS"><b>Thời gian</b></label>
+        <input
+          id="schedule-duration"
+          type="text"
+          placeholder="Nhập thời gian học"
+          name="timeCourseS"
+        />
 
-            <button type="submit" class="btn">Thêm</button>
-            <button type="button" class="btn cancel" onclick="closeFormS()">Đóng</button>
-        </form>
+        <button onclick="handleAddSchedule()" type="submit" class="btn">
+          Thêm
+        </button>
+        <button type="button" class="btn cancel" onclick="closeFormS()">
+          Đóng
+        </button>
+      </div>
     </div>
 
     <!--Popup Form ExamSchedule-->
-    <div class="form-popup" id="popupFormE" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Thêm TT Lịch thi</b></h1>
-            <label for="nameCouseE"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE">
-            <label for="roomCourseE"><b>Phòng thi</b></label>
-            <input type="text" placeholder="Nhập phòng thi" name="roomCourseE">
-            <label for="dateeCourseE"><b>Ngày thi</b></label>
-            <input type="text" placeholder="Nhập ngày thi" name="dateeCourseE">
-            <label for="timeCourseE"><b>Thời gian</b></label>
-            <input type="text" placeholder="Nhập thời gian thi" name="timeCourseE">
+    <div
+      class="form-popup"
+      id="popupFormE"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Thêm TT Lịch thi</b></h1>
+        <label for="nameCouseE"><b>Tên khóa học</b></label>
+        <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE" />
+        <label for="roomCourseE"><b>Phòng thi</b></label>
+        <input type="text" placeholder="Nhập phòng thi" name="roomCourseE" />
+        <label for="dateeCourseE"><b>Ngày thi</b></label>
+        <input type="text" placeholder="Nhập ngày thi" name="dateeCourseE" />
+        <label for="timeCourseE"><b>Thời gian</b></label>
+        <input
+          type="text"
+          placeholder="Nhập thời gian thi"
+          name="timeCourseE"
+        />
 
-            <button type="submit" class="btn">Thêm</button>
-            <button type="button" class="btn cancel" onclick="closeFormE()">Đóng</button>
-        </form>
+        <button type="submit" class="btn">Thêm</button>
+        <button type="button" class="btn cancel" onclick="closeFormE()">
+          Đóng
+        </button>
+      </div>
     </div>
-
 
     <!--PopupEdit-->
     <!--Popup Form StudySchedule-->
-    <div class="form-popup" id="popupFormSEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Sửa TT Lịch học</b></h1>
-            <label for="nameCouseS"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseS" value="Lập trình Game cơ bản">
-            <label for="roomCourseS"><b>Phòng</b></label>
-            <input type="text" placeholder="Nhập phòng học" name="roomCourseS" value="A506">
-            <label for="day"><b>Thứ</b></label>
-            <input type="text" placeholder="Nhập thứ" name="day" value="Ba">
-            <label for="timeCourseS"><b>Thời gian</b></label>
-            <input type="text" placeholder="Nhập thời gian học" name="timeCourseS" value="12:30 - 14:55">
+    <div
+      class="form-popup"
+      id="popupFormSEdit"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Sửa TT Lịch học</b></h1>
+        <label for="nameCouseS"><b>Tên khóa học</b></label>
+        <input
+          id="edit-schedule-course-name"
+          type="text"
+          placeholder="Nhập tên khóa học"
+          name="nameCouseS"
+        />
+        <label for="roomCourseS"><b>Phòng</b></label>
+        <input
+          id="edit-schedule-room"
+          type="text"
+          placeholder="Nhập phòng học"
+          name="roomCourseS"
+        />
+        <label for="day"><b>Thứ</b></label>
+        <input
+          id="edit-schedule-week_date"
+          type="text"
+          placeholder="Nhập thứ"
+          name="day"
+        />
+        <label for="timeCourseS"><b>Thời gian</b></label>
+        <input
+          id="edit-schedule-duration"
+          type="text"
+          placeholder="Nhập thời gian học"
+          name="timeCourseS"
+        />
 
-            <button type="submit" class="btn">Xác nhận</button>
-            <button type="button" class="btn cancel" onclick="closeFormSEdit()">Đóng</button>
-        </form>
+        <button onclick="handleEditScheduleById()" type="submit" class="btn">Xác nhận</button>
+        <button type="button" class="btn cancel" onclick="closeFormSEdit()">
+          Đóng
+        </button>
+      </div>
     </div>
 
     <!--Popup Form ExamSchedule-->
-    <div class="form-popup" id="popupFormEEdit" style="max-width: 500px; max-height: 550px; overflow: scroll;">
-        <form action="" class="form-container">
-            <h1 style="text-align: center;"><b>Sửa TT Lịch thi</b></h1>
-            <label for="nameCouseE"><b>Tên khóa học</b></label>
-            <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE" value="Lập trình Game cơ bản">
-            <label for="roomCourseE"><b>Phòng thi</b></label>
-            <input type="text" placeholder="Nhập phòng thi" name="roomCourseE" value="A705">
-            <label for="dateeCourseE"><b>Ngày thi</b></label>
-            <input type="text" placeholder="Nhập ngày thi" name="dateeCourseE" value="01/12/2020">
-            <label for="timeCourseE"><b>Thời gian</b></label>
-            <input type="text" placeholder="Nhập thời gian thi" name="timeCourseE" value="90 phút">
+    <div
+      class="form-popup"
+      id="popupFormEEdit"
+      style="max-width: 500px; max-height: 550px; overflow: scroll"
+    >
+      <div class="form-container">
+        <h1 style="text-align: center"><b>Sửa TT Lịch thi</b></h1>
+        <label for="nameCouseE"><b>Tên khóa học</b></label>
+        <input
+          type="text"
+          placeholder="Nhập tên khóa học"
+          name="nameCouseE"
+          value="Lập trình Game cơ bản"
+        />
+        <label for="roomCourseE"><b>Phòng thi</b></label>
+        <input
+          type="text"
+          placeholder="Nhập phòng thi"
+          name="roomCourseE"
+          value="A705"
+        />
+        <label for="dateeCourseE"><b>Ngày thi</b></label>
+        <input
+          type="text"
+          placeholder="Nhập ngày thi"
+          name="dateeCourseE"
+          value="01/12/2020"
+        />
+        <label for="timeCourseE"><b>Thời gian</b></label>
+        <input
+          type="text"
+          placeholder="Nhập thời gian thi"
+          name="timeCourseE"
+          value="90 phút"
+        />
 
-            <button type="submit" class="btn">Xác nhận</button>
-            <button type="button" class="btn cancel" onclick="closeFormEEdit()">Đóng</button>
-        </form>
+        <button type="submit" class="btn">Xác nhận</button>
+        <button type="button" class="btn cancel" onclick="closeFormEEdit()">
+          Đóng
+        </button>
+      </div>
     </div>
 
     <script>
-        $(document).ready(function () {
-            $(".mdi-delete").click(function () {
-                $('#myModal').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
-            });
+      $(document).ready(function () {
+        $(".mdi-delete").click(function () {
+          $("#myModal").modal({
+            backdrop: "static",
+            keyboard: false,
+          });
         });
+      });
     </script>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Xóa</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <p>Bạn có chắc chắn muốn xóa?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Xóa</h5>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Bạn có chắc chắn muốn xóa?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Đóng
+            </button>
 
-                    <form action='' method='POST' style='display: inline;'>
-                        <input id='deleteitem' type='hidden' name='confirm'>
-                        <button type="submit" class="btn btn-danger">Xác nhận</button>
-                    </form>
-                </div>
-            </div>
+            <form action="" method="POST" style="display: inline">
+              <input id="deleteitem" type="hidden" name="confirm" />
+              <button type="submit" class="btn btn-danger">Xác nhận</button>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
     <!--Footer-->
     <div id="footer">
-        <div class="row">
-            <!--Map Picture-->
-            <img src="../../images/map.png" width="400" heigh="400" class="flex map">
-            <!--Info Footer-->
-            <div class="infoFooter">
-                <h>Nhóm phát triển phần mềm LKL Edu</h><br>
-                <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br>
-                <h>Hotline: (+84) 0987654321</h><br>
-                <h>Email: lklsupport@gmail.com</h><br>
-                <h>Copyright © 2020 by lkledu.vn</h><br>
-                <!--Some Other Media-->
-                <img src="../../images/twitterLogo.png" width="100" class="twitterLogo">
-                <img src="../../images/facebookLogo.png" width="60">
-                <img src="../../images/instagramLogo.png" width="55">
-            </div>
+      <div class="row">
+        <!--Map Picture-->
+        <img
+          src="../../images/map.png"
+          width="400"
+          heigh="400"
+          class="flex map"
+        />
+        <!--Info Footer-->
+        <div class="infoFooter">
+          <h>Nhóm phát triển phần mềm LKL Edu</h><br />
+          <h>19 Nguyễn Hữu Thọ,Tân Phong,Q7,TPHCM</h><br />
+          <h>Hotline: (+84) 0987654321</h><br />
+          <h>Email: lklsupport@gmail.com</h><br />
+          <h>Copyright © 2020 by lkledu.vn</h><br />
+          <!--Some Other Media-->
+          <img
+            src="../../images/twitterLogo.png"
+            width="100"
+            class="twitterLogo"
+          />
+          <img src="../../images/facebookLogo.png" width="60" />
+          <img src="../../images/instagramLogo.png" width="55" />
         </div>
-        <!--Product Footer-->
-        <div class="productFooter">
-            <p><img src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png" /></p>
-            <p>Producted by LKL Software Team.</p>
-        </div>
+      </div>
+      <!--Product Footer-->
+      <div class="productFooter">
+        <p>
+          <img
+            src="https://kichi.ggg.com.vn/wp-content/uploads/2018/10/bct.png"
+          />
+        </p>
+        <p>Producted by LKL Software Team.</p>
+      </div>
     </div>
 
     <script src="../../js/index.js"></script>
+    <script src="../../js/addSchedule.js"></script>
+    <script src="../../js/getScheduleForModerator.js"></script>
+    <script src="../../js/deleteScheduleById.js"></script>
+    <script src="../../js/updateScheduleById.js"></script>
     <script>
-        getWeekDate();
-    </script>
-</body>
+      getWeekDate();
+      getScheduleForModeratoer(week);
 
+      Previous.onclick = () => {
+        preWeek();
+        getScheduleForModeratoer(week);
+      };
+
+      Next.onclick = () => {
+        nextWeek();
+        getScheduleForModeratoer(week);
+      };
+
+      function handleAddSchedule() {
+        activeElement("loading");
+        const courseId = "chưa có";
+        const name =
+          document.querySelector("#schedule-course-name").value || "chưa có";
+        const room =
+          document.querySelector("#schedule-room").value || "chưa có";
+        const week_date =
+          document.querySelector("#schedule-week_date").value || "chưa có";
+        const duration =
+          document.querySelector("#schedule-duration").value || "chưa có";
+
+        addSchedule(courseId, name, room, week_date, duration, week);
+      }
+
+      function handleDeleteScheduleById(scheduleId) {
+        activeElement("loading");
+        deleteScheduleById(scheduleId);
+      }
+    
+      let selectedScheduleId;
+
+      function handleOpenFormEditScheduleById(idx) {
+        const schedule = scheduleList[idx]
+        selectedScheduleId = schedule.id
+        document.querySelector("#edit-schedule-course-name").value = schedule.name
+        document.querySelector("#edit-schedule-room").value = schedule.room
+        document.querySelector("#edit-schedule-week_date").value = schedule.week_date
+        document.querySelector("#edit-schedule-duration").value = schedule.duration
+        
+        openFormSEdit()
+      }
+
+
+      function handleEditScheduleById() {
+        activeElement("loading")
+        closeFormSEdit()
+        const name = document.querySelector("#edit-schedule-course-name").value
+        const room = document.querySelector("#edit-schedule-room").value
+        const week_date = document.querySelector("#edit-schedule-week_date").value
+        const duration = document.querySelector("#edit-schedule-duration").value
+
+        updateScheduleById(selectedScheduleId, "courseId", name, room, week_date, duration)
+      }
+    </script>
+  </body>
 </html>

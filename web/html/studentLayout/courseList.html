@@ -61,22 +61,18 @@
                   "
                 />
                 <li id="menu" class="nav-item">
-                  <p class="nav-link" style="text-align: center">
+                  <p id="user-name" class="nav-link" style="text-align: center">
                     {{ Tên học viên }}
                   </p>
                 </li>
               </div>
               <br />
               <li id="menu" class="nav-item">
-                <a class="nav-link" href="notificationList.html">
-                  Thông báo
-                </a>
+                <a class="nav-link" href="notificationList.html"> Thông báo </a>
               </li>
               <div class="dropdown-divider"></div>
               <li id="menu" class="nav-item active">
-                <a class="nav-link" href="">
-                  Khóa học
-                </a>
+                <a class="nav-link" href=""> Khóa học </a>
               </li>
               <div class="dropdown-divider"></div>
               <li id="menu" class="nav-item">
@@ -86,15 +82,11 @@
               </li>
               <div class="dropdown-divider"></div>
               <li id="menu" class="nav-item">
-                <a class="nav-link" href="tuitionFee.html">
-                  Học phí
-                </a>
+                <a class="nav-link" href="tuitionFee.html"> Học phí </a>
               </li>
               <div class="dropdown-divider"></div>
               <li id="menu" class="nav-item">
-                <a class="nav-link" href="../home.html">
-                  Đăng xuất
-                </a>
+                <a class="nav-link" href="../home.html"> Đăng xuất </a>
               </li>
               <div class="dropdown-divider"></div>
             </ul>
@@ -170,17 +162,30 @@
     </div>
     <script src="../../js/getCourse.js"></script>
     <script src="../../js/courseSignIn.js"></script>
+    <script src="../../js/setUserInfor.js"></script>
+    <script src="../../js/deleteStudentCourse.js"></script>
     <script>
-      getCourse(JSON.parse(localStorage.getItem("userInfor"))["user"]["id"]);
-      
+      const studentId = JSON.parse(localStorage.getItem("userInfor"))["user"][
+        "id"
+      ];
+      setUserInfor();
+
+      getCourse(studentId);
+
       let selectedCourse;
 
       function handleCourseSignIn(idx) {
-        activeElement("loading")
-        selectedCourse = courseList[idx]
-        const courseId = selectedCourse.id
-        const studentId = JSON.parse(localStorage.getItem("userInfor"))["user"]["id"]
-        courseSignIn(studentId, courseId) 
+        activeElement("loading");
+        selectedCourse = courseList[idx];
+        const courseId = selectedCourse.id;
+        courseSignIn(studentId, courseId);
+      }
+
+      function handleCancelSignIn(idx) {
+        activeElement("loading");
+        selectedCourse = courseList[idx];
+        const courseId = selectedCourse.id;
+        deleteStudentCourse(studentId, courseId);
       }
     </script>
   </body>

@@ -4,25 +4,7 @@ var path = require("path");
 
 // check status
 router.get("/", (req, res, ext) => {
-  // console.log(req)
-  // message = {
-  //     mess: path.join(__dirname + '../public/')
-  // }
-  // res.send(message)    //
-  // res.render('index', { title: 'Hey', message: 'Hello there!'});
-  // res.sendFile('../public/index.html', { root: __dirname})
-  // res.se
-  res.sendFile("index.html", { root: path.join(__dirname, "../public") });
-});
-
-router.post("/linhtqapi", (req, res, ext) => {
-  console.log(req.body);
-
-  var message = {
-    mess: `Thanks for request`,
-  };
-
-  res.send(message); // res.sendFile(path.join(__dirname + '/public/index.html'))
+  res.send("Look good");
 });
 
 const user = require("./user");
@@ -42,5 +24,8 @@ router.use("/teacher", teacher);
 
 const student_course = require("./student_course");
 router.use("/student_course", student_course);
+
+const schedule = require("./schedule");
+router.use("/schedule", schedule);
 
 module.exports = router;
