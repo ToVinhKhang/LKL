@@ -157,12 +157,30 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Thêm khóa học</b></h1>
         <label for="nameCourse"><b>Tên khóa học</b></label>
-        <input
-          id="course-name"
-          type="text"
-          placeholder="Nhập tên khóa học"
-          name="nameCourse"
-        />
+        <select 
+          id="course-name" 
+          name="nameCouse"
+          class="form-control" style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn khóa học</option>
+          <option value="subject-01">Công nghệ phần mềm</option>
+          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
+          <option value="subject-02">Lập trình Game</option>
+          <option value="subject-03">Lập trình Web và ứng dụng</option>
+          <option value="subject-04">Lập trình Web nâng cao</option>
+          <option value="subject-05">Lập trình OOP</option>
+          <option value="subject-06">Hệ cơ sở dữ liệu</option>
+          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
+          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
+          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
+          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
+          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
+          <option value="subject-12">Thiết kế UX/UI</option>
+          <option value="subject-13">Thương mại điện tử</option>
+          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
+        </select>
+        <br>
+        
         <label for="tuitionFees"><b>Học phí</b></label>
         <input
           id="course-fee"

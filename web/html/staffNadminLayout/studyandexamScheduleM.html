@@ -175,7 +175,7 @@
               <tbody id="table-body">
                 <!--Subject 1-->
                 <tr>
-                  <td>Lập trình Game cơ bản</td>
+                  <td>Lập trình Game</td>
                   <td>A705</td>
                   <td>01/12/2020</td>
                   <td>90 phút</td>
@@ -241,12 +241,31 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Thêm TT Lịch học</b></h1>
         <label for="nameCouseS"><b>Tên khóa học</b></label>
-        <input
+        <select 
           id="schedule-course-name"
-          type="text"
-          placeholder="Nhập tên khóa học"
-          name="nameCouseS"
-        />
+          name="nameCouseS"  
+          class="form-control" 
+          style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn khóa học</option>
+          <option value="subject-01">Công nghệ phần mềm</option>
+          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
+          <option value="subject-02">Lập trình Game</option>
+          <option value="subject-03">Lập trình Web và ứng dụng</option>
+          <option value="subject-04">Lập trình Web nâng cao</option>
+          <option value="subject-05">Lập trình OOP</option>
+          <option value="subject-06">Hệ cơ sở dữ liệu</option>
+          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
+          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
+          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
+          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
+          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
+          <option value="subject-12">Thiết kế UX/UI</option>
+          <option value="subject-13">Thương mại điện tử</option>
+          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
+        </select>
+        <br>
+
         <label for="roomCourseS"><b>Phòng</b></label>
         <input
           id="schedule-room"
@@ -255,12 +274,23 @@
           name="roomCourseS"
         />
         <label for="day"><b>Thứ</b></label>
-        <input
+        <select 
           id="schedule-week_date"
-          type="text"
-          placeholder="Nhập thứ"
-          name="day"
-        />
+          name="day" 
+          class="form-control" 
+          style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn thứ</option>
+          <option value="Monday">Thứ Hai</option>
+          <option value="Tuesday">Thứ Ba</option>
+          <option value="Wednesday">Thứ Tư</option>
+          <option value="Thursday">Thứ Năm</option>
+          <option value="Friday">Thứ Sáu</option>
+          <option value="Saturday">Thứ Bảy</option>
+          <option value="Sunday">Chủ Nhật</option>
+        </select>
+        <br>
+
         <label for="timeCourseS"><b>Thời gian</b></label>
         <input
           id="schedule-duration"
@@ -287,13 +317,46 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Thêm TT Lịch thi</b></h1>
         <label for="nameCouseE"><b>Tên khóa học</b></label>
-        <input type="text" placeholder="Nhập tên khóa học" name="nameCouseE" />
+        <select 
+          id=""
+          name="nameCouseE"
+          class="form-control" style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn khóa học</option>
+          <option value="subject-01">Công nghệ phần mềm</option>
+          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
+          <option value="subject-02">Lập trình Game</option>
+          <option value="subject-03">Lập trình Web và ứng dụng</option>
+          <option value="subject-04">Lập trình Web nâng cao</option>
+          <option value="subject-05">Lập trình OOP</option>
+          <option value="subject-06">Hệ cơ sở dữ liệu</option>
+          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
+          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
+          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
+          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
+          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
+          <option value="subject-12">Thiết kế UX/UI</option>
+          <option value="subject-13">Thương mại điện tử</option>
+          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
+        </select>
+        <br>
         <label for="roomCourseE"><b>Phòng thi</b></label>
-        <input type="text" placeholder="Nhập phòng thi" name="roomCourseE" />
+        <input
+          id="" 
+          type="text" 
+          placeholder="Nhập phòng thi" 
+          name="roomCourseE" 
+        />
         <label for="dateeCourseE"><b>Ngày thi</b></label>
-        <input type="text" placeholder="Nhập ngày thi" name="dateeCourseE" />
+        <input 
+          id=""
+          type="text" 
+          placeholder="Nhập ngày thi" 
+          name="dateeCourseE" 
+        />
         <label for="timeCourseE"><b>Thời gian</b></label>
         <input
+          id=""
           type="text"
           placeholder="Nhập thời gian thi"
           name="timeCourseE"
@@ -316,12 +379,30 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Sửa TT Lịch học</b></h1>
         <label for="nameCouseS"><b>Tên khóa học</b></label>
-        <input
-          id="edit-schedule-course-name"
-          type="text"
-          placeholder="Nhập tên khóa học"
+        <select 
+          id="edit-schedule-course-name" 
           name="nameCouseS"
-        />
+          class="form-control" 
+          style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn khóa học</option>
+          <option value="subject-01">Công nghệ phần mềm</option>
+          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
+          <option value="subject-02">Lập trình Game</option>
+          <option value="subject-03">Lập trình Web và ứng dụng</option>
+          <option value="subject-04">Lập trình Web nâng cao</option>
+          <option value="subject-05">Lập trình OOP</option>
+          <option value="subject-06">Hệ cơ sở dữ liệu</option>
+          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
+          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
+          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
+          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
+          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
+          <option value="subject-12">Thiết kế UX/UI</option>
+          <option value="subject-13">Thương mại điện tử</option>
+          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
+        </select>
+        <br>
         <label for="roomCourseS"><b>Phòng</b></label>
         <input
           id="edit-schedule-room"
@@ -329,13 +410,25 @@
           placeholder="Nhập phòng học"
           name="roomCourseS"
         />
+
         <label for="day"><b>Thứ</b></label>
-        <input
+        <select 
           id="edit-schedule-week_date"
-          type="text"
-          placeholder="Nhập thứ"
-          name="day"
-        />
+          name="day" 
+          class="form-control" 
+          style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn thứ</option>
+          <option value="Monday">Thứ Hai</option>
+          <option value="Tuesday">Thứ Ba</option>
+          <option value="Wednesday">Thứ Tư</option>
+          <option value="Thursday">Thứ Năm</option>
+          <option value="Friday">Thứ Sáu</option>
+          <option value="Saturday">Thứ Bảy</option>
+          <option value="Sunday">Chủ Nhật</option>
+        </select>
+        <br>
+
         <label for="timeCourseS"><b>Thời gian</b></label>
         <input
           id="edit-schedule-duration"
@@ -360,21 +453,40 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Sửa TT Lịch thi</b></h1>
         <label for="nameCouseE"><b>Tên khóa học</b></label>
-        <input
-          type="text"
-          placeholder="Nhập tên khóa học"
+        <select 
+          id="" 
           name="nameCouseE"
-          value="Lập trình Game cơ bản"
-        />
+          class="form-control" style="background-color: #F1F1F1; height: 50px;">
+
+          <option disabled selected value>Chọn khóa học</option>
+          <option value="subject-01">Công nghệ phần mềm</option>
+          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
+          <option value="subject-02">Lập trình Game</option>
+          <option value="subject-03">Lập trình Web và ứng dụng</option>
+          <option value="subject-04">Lập trình Web nâng cao</option>
+          <option value="subject-05">Lập trình OOP</option>
+          <option value="subject-06">Hệ cơ sở dữ liệu</option>
+          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
+          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
+          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
+          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
+          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
+          <option value="subject-12">Thiết kế UX/UI</option>
+          <option value="subject-13">Thương mại điện tử</option>
+          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
+        </select>
+        <br>
         <label for="roomCourseE"><b>Phòng thi</b></label>
         <input
+          id=""
           type="text"
           placeholder="Nhập phòng thi"
           name="roomCourseE"
           value="A705"
         />
-        <label for="dateeCourseE"><b>Ngày thi</b></label>
+        <label for="dateCourseE"><b>Ngày thi</b></label>
         <input
+          id=""
           type="text"
           placeholder="Nhập ngày thi"
           name="dateeCourseE"
@@ -382,6 +494,7 @@
         />
         <label for="timeCourseE"><b>Thời gian</b></label>
         <input
+          id=""
           type="text"
           placeholder="Nhập thời gian thi"
           name="timeCourseE"
