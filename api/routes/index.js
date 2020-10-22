@@ -28,4 +28,7 @@ router.use("/student_course", student_course);
 const schedule = require("./schedule");
 router.use("/schedule", schedule);
 
+const exam_schedule = require("./exam_schedule");
+router.use("/exam_schedule", exam_schedule);
+
 module.exports = router;

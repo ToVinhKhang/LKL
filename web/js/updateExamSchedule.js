@@ -1,14 +1,14 @@
-function updateScheduleById(id, courseId, name, room, week_date, duration) {
+function updateExamSchedule(id, course_id, name, room, exam_date, exam_duration) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
   var raw = JSON.stringify({
     id: id,
-    courseId: courseId,
+    course_id: course_id,
     name: name,
     room: room,
-    week_date: week_date,
-    duration: duration,
+    exam_date: exam_date,
+    exam_duration: exam_duration,
   });
 
   var requestOptions = {
@@ -18,8 +18,8 @@ function updateScheduleById(id, courseId, name, room, week_date, duration) {
     redirect: "follow",
   };
 
-  fetch("http://localhost:4000/schedule/update", requestOptions)
+  fetch("http://localhost:4000/exam_schedule/update", requestOptions)
     .then((response) => response.text())
-    .then((result) =>  getScheduleForModerator(week))
+    .then((result) => getExamScheduleForModerator())
     .catch((error) => console.log("error", error));
 }

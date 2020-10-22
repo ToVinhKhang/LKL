@@ -26,6 +26,12 @@
   </head>
 
   <body>
+    <!-- loading -->
+    <div id="loading" class="loading">
+      <div class="loading-overlay"></div>
+      <div class="spinner"></div>
+    </div>
+
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
       <img id="logo" src="../../images/LKLlogo.png" /><a
@@ -53,42 +59,42 @@
                     margin-right: auto;
                   "
                 />
-                <li id="menu" class="nav-item">
+                <li  class="nav-item">
                   <p class="nav-link" style="text-align: center">
                     KentStaffAdmin
                   </p>
                 </li>
               </div>
               <br />
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="notificationListM.html"
                   >Quản lý Thông báo</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item active">
+              <li  class="nav-item active">
                 <a class="nav-link" href="">Quản lý Khóa học</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="studyandexamScheduleM.html"
                   >Quản lý Lịch học và thi</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="studentInfoM.html"
                   >Quản lý TT Học viên</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="teacherInfoM.html"
                   >Quản lý TT Giảng viên</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="../home.html">Đăng xuất</a>
               </li>
               <div class="dropdown-divider"></div>
@@ -157,29 +163,12 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Thêm khóa học</b></h1>
         <label for="nameCourse"><b>Tên khóa học</b></label>
-        <select 
-          id="course-name" 
-          name="nameCouse"
-          class="form-control" style="background-color: #F1F1F1; height: 50px;">
-
-          <option disabled selected value>Chọn khóa học</option>
-          <option value="subject-01">Công nghệ phần mềm</option>
-          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
-          <option value="subject-02">Lập trình Game</option>
-          <option value="subject-03">Lập trình Web và ứng dụng</option>
-          <option value="subject-04">Lập trình Web nâng cao</option>
-          <option value="subject-05">Lập trình OOP</option>
-          <option value="subject-06">Hệ cơ sở dữ liệu</option>
-          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
-          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
-          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
-          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
-          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
-          <option value="subject-12">Thiết kế UX/UI</option>
-          <option value="subject-13">Thương mại điện tử</option>
-          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
-        </select>
-        <br>
+        <input
+          id="course-name"
+          type="text"
+          placeholder="Nhập tên khóa học"
+          name="nameCourse"
+        />
         
         <label for="tuitionFees"><b>Học phí</b></label>
         <input
@@ -343,6 +332,7 @@
       </div>
     </div>
 
+    <script src="../../js/index.js"></script>
     <script src="../../js/getCourseForModerator.js"></script>
     <script src="../../js/addCourse.js"></script>
     <script src="../../js/deleteCourse.js"></script>

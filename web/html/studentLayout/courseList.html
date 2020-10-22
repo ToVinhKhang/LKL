@@ -60,32 +60,32 @@
                     margin-right: auto;
                   "
                 />
-                <li id="menu" class="nav-item">
+                <li  class="nav-item">
                   <p id="user-name" class="nav-link" style="text-align: center">
                     {{ Tên học viên }}
                   </p>
                 </li>
               </div>
               <br />
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="notificationList.html"> Thông báo </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item active">
+              <li  class="nav-item active">
                 <a class="nav-link" href=""> Khóa học </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="studyexamSchedule.html">
                   Lịch học / Lịch thi
                 </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="tuitionFee.html"> Học phí </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
+              <li  class="nav-item">
                 <a class="nav-link" href="../home.html"> Đăng xuất </a>
               </li>
               <div class="dropdown-divider"></div>
@@ -170,7 +170,8 @@
       ];
       setUserInfor();
 
-      getCourse(studentId);
+      // getCourse(studentId);
+      getCoursesByStudentId(studentId);
 
       let selectedCourse;
 

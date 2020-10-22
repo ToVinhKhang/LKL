@@ -1,8 +1,8 @@
-function deleteScheduleById(id) {
+function deleteExamScheduleById(examScheduleId) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
-  var raw = JSON.stringify({ id: id });
+  var raw = JSON.stringify({ id: examScheduleId });
 
   var requestOptions = {
     method: "DELETE",
@@ -11,10 +11,8 @@ function deleteScheduleById(id) {
     redirect: "follow",
   };
 
-  fetch("http://localhost:4000/schedule/delete", requestOptions)
+  fetch("http://localhost:4000/exam_schedule/delete", requestOptions)
     .then((response) => response.text())
-    .then((result) => {
-      getScheduleForModerator(week)
-    })
+    .then((result) => getExamScheduleForModerator())
     .catch((error) => console.log("error", error));
 }

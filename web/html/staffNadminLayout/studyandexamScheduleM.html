@@ -4,24 +4,24 @@
     <meta charset="UTF-8" />
     <title>LKL Edu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+    <link
+      href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
       href="../../images/favicon.png"
     />
-    <link
-      href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css"
-      rel="stylesheet"
-    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -33,10 +33,7 @@
 
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-      <img id="logo" src="../../images/LKLlogo.png" /><a
-        class="navbar-brand"
-        href="#"
-      ></a>
+      <img id="logo" src="../../images/LKLlogo.png" />
     </nav>
 
     <!--DataView-->
@@ -47,7 +44,8 @@
           <nav class="navbar navbar-light" style="padding-top: 0px">
             <ul class="navbar-nav nav nav-pills">
               <div style="border-style: ridge; border-radius: 10px">
-                <br /><img
+                <br />
+                <img
                   src="../../images/ava2.png"
                   style="
                     border-radius: 50%;
@@ -58,43 +56,45 @@
                     margin-right: auto;
                   "
                 />
-                <li id="menu" class="nav-item">
+                <li class="nav-item">
                   <p class="nav-link" style="text-align: center">
                     KentStaffAdmin
                   </p>
                 </li>
               </div>
               <br />
-              <li id="menu" class="nav-item">
-                <a class="nav-link" href="notificationListM.html"
-                  >Quản lý Thông báo</a
-                >
+              <li class="nav-item">
+                <a class="nav-link" href="notificationListM.html">
+                  Quản lý Thông báo
+                </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
-                <a class="nav-link" href="courseListM.html">Quản lý Khóa học</a>
+              <li class="nav-item">
+                <a class="nav-link" href="courseListM.html">
+                  Quản lý Khóa học
+                </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item active">
-                <a class="nav-link" href="studyandexamScheduleM.html"
-                  >Quản lý Lịch học và thi</a
-                >
+              <li class="nav-item active">
+                <a class="nav-link" href="studyandexamScheduleM.html">
+                  Quản lý Lịch học và thi
+                </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
-                <a class="nav-link" href="studentInfoM.html"
-                  >Quản lý TT Học viên</a
-                >
+              <li class="nav-item">
+                <a class="nav-link" href="studentInfoM.html">
+                  Quản lý TT Học viên
+                </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
-                <a class="nav-link" href="teacherInfoM.html"
-                  >Quản lý TT Giảng viên</a
-                >
+              <li class="nav-item">
+                <a class="nav-link" href="teacherInfoM.html">
+                  Quản lý TT Giảng viên
+                </a>
               </li>
               <div class="dropdown-divider"></div>
-              <li id="menu" class="nav-item">
-                <a class="nav-link" href="../home.html">Đăng xuất</a>
+              <li class="nav-item">
+                <a class="nav-link" href="../home.html"> Đăng xuất </a>
               </li>
               <div class="dropdown-divider"></div>
             </ul>
@@ -110,12 +110,13 @@
                 width="40"
                 height="40"
                 alt="folder icon"
-              />&thinsp;Quản lý Lịch học
+              />
+              Quản lý Lịch học
             </h4>
 
-            <span onclick="openFormS()" class="l-btn noselect"
-              >Thêm Lịch học</span
-            >
+            <span onclick="openFormS()" class="l-btn noselect">
+              Thêm Lịch học
+            </span>
 
             <!--Study Schedule Info-->
             <table id="MyTable" class="table table-hover">
@@ -155,12 +156,13 @@
                 width="40"
                 height="40"
                 alt="folder icon"
-              />&thinsp;Quản lý Lịch thi
+              />
+              Quản lý Lịch thi
             </h4>
             <!--Exam Schedule Info-->
-            <span onclick="openFormE()" class="l-btn noselect"
-              >Thêm Lịch thi</span
-            >
+            <span onclick="openFormE()" class="l-btn noselect">
+              Thêm Lịch thi
+            </span>
             <table id="MyTable" class="table table-hover">
               <thead>
                 <tr>
@@ -172,30 +174,8 @@
                 </tr>
               </thead>
 
-              <tbody id="table-body">
+              <tbody id="examSchedule-list">
                 <!--Subject 1-->
-                <tr>
-                  <td>Lập trình Game</td>
-                  <td>A705</td>
-                  <td>01/12/2020</td>
-                  <td>90 phút</td>
-                  <td>
-                    <div class="d-flex">
-                      <div>
-                        <i
-                          onclick="openFormEEdit()"
-                          class="mdi mdi-pen l-icon l-icon-md"
-                        ></i>
-                      </div>
-                      <div class="l-spacer"></div>
-                      <div>
-                        <i
-                          class="mdi mdi-delete l-icon l-icon-md l-fill-red"
-                        ></i>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -241,30 +221,13 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Thêm TT Lịch học</b></h1>
         <label for="nameCouseS"><b>Tên khóa học</b></label>
-        <select 
+        <select
           id="schedule-course-name"
-          name="nameCouseS"  
-          class="form-control" 
-          style="background-color: #F1F1F1; height: 50px;">
-
-          <option disabled selected value>Chọn khóa học</option>
-          <option value="subject-01">Công nghệ phần mềm</option>
-          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
-          <option value="subject-02">Lập trình Game</option>
-          <option value="subject-03">Lập trình Web và ứng dụng</option>
-          <option value="subject-04">Lập trình Web nâng cao</option>
-          <option value="subject-05">Lập trình OOP</option>
-          <option value="subject-06">Hệ cơ sở dữ liệu</option>
-          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
-          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
-          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
-          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
-          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
-          <option value="subject-12">Thiết kế UX/UI</option>
-          <option value="subject-13">Thương mại điện tử</option>
-          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
-        </select>
-        <br>
+          name="nameCouseS"
+          class="form-control course-selection"
+          style="background-color: #f1f1f1; height: 50px"
+        ></select>
+        <br />
 
         <label for="roomCourseS"><b>Phòng</b></label>
         <input
@@ -274,12 +237,12 @@
           name="roomCourseS"
         />
         <label for="day"><b>Thứ</b></label>
-        <select 
+        <select
           id="schedule-week_date"
-          name="day" 
-          class="form-control" 
-          style="background-color: #F1F1F1; height: 50px;">
-
+          name="day"
+          class="form-control"
+          style="background-color: #f1f1f1; height: 50px"
+        >
           <option disabled selected value>Chọn thứ</option>
           <option value="Monday">Thứ Hai</option>
           <option value="Tuesday">Thứ Ba</option>
@@ -289,7 +252,7 @@
           <option value="Saturday">Thứ Bảy</option>
           <option value="Sunday">Chủ Nhật</option>
         </select>
-        <br>
+        <br />
 
         <label for="timeCourseS"><b>Thời gian</b></label>
         <input
@@ -316,53 +279,39 @@
     >
       <div class="form-container">
         <h1 style="text-align: center"><b>Thêm TT Lịch thi</b></h1>
-        <label for="nameCouseE"><b>Tên khóa học</b></label>
-        <select 
-          id=""
+        <label for="nameCouseE "><b>Tên khóa học</b></label>
+        <select
+          id="exam-schedule-course-name"
           name="nameCouseE"
-          class="form-control" style="background-color: #F1F1F1; height: 50px;">
-
-          <option disabled selected value>Chọn khóa học</option>
-          <option value="subject-01">Công nghệ phần mềm</option>
-          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
-          <option value="subject-02">Lập trình Game</option>
-          <option value="subject-03">Lập trình Web và ứng dụng</option>
-          <option value="subject-04">Lập trình Web nâng cao</option>
-          <option value="subject-05">Lập trình OOP</option>
-          <option value="subject-06">Hệ cơ sở dữ liệu</option>
-          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
-          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
-          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
-          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
-          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
-          <option value="subject-12">Thiết kế UX/UI</option>
-          <option value="subject-13">Thương mại điện tử</option>
-          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
-        </select>
-        <br>
+          class="form-control course-selection"
+          style="background-color: #f1f1f1; height: 50px"
+        ></select>
+        <br />
         <label for="roomCourseE"><b>Phòng thi</b></label>
         <input
-          id="" 
-          type="text" 
-          placeholder="Nhập phòng thi" 
-          name="roomCourseE" 
+          id="exam-schedule-room"
+          type="text"
+          placeholder="Nhập phòng thi"
+          name="roomCourseE"
         />
         <label for="dateeCourseE"><b>Ngày thi</b></label>
-        <input 
-          id=""
-          type="text" 
-          placeholder="Nhập ngày thi" 
-          name="dateeCourseE" 
+        <input
+          id="exam-schedule-exam_date"
+          type="text"
+          placeholder="Nhập ngày thi"
+          name="dateeCourseE"
         />
         <label for="timeCourseE"><b>Thời gian</b></label>
         <input
-          id=""
+          id="exam-schedule-duration"
           type="text"
           placeholder="Nhập thời gian thi"
           name="timeCourseE"
         />
 
-        <button type="submit" class="btn">Thêm</button>
+        <button onclick="handleAddExamSchedule()" type="submit" class="btn">
+          Thêm
+        </button>
         <button type="button" class="btn cancel" onclick="closeFormE()">
           Đóng
         </button>
@@ -379,30 +328,13 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Sửa TT Lịch học</b></h1>
         <label for="nameCouseS"><b>Tên khóa học</b></label>
-        <select 
-          id="edit-schedule-course-name" 
+        <select
+          id="edit-schedule-course-name"
           name="nameCouseS"
-          class="form-control" 
-          style="background-color: #F1F1F1; height: 50px;">
-
-          <option disabled selected value>Chọn khóa học</option>
-          <option value="subject-01">Công nghệ phần mềm</option>
-          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
-          <option value="subject-02">Lập trình Game</option>
-          <option value="subject-03">Lập trình Web và ứng dụng</option>
-          <option value="subject-04">Lập trình Web nâng cao</option>
-          <option value="subject-05">Lập trình OOP</option>
-          <option value="subject-06">Hệ cơ sở dữ liệu</option>
-          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
-          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
-          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
-          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
-          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
-          <option value="subject-12">Thiết kế UX/UI</option>
-          <option value="subject-13">Thương mại điện tử</option>
-          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
-        </select>
-        <br>
+          class="form-control course-selection"
+          style="background-color: #f1f1f1; height: 50px"
+        ></select>
+        <br />
         <label for="roomCourseS"><b>Phòng</b></label>
         <input
           id="edit-schedule-room"
@@ -412,12 +344,12 @@
         />
 
         <label for="day"><b>Thứ</b></label>
-        <select 
+        <select
           id="edit-schedule-week_date"
-          name="day" 
-          class="form-control" 
-          style="background-color: #F1F1F1; height: 50px;">
-
+          name="day"
+          class="form-control"
+          style="background-color: #f1f1f1; height: 50px"
+        >
           <option disabled selected value>Chọn thứ</option>
           <option value="Monday">Thứ Hai</option>
           <option value="Tuesday">Thứ Ba</option>
@@ -427,7 +359,7 @@
           <option value="Saturday">Thứ Bảy</option>
           <option value="Sunday">Chủ Nhật</option>
         </select>
-        <br>
+        <br />
 
         <label for="timeCourseS"><b>Thời gian</b></label>
         <input
@@ -437,7 +369,9 @@
           name="timeCourseS"
         />
 
-        <button onclick="handleEditScheduleById()" type="submit" class="btn">Xác nhận</button>
+        <button onclick="handleEditScheduleById()" type="submit" class="btn">
+          Xác nhận
+        </button>
         <button type="button" class="btn cancel" onclick="closeFormSEdit()">
           Đóng
         </button>
@@ -453,32 +387,16 @@
       <div class="form-container">
         <h1 style="text-align: center"><b>Sửa TT Lịch thi</b></h1>
         <label for="nameCouseE"><b>Tên khóa học</b></label>
-        <select 
-          id="" 
+        <select
+          id="edit-exam-schedule-course-name"
           name="nameCouseE"
-          class="form-control" style="background-color: #F1F1F1; height: 50px;">
-
-          <option disabled selected value>Chọn khóa học</option>
-          <option value="subject-01">Công nghệ phần mềm</option>
-          <option value="subject-01">Cấu trúc dữ liệu và giải thuật</option>
-          <option value="subject-02">Lập trình Game</option>
-          <option value="subject-03">Lập trình Web và ứng dụng</option>
-          <option value="subject-04">Lập trình Web nâng cao</option>
-          <option value="subject-05">Lập trình OOP</option>
-          <option value="subject-06">Hệ cơ sở dữ liệu</option>
-          <option value="subject-07">Hệ thống hoạch định nguồn lực doanh nghiệp</option>
-          <option value="subject-08">Nhập môn Hệ thống phân tán</option>
-          <option value="subject-09">Nhập môn Trí tuệ nhân tạo</option>
-          <option value="subject-10">Phân tích thiết kế yêu cầu</option>
-          <option value="subject-11">Phát triển phần mềm trên nền tảng tiến hóa</option>
-          <option value="subject-12">Thiết kế UX/UI</option>
-          <option value="subject-13">Thương mại điện tử</option>
-          <option value="subject-14">Toán tổ hợp đồ thị và ứng dụng</option>
-        </select>
-        <br>
+          class="form-control course-selection"
+          style="background-color: #f1f1f1; height: 50px"
+        ></select>
+        <br />
         <label for="roomCourseE"><b>Phòng thi</b></label>
         <input
-          id=""
+          id="edit-exam-schedule-room"
           type="text"
           placeholder="Nhập phòng thi"
           name="roomCourseE"
@@ -486,7 +404,7 @@
         />
         <label for="dateCourseE"><b>Ngày thi</b></label>
         <input
-          id=""
+          id="edit-exam-schedule-exam_date"
           type="text"
           placeholder="Nhập ngày thi"
           name="dateeCourseE"
@@ -494,30 +412,25 @@
         />
         <label for="timeCourseE"><b>Thời gian</b></label>
         <input
-          id=""
+          id="edit-exam-schedule-duration"
           type="text"
           placeholder="Nhập thời gian thi"
           name="timeCourseE"
           value="90 phút"
         />
 
-        <button type="submit" class="btn">Xác nhận</button>
+        <button
+          type="submit"
+          class="btn"
+          onclick="handleUpdateExamScheduleById()"
+        >
+          Xác nhận
+        </button>
         <button type="button" class="btn cancel" onclick="closeFormEEdit()">
           Đóng
         </button>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        $(".mdi-delete").click(function () {
-          $("#myModal").modal({
-            backdrop: "static",
-            keyboard: false,
-          });
-        });
-      });
-    </script>
 
     <!-- Delete Confirm Modal -->
     <div id="myModal" class="modal fade" role="dialog">
@@ -534,14 +447,26 @@
             <p>Bạn có chắc chắn muốn xóa?</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
+            <button
+              id="confirm-popup"
+              type="button"
+              class="btn btn-default"
+              onclick="confirmFalse()"
+              data-dismiss="modal"
+            >
               Đóng
             </button>
 
-            <form action="" method="POST" style="display: inline">
+            <div style="display: inline">
               <input id="deleteitem" type="hidden" name="confirm" />
-              <button type="submit" class="btn btn-danger">Xác nhận</button>
-            </form>
+              <button
+                type="submit"
+                class="btn btn-danger"
+                onclick="confirmTrue()"
+              >
+                Xác nhận
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -586,29 +511,38 @@
     </div>
 
     <script src="../../js/index.js"></script>
+    <script src="../../js/buildCourseSelection.js"></script>
     <script src="../../js/addSchedule.js"></script>
     <script src="../../js/getScheduleForModerator.js"></script>
     <script src="../../js/deleteScheduleById.js"></script>
     <script src="../../js/updateScheduleById.js"></script>
+    <script src="../../js/getExamScheduleForModerator.js"></script>
+    <script src="../../js/addExamSchedule.js"></script>
+    <script src="../../js/deleteExamScheduleById.js"></script>
+    <script src="../../js/updateExamSchedule.js"></script>
     <script>
       getWeekDate();
-      getScheduleForModeratoer(week);
+      getScheduleForModerator(week);
+      getExamScheduleForModerator();
+      buildCourseSelection();
 
       Previous.onclick = () => {
         preWeek();
-        getScheduleForModeratoer(week);
+        getScheduleForModerator(week);
       };
 
       Next.onclick = () => {
         nextWeek();
-        getScheduleForModeratoer(week);
+        getScheduleForModerator(week);
       };
 
       function handleAddSchedule() {
         activeElement("loading");
-        const courseId = "chưa có";
         const name =
           document.querySelector("#schedule-course-name").value || "chưa có";
+        const courseId = document
+          .getElementById("schedule-course-name")
+          .selectedOptions[0].getAttribute("data-course-id");
         const room =
           document.querySelector("#schedule-room").value || "chưa có";
         const week_date =
@@ -623,30 +557,128 @@
         activeElement("loading");
         deleteScheduleById(scheduleId);
       }
-    
+
       let selectedScheduleId;
 
       function handleOpenFormEditScheduleById(idx) {
-        const schedule = scheduleList[idx]
-        selectedScheduleId = schedule.id
-        document.querySelector("#edit-schedule-course-name").value = schedule.name
-        document.querySelector("#edit-schedule-room").value = schedule.room
-        document.querySelector("#edit-schedule-week_date").value = schedule.week_date
-        document.querySelector("#edit-schedule-duration").value = schedule.duration
-        
-        openFormSEdit()
+        const schedule = scheduleList[idx];
+        selectedScheduleId = schedule.id;
+        document.querySelector("#edit-schedule-course-name").value =
+          schedule.name;
+        document.querySelector("#edit-schedule-room").value = schedule.room;
+        document.querySelector("#edit-schedule-week_date").value =
+          schedule.week_date;
+        document.querySelector("#edit-schedule-duration").value =
+          schedule.duration;
+
+        openFormSEdit();
       }
 
-
       function handleEditScheduleById() {
-        activeElement("loading")
-        closeFormSEdit()
-        const name = document.querySelector("#edit-schedule-course-name").value
-        const room = document.querySelector("#edit-schedule-room").value
-        const week_date = document.querySelector("#edit-schedule-week_date").value
-        const duration = document.querySelector("#edit-schedule-duration").value
+        activeElement("loading");
+        closeFormSEdit();
+        const name = document.querySelector("#edit-schedule-course-name").value;
+        const courseId = document
+          .getElementById("edit-schedule-course-name")
+          .selectedOptions[0].getAttribute("data-course-id");
+        const room = document.querySelector("#edit-schedule-room").value;
+        const week_date = document.querySelector("#edit-schedule-week_date")
+          .value;
+        const duration = document.querySelector("#edit-schedule-duration")
+          .value;
 
-        updateScheduleById(selectedScheduleId, "courseId", name, room, week_date, duration)
+        updateScheduleById(
+          selectedScheduleId,
+          courseId,
+          name,
+          room,
+          week_date,
+          duration
+        );
+      }
+
+      // Exam
+      function openPopupConfirmDeleteExamSchedule(examScheduleId) {
+        examScheduleIdSelected = examScheduleId;
+        isDeleteExamSchedule = false;
+        $("#myModal").modal({
+          backdrop: "static",
+          keyboard: false,
+        });
+      }
+
+      let isDeleteExamSchedule = undefined;
+      let examScheduleIdSelected;
+
+      function confirmFalse() {
+        isDeleteExamSchedule = undefined;
+      }
+
+      function confirmTrue() {
+        if (isDeleteExamSchedule != undefined) {
+          isDeleteExamSchedule = true;
+          handleDeleteExamScheduleById();
+          // close confirm
+          document.getElementById("confirm-popup").click();
+        }
+      }
+
+      function handleAddExamSchedule() {
+        activeElement("loading");
+        const name =
+          document.querySelector("#exam-schedule-course-name").value ||
+          "chưa có";
+        const course_id = document
+          .getElementById("exam-schedule-course-name")
+          .selectedOptions[0].getAttribute("data-course-id");
+        const room =
+          document.querySelector("#exam-schedule-room").value || "chưa có";
+        const exam_date =
+          document.querySelector("#exam-schedule-exam_date").value || "chưa có";
+        const exam_duration =
+          document.querySelector("#exam-schedule-duration").value || "chưa có";
+
+        addExamSchedule(name, course_id, room, exam_date, exam_duration);
+      }
+
+      function handleDeleteExamScheduleById() {
+        if (isDeleteExamSchedule) {
+          activeElement("loading");
+          deleteExamScheduleById(examScheduleIdSelected);
+        }
+      }
+
+      function handleOpenFormEditExamScheduleById(idx) {
+        openFormEEdit();
+        const examSchedule = examScheduleList[idx];
+        examScheduleIdSelected = examSchedule.id;
+        document.querySelector("#edit-exam-schedule-course-name").value =
+          examSchedule.name;
+        document.querySelector("#edit-exam-schedule-room").value =
+          examSchedule.room;
+        document.querySelector("#edit-exam-schedule-exam_date").value =
+          examSchedule.exam_date;
+        document.querySelector("#edit-exam-schedule-duration").value =
+          examSchedule.exam_duration;
+      }
+
+      function handleUpdateExamScheduleById() {
+        activeElement("loading");
+        closeFormEEdit();
+        const id = examScheduleIdSelected;
+        const course_id = document
+          .getElementById("edit-exam-schedule-course-name")
+          .selectedOptions[0].getAttribute("data-course-id");
+        const name = document.querySelector("#edit-exam-schedule-course-name")
+          .value;
+        const room = document.querySelector("#edit-exam-schedule-room").value;
+        const exam_date = document.querySelector(
+          "#edit-exam-schedule-exam_date"
+        ).value;
+        const exam_duration = document.querySelector(
+          "#edit-exam-schedule-duration"
+        ).value;
+        updateExamSchedule(id, course_id, name, room, exam_date, exam_duration);
       }
     </script>
   </body>

@@ -1,4 +1,4 @@
-function getScheduleForModeratoer(week) {
+function getScheduleForModerator(week) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -20,6 +20,7 @@ function getScheduleForModeratoer(week) {
 var scheduleList;
 
 function buildSchedule(result) {
+  inactiveElement("loading")
   var scheduleTable = document.querySelector("#schedule-list");
   scheduleTable.innerHTML = ""
   scheduleList = JSON.parse(result)["schedule"];
@@ -51,6 +52,5 @@ function buildSchedule(result) {
     var scheduleHTMLDIV = document.createElement("tr");
     scheduleHTMLDIV.innerHTML = scheduleHTML;
     scheduleTable.append(scheduleHTMLDIV);
-    inactiveElement("loading")
   }
 }

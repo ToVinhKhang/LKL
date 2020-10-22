@@ -54,6 +54,7 @@ function buildCourse(result) {
                 </div>
             </td>
         `;
+    inactiveElement("loading")
     var courseHTMLDIV = document.createElement("tr");
     courseHTMLDIV.innerHTML = courseHTML;
     courseTable.append(courseHTMLDIV);

@@ -20,6 +20,6 @@ function addSchedule(courseId, name, room, week_date, duration, week) {
 
   fetch("http://localhost:4000/schedule/add", requestOptions)
     .then((response) => response.text())
-    .then((result) => getScheduleForModeratoer(week))
+    .then((result) => getScheduleForModerator(week))
     .catch((error) => console.log("error", error));
 }
