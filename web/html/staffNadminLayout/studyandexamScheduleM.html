@@ -241,7 +241,7 @@
 
 
         <label for="day"><b>Thứ</b></label>
-        <div id="dayList" class="dayList" >
+        <div id="schedule-week_date" class="dayList" >
           <span class="anchor form-control" style="background-color: #f1f1f1;">Chọn Thứ</span>
           <ul class="items">
             <span class="noWrap"><label for="Monday">Thứ Hai:</label><input type="checkbox" id="Monday"/></span>
@@ -257,7 +257,7 @@
 
         <link rel="stylesheet" type="text/css" href="../../css/temp.css" />
         <script type="text/javascript">
-          var checkboxList = document.getElementById('dayList');
+          var checkboxList = document.getElementsByClassName('dayList')[0];
           checkboxList.getElementsByClassName('anchor')[0].onclick = function(evt) {
             if(checkboxList.classList.contains('visible')){checkboxList.classList.remove('visible');}
             else{checkboxList.classList.add('visible');}
@@ -354,24 +354,19 @@
           name="roomCourseS"
         />
 
-        <label id="edit-schedule-week_date" for="day"><b>Thứ</b></label>
-        <select
-          id="edit-schedule-week_date"
-          name="day"
-          class="form-control"
-          style="background-color: #f1f1f1; height: 50px"
-        >
-          <option disabled selected value>Chọn thứ</option>
-          <option value="Monday">Thứ Hai</option>
-          <option value="Tuesday">Thứ Ba</option>
-          <option value="Wednesday">Thứ Tư</option>
-          <option value="Thursday">Thứ Năm</option>
-          <option value="Friday">Thứ Sáu</option>
-          <option value="Saturday">Thứ Bảy</option>
-          <option value="Sunday">Chủ Nhật</option>
-
-
-        </select>
+        <label for="day"><b>Thứ</b></label>
+        <div id="edit-schedule-week_date" class="dayList" >
+          <span class="anchor form-control" style="background-color: #f1f1f1;">Chọn Thứ</span>
+          <ul class="items">
+            <span class="noWrap"><label for="Monday">Thứ Hai:</label><input type="checkbox" id="Monday"/></span>
+            <span class="noWrap"><label for="Tuesday">Thứ Ba :</label><input type="checkbox" id="Tuesday"/></span>
+            <span class="noWrap"><label for="Wednesday">Thứ Tư :</label><input type="checkbox" id="Wednesday"/></span>
+            <span class="noWrap"><label for="Thursday">Thứ Năm:</label><input type="checkbox" id="Thursday"/></span>
+            <span class="noWrap"><label for="Friday">Thứ Sáu:</label><input type="checkbox" id="Friday"/></span>
+            <span class="noWrap"><label for="Saturday">Thứ Bảy:</label><input type="checkbox" id="Saturday"/></span>
+            <span class="noWrap"><label for="Sunday">Chủ Nhật:</label><input type="checkbox" id="Sunday"/></span>           
+          </ul>
+        </div>
         <br />
 
         <label for="timeCourseS"><b>Thời gian</b></label>
