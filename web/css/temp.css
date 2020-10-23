@@ -1,0 +1,10 @@
+.noWrap{white-space: nowrap; margin-left: 8px;}
+.dayList {display: block;}
+.dayList .anchor {position: relative;cursor: pointer;display: block;padding: 5px 50px 5px 10px;border: 1px solid #ccc;}
+.dayList .anchor:after {position: absolute;content: "";border-left: 1px solid black;border-top: 1px solid black;padding: 5px;right: 10px;top: 20%;-moz-transform: rotate(-135deg);-ms-transform: rotate(-135deg);-o-transform: rotate(-135deg);-webkit-transform: rotate(-135deg);transform: rotate(-135deg);}
+.dayList .anchor:active:after {right: 8px;top: 21%;}
+.dayList ul.items span:hover {font-weight: bold;}
+.dayList ul.items {padding: 2px;display: none;margin: 0;border: 1px solid #ccc;border-top: none;}
+.dayList ul.items span > label{width: 50px;}
+.dayList.visible .anchor {color: black;}
+.dayList.visible .items {display: block;}
