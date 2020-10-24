@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const { addSchedule, getSchedule, deleteSchedule, updateSchedule } = require("./services");
+const { addSchedule, getSchedule, deleteSchedule, updateSchedule, getScheduleByStudentId } = require("./services");
 
 router.get("/", async (req, res, ext) => {
   res.send("schedule ok!");
@@ -19,6 +19,10 @@ router.put("/add", async (req, res, ext) => {
 
 router.post("/get", async (req, res, ext) => {
   res.send(await getSchedule(req.body.week));
+});
+
+router.post("/getbystudentid", async (req, res, ext) => {
+  res.send(await getScheduleByStudentId(req.body.week, req.body.id));
 });
 
 router.delete("/delete", async (req, res, ext) => {

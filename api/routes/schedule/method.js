@@ -1,18 +1,20 @@
-function isSigned(courseId, signedCourse) {
-  for (let i = 0; i < signedCourse.length; i++) {
-    if (courseId === signedCourse[i].course_id) return true;
+const { Schedule } = require("@models/schedule");
+
+async function getScheduleByCoursesId(week, courses) {
+  let schedule_list = [];
+
+  for (var i = 0; i < courses.length; i++) {
+    const course_id = courses[i].id;
+    const schedule = await Schedule.query()
+      .where("week", week)
+      .where("course_id", course_id);
+
+    if (schedule.length !== 0) schedule_list = [...schedule_list,...schedule];
   }
 
-  return false;
-}
-
-function addCourseStatus(course, signedCourse) {
-  for (let i = 0; i < course.length; i++) {
-    if (isSigned(course[i].id, signedCourse)) course[i]["isSigned"] = true;
-    else course[i]["isSigned"] = false;
-  }
+  return schedule_list;
 }
 
 module.exports = {
-  addCourseStatus,
+  getScheduleByCoursesId,
 };

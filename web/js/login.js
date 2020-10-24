@@ -27,7 +27,7 @@ function login(username, password) {
             break;
   
           case "teacher":
-            window.location.href = "./teacherLayout/notificationListM.html"
+            window.location.href = "./teacherLayout/notificationList.html"
             break;
         }
       } catch (e) {

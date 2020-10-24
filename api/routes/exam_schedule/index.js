@@ -3,6 +3,7 @@ var router = express.Router();
 const {
   addExamSchedule,
   getExamSchedule,
+  getExamScheduleById,
   deleteExamSchedule,
   updateExamSchedule,
 } = require("./services");
@@ -25,6 +26,10 @@ router.put("/add", async (req, res, ext) => {
 
 router.get("/get", async (req, res, ext) => {
   res.send(await getExamSchedule());
+});
+
+router.post("/get", async (req, res, ext) => {
+  res.send(await getExamScheduleById(req.body.id));
 });
 
 router.delete("/delete", async (req, res, ext) => {

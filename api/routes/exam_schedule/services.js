@@ -1,5 +1,8 @@
 const { ExamSchedule } = require("@models/exam_schedule");
 const { v4: uuidv4 } = require("uuid");
+const { getCoursesByStudentId } = require("../student_course/services")
+const { getExamScheduleByCoursesId } = require("./method")
+
 
 async function addExamSchedule(
   course_id,
@@ -35,6 +38,15 @@ async function getExamSchedule() {
   };
 }
 
+async function getExamScheduleById(student_id) {
+  const courses = await getCoursesByStudentId(student_id)
+  const examSchedule = await getExamScheduleByCoursesId(courses['courses'])
+  
+  return {
+    examSchedule: examSchedule,
+  };
+}
+
 async function deleteExamSchedule(id) {
   await ExamSchedule.query().deleteById(id);
   return { mess: "deleted" };
@@ -62,6 +74,7 @@ async function updateExamSchedule(
 module.exports = {
   addExamSchedule,
   getExamSchedule,
+  getExamScheduleById,
   deleteExamSchedule,
   updateExamSchedule,
 };

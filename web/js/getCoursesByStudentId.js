@@ -1,4 +1,4 @@
-function getCoursesByStudentId(student_id) {
+function getCoursesByStudentId(student_id, buildFunction) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
 
@@ -13,7 +13,13 @@ function getCoursesByStudentId(student_id) {
 
   fetch("http://localhost:4000/student_course/getcourse", requestOptions)
     .then((response) => response.text())
-    .then((result) => buildCourse(result))
+    .then((result) =>  {
+      if (!buildFunction) {
+        buildCourse(result)
+      } else {
+        buildFunction(result)
+      }
+    })
     .catch((error) => console.log("error", error));
 }
 

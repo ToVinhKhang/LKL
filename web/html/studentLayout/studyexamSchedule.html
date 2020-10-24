@@ -53,30 +53,30 @@
                     margin-right: auto;
                   "
                 />
-                <li  class="nav-item">
+                <li class="nav-item">
                   <p id="user-name" class="nav-link" style="text-align: center">
                     {{ Tên học viên }}
                   </p>
                 </li>
               </div>
               <br />
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="notificationList.html">Thông báo</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="courseList.html">Khóa học</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item active">
+              <li class="nav-item active">
                 <a class="nav-link" href="">Lịch học/Lịch thi</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="tuitionFee.html">Học phí</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="../home.html">Đăng xuất</a>
               </li>
               <div class="dropdown-divider"></div>
@@ -105,28 +105,8 @@
               </tr>
             </thead>
 
-            <tbody id="table-body">
+            <tbody id="schedule-table">
               <!--Monday-->
-              <tr>
-                <td>Lập trình Game cơ bản</td>
-                <td>Ba</td>
-                <td>A506</td>
-                <td>12:30 - 14:55</td>
-              </tr>
-              <!--Tuesday-->
-              <tr>
-                <td>Nhập môn Trí tuệ nhân tạo</td>
-                <td>Tư, Sáu</td>
-                <td>A506</td>
-                <td>12:30 - 14:55</td>
-              </tr>
-              <!--Wednesday-->
-              <tr>
-                <td>Lập trình Web và ứng dụng</td>
-                <td>Năm</td>
-                <td>A506</td>
-                <td>12:30 - 14:55</td>
-              </tr>
             </tbody>
           </table>
 
@@ -164,29 +144,13 @@
               </tr>
             </thead>
 
-            <tbody id="table-body">
+            <tbody id="exam-schedule-table">
               <!--Subject 1-->
               <tr>
                 <td>Lập trình Game cơ bản</td>
                 <td>A705</td>
                 <td>01/12/2020</td>
                 <td>90 phút</td>
-              </tr>
-
-              <!--Subject 2-->
-              <tr>
-                <td>Nhập môn Trí tuệ nhân tạo</td>
-                <td>A709</td>
-                <td>05/12/2020</td>
-                <td>45 phút</td>
-              </tr>
-
-              <!--Subject 3-->
-              <tr>
-                <td>Lập trình Web và ứng dụng</td>
-                <td>A508</td>
-                <td>03/12/2020</td>
-                <td>60 phút</td>
               </tr>
             </tbody>
           </table>
@@ -264,9 +228,26 @@
     </div>
     <script src="../../js/index.js"></script>
     <script src="../../js/setUserInfor.js"></script>
+    <script src="../../js/getScheduleByStudentId.js"></script>
+    <script src="../../js/getExamScheduleByStudentId.js"></script>
     <script>
+      const studentId = JSON.parse(localStorage.getItem("userInfor"))["user"][
+        "id"
+      ];
       setUserInfor();
       getWeekDate();
+      getExamExamScheduleByStudentId(studentId);
+      getScheduleByStudentId(week, studentId);
+
+      Previous.onclick = () => {
+        preWeek();
+        getScheduleByStudentId(week, studentId);
+      };
+
+      Next.onclick = () => {
+        nextWeek();
+        getScheduleByStudentId(week, studentId);
+      };
     </script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 const { Schedule } = require("@models/schedule");
 const { v4: uuidv4 } = require("uuid");
+const { getCoursesByStudentId } = require("../student_course/services")
+const { getScheduleByCoursesId } = require("./method")
 
 async function addSchedule(courseId, name, room, week_date, duration, week) {
   const trx = await Schedule.startTransaction();
@@ -25,6 +27,15 @@ async function addSchedule(courseId, name, room, week_date, duration, week) {
 
 async function getSchedule(week) {
   const schedule = await Schedule.query().where("week", week);
+  return {
+    schedule: schedule,
+  };
+}
+
+async function getScheduleByStudentId(week, student_id) {
+  const courses = await getCoursesByStudentId(student_id)
+  const schedule = await getScheduleByCoursesId(week, courses['courses'])
+
   return {
     schedule: schedule,
   };
@@ -57,6 +68,7 @@ async function updateSchedule(
 module.exports = {
   addSchedule,
   getSchedule,
+  getScheduleByStudentId,
   deleteSchedule,
   updateSchedule,
 };
