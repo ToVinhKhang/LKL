@@ -23,10 +23,9 @@ function signIn(name, phone, birth, address, idnum, username, password, next) {
   fetch("http://localhost:4000/user/signin", requestOptions)
     .then((response) => response.text())
     .then((result) => {
-      if (next === "#")
-        window.location.reload()
-      else
-        window.location.href= next
+      localStorage.setItem("signinStatus", true);
+      if (next === "#") window.location.reload();
+      else window.location.href = next;
     })
-    .catch((error) => console.log("error", error));
+    .catch((error) => localStorage.setItem("signinStatus", false));
 }
