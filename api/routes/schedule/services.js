@@ -1,7 +1,7 @@
 const { Schedule } = require("@models/schedule");
 const { v4: uuidv4 } = require("uuid");
 const { getCoursesByStudentId } = require("../student_course/services")
-const { getScheduleByCoursesId } = require("./method")
+const { getScheduleByCoursesId, getCoursesByTeacherId } = require("./method")
 
 async function addSchedule(courseId, name, room, week_date, duration, week) {
   const trx = await Schedule.startTransaction();
@@ -41,6 +41,15 @@ async function getScheduleByStudentId(week, student_id) {
   };
 }
 
+async function getScheduleByTeacherId(week, teacher_id) {
+  const courses = await getCoursesByTeacherId(teacher_id)
+  const schedule = await getScheduleByCoursesId(week, courses)
+
+  return {
+    schedule: schedule,
+  };
+}
+
 async function deleteSchedule(id) {
   await Schedule.query().deleteById(id);
   return { mess: "deleted" };
@@ -69,6 +78,7 @@ module.exports = {
   addSchedule,
   getSchedule,
   getScheduleByStudentId,
+  getScheduleByTeacherId,
   deleteSchedule,
   updateSchedule,
 };

@@ -183,7 +183,6 @@
       </div>
     </div>
 
-
     <script type="text/javascript">
       function openFormS() {
         document.getElementById("popupFormS").style.display = "block";
@@ -212,7 +211,6 @@
       }
     </script>
 
-
     <!--PopupAdd-->
     <!--Popup Form StudySchedule-->
     <div
@@ -239,33 +237,20 @@
           name="roomCourseS"
         />
 
-
-        <label for="day"><b>Thứ</b></label>
-        <div id="schedule-week_date" class="dayList" >
-          <span class="anchor form-control" style="background-color: #f1f1f1;">Chọn Thứ</span>
-          <ul class="items">
-            <span class="noWrap"><label for="Monday">Thứ Hai:</label><input type="checkbox" id="Monday"/></span>
-            <span class="noWrap"><label for="Tuesday">Thứ Ba :</label><input type="checkbox" id="Tuesday"/></span>
-            <span class="noWrap"><label for="Wednesday">Thứ Tư :</label><input type="checkbox" id="Wednesday"/></span>
-            <span class="noWrap"><label for="Thursday">Thứ Năm:</label><input type="checkbox" id="Thursday"/></span>
-            <span class="noWrap"><label for="Friday">Thứ Sáu:</label><input type="checkbox" id="Friday"/></span>
-            <span class="noWrap"><label for="Saturday">Thứ Bảy:</label><input type="checkbox" id="Saturday"/></span>
-            <span class="noWrap"><label for="Sunday">Chủ Nhật:</label><input type="checkbox" id="Sunday"/></span>           
-          </ul>
-        </div>
+        <label for="week_date"><b>Thứ</b></label>
+        <input
+          id="schedule-week_date"
+          type="text"
+          placeholder="Nhập thời gian học"
+          name="week_date"
+        />
         <br />
 
         <link rel="stylesheet" type="text/css" href="../../css/temp.css" />
-        <script type="text/javascript">
-          var checkboxList = document.getElementsByClassName('dayList')[0];
-          checkboxList.getElementsByClassName('anchor')[0].onclick = function(evt) {
-            if(checkboxList.classList.contains('visible')){checkboxList.classList.remove('visible');}
-            else{checkboxList.classList.add('visible');}
-          }
-        </script>
 
-
-        <label for="timeCourseS"><b><p style="overflow: auto;" >Thời gian</p></b></label>
+        <label for="timeCourseS"
+          ><b><p style="overflow: auto">Thời gian</p></b></label
+        >
         <input
           id="schedule-duration"
           type="text"
@@ -354,19 +339,13 @@
           name="roomCourseS"
         />
 
-        <label for="day"><b>Thứ</b></label>
-        <div id="edit-schedule-week_date" class="dayList" >
-          <span class="anchor form-control" style="background-color: #f1f1f1;">Chọn Thứ</span>
-          <ul class="items">
-            <span class="noWrap"><label for="Monday">Thứ Hai:</label><input type="checkbox" id="Monday"/></span>
-            <span class="noWrap"><label for="Tuesday">Thứ Ba :</label><input type="checkbox" id="Tuesday"/></span>
-            <span class="noWrap"><label for="Wednesday">Thứ Tư :</label><input type="checkbox" id="Wednesday"/></span>
-            <span class="noWrap"><label for="Thursday">Thứ Năm:</label><input type="checkbox" id="Thursday"/></span>
-            <span class="noWrap"><label for="Friday">Thứ Sáu:</label><input type="checkbox" id="Friday"/></span>
-            <span class="noWrap"><label for="Saturday">Thứ Bảy:</label><input type="checkbox" id="Saturday"/></span>
-            <span class="noWrap"><label for="Sunday">Chủ Nhật:</label><input type="checkbox" id="Sunday"/></span>           
-          </ul>
-        </div>
+        <label for="week_date"><b>Thứ</b></label>
+        <input
+          id="edit-schedule-week_date"
+          type="text"
+          placeholder="Nhập thời gian học"
+          name="week_date"
+        />
         <br />
 
         <label for="timeCourseS"><b>Thời gian</b></label>
@@ -554,7 +533,8 @@
         const room =
           document.querySelector("#schedule-room").value || "chưa có";
         const week_date =
-          document.querySelector("#schedule-week_date").value || "chưa có";
+          document.querySelector("#schedule-week_date").value ||
+          "chưa có";
         const duration =
           document.querySelector("#schedule-duration").value || "chưa có";
 

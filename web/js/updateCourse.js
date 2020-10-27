@@ -4,7 +4,8 @@ function updateCourse(
   courseDes,
   courseFee,
   courseStartDate,
-  courseTeacher
+  courseTeacher,
+  teacherId
 ) {
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -16,6 +17,7 @@ function updateCourse(
     course_fee: courseFee,
     course_startdate: courseStartDate,
     course_teacher: courseTeacher,
+    teacher_id: teacherId
   });
 
   var requestOptions = {
@@ -27,6 +29,6 @@ function updateCourse(
 
   fetch("http://localhost:4000/course/update", requestOptions)
     .then((response) => response.text())
-    .then((result) => console.log(result))
+    .then((result) => window.location.reload())
     .catch((error) => console.log("error", error));
 }

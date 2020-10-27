@@ -12,8 +12,9 @@ router.post("/add", async (req, res, ext) => {
   var courseFee = req.body.course_fee
   var courseStartDate = req.body.course_startdate
   var courseTeacher = req.body.course_teacher
+  var teacherId = req.body.teacher_id
 
-  res.send(await addCourse (courseName, courseDes, courseFee, courseStartDate, courseTeacher)) 
+  res.send(await addCourse (courseName, courseDes, courseFee, courseStartDate, courseTeacher, teacherId)) 
 })
 
 router.post("/delete", async (req, res, ext) => {
@@ -27,9 +28,10 @@ router.post("/update", async (req, res, ext) => {
   var courseFee = req.body.course_fee
   var courseStartDate = req.body.course_startdate
   var courseTeacher = req.body.course_teacher
+  var teacherId = req.body.teacher_id
 
 
-  res.send(await updateCourse (id, courseName, courseDes, courseFee, courseStartDate, courseTeacher)) 
+  res.send(await updateCourse (id, courseName, courseDes, courseFee, courseStartDate, courseTeacher, teacherId)) 
 })
 
 module.exports = router;

@@ -59,42 +59,42 @@
                     margin-right: auto;
                   "
                 />
-                <li  class="nav-item">
+                <li class="nav-item">
                   <p class="nav-link" style="text-align: center">
                     KentStaffAdmin
                   </p>
                 </li>
               </div>
               <br />
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="notificationListM.html"
                   >Quản lý Thông báo</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item active">
+              <li class="nav-item active">
                 <a class="nav-link" href="">Quản lý Khóa học</a>
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="studyandexamScheduleM.html"
                   >Quản lý Lịch học và thi</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="studentInfoM.html"
                   >Quản lý TT Học viên</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="teacherInfoM.html"
                   >Quản lý TT Giảng viên</a
                 >
               </li>
               <div class="dropdown-divider"></div>
-              <li  class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="../home.html">Đăng xuất</a>
               </li>
               <div class="dropdown-divider"></div>
@@ -169,7 +169,7 @@
           placeholder="Nhập tên khóa học"
           name="nameCourse"
         />
-        
+
         <label for="tuitionFees"><b>Học phí</b></label>
         <input
           id="course-fee"
@@ -184,13 +184,15 @@
           placeholder="Nhập ngày bắt đầu khóa học"
           name="daystartCourse"
         />
+
         <label for="teacher"><b>Giảng viên</b></label>
-        <input
+        <select
           id="course-teacher"
-          type="text"
-          placeholder="Nhập tên giảng viên giảng dạy"
           name="teacher"
-        />
+          class="form-control teacher-selection"
+          style="background-color: #f1f1f1; height: 50px"
+        ></select>
+
         <label for="course-des"><b>Mô tả</b></label>
         <textarea
           type="text"
@@ -237,13 +239,15 @@
           placeholder="Nhập ngày bắt đầu khóa học"
           name="daystartCourse"
         />
-        <label for="teacher"><b>Giảng viên</b></label>
-        <input
+
+        <label for="edit-teacher"><b>Giảng viên</b></label>
+        <select
           id="course-edit-teacher"
-          type="text"
-          placeholder="Nhập tên giảng viên giảng dạy"
-          name="teacher"
-        />
+          name="edit-teacher"
+          class="form-control teacher-selection"
+          style="background-color: #f1f1f1; height: 50px"
+        ></select>
+
         <label for="course-edit-des"><b>Mô tả</b></label>
         <textarea
           type="text"
@@ -337,8 +341,10 @@
     <script src="../../js/addCourse.js"></script>
     <script src="../../js/deleteCourse.js"></script>
     <script src="../../js/updateCourse.js"></script>
+    <script src="../../js/buildTeacherSelection.js"></script>
     <script>
       getCourse();
+      buildTeacherSelection();
 
       let selectedCourse;
 
@@ -351,7 +357,6 @@
       }
 
       function handleDeleteCourse() {
-        console.log(selectedCourse);
         deleteCourse(selectedCourse.id);
       }
 
@@ -366,16 +371,18 @@
           document.querySelector("#course-startdate").value || "Chưa đặt";
         var courseTeacher =
           document.querySelector("#course-teacher").value || "Chưa đặt";
+        const teacherId = document
+          .getElementById("course-teacher")
+          .selectedOptions[0].getAttribute("data-teacher-id");
 
         addCourse(
           courseName,
           courseDes,
           courseFee,
           courseStartDate,
-          courseTeacher
+          courseTeacher,
+          teacherId
         );
-
-        window.location.reload();
       }
 
       function setEditCourseValue(course_idx) {
@@ -404,6 +411,9 @@
           document.querySelector("#course-edit-startdate").value || "Chưa đặt";
         var courseTeacher =
           document.querySelector("#course-edit-teacher").value || "Chưa đặt";
+        const teacherId = document
+          .getElementById("course-edit-teacher")
+          .selectedOptions[0].getAttribute("data-teacher-id");
 
         updateCourse(
           id,
@@ -411,10 +421,9 @@
           courseDes,
           courseFee,
           courseStartDate,
-          courseTeacher
+          courseTeacher,
+          teacherId
         );
-
-        window.location.reload();
       }
     </script>
   </body>

@@ -1,4 +1,5 @@
 const { Schedule } = require("@models/schedule");
+const { Course } = require("@models/course")
 
 async function getScheduleByCoursesId(week, courses) {
   let schedule_list = [];
@@ -15,6 +16,12 @@ async function getScheduleByCoursesId(week, courses) {
   return schedule_list;
 }
 
+async function getCoursesByTeacherId(teacherId) {
+  const courses = await Course.query().where("teacher_id", teacherId)
+  return courses;
+}
+
 module.exports = {
   getScheduleByCoursesId,
+  getCoursesByTeacherId
 };
