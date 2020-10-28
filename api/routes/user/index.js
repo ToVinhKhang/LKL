@@ -26,11 +26,11 @@ router.post("/login", async function (req, res, next) {
   }
 });
 
-router.post("/logout", [auth], async function (req, res, next) {
+router.post("/logout", async function (req, res, next) {
   try {
     const data = {
-      user: req.user,
-      token: req.token,
+      id: req.body.id,
+      token: req.body.token,
     };
 
     await logout(data);

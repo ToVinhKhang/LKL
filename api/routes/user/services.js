@@ -43,12 +43,9 @@ async function login(username, password) {
 }
 
 async function logout(data) {
-  const trx = await User.startTransaction();
+  const trx = await Token.startTransaction();
   try {
-    await data.user
-      .$relatedQuery("user_token", trx)
-      .delete()
-      .where("token", data.token);
+    await Token.query().delete().where("id", data.id).where("token", data.token);
     trx.commit();
 
     return;
