@@ -196,6 +196,7 @@
           type="text"
           placeholder="Nhập tên tài khoản đăng nhập"
           name="accountStu"
+          onblur="checkExistUserName('username')"
         />
         <label for="passStu"><b>Mật khẩu</b></label>
         <input
@@ -261,6 +262,7 @@
           type="text"
           placeholder="Nhập tên tài khoản đăng nhập"
           name="accountStu"
+          onblur="checkExistUserName('edit-username')"
         />
         <label for="passStu"><b>Mật khẩu</b></label>
         <input
@@ -364,6 +366,7 @@
     <script src="../../js/signin.js"></script>
     <script src="../../js/deleteStudent.js"></script>
     <script src="../../js/updateStudentInfor.js"></script>
+    <script src="../../js/checkExistUserName.js"></script>
     <script>
       getStudent();
 

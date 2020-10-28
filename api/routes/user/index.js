@@ -3,12 +3,16 @@ var router = express.Router();
 
 const auth = require("@middlewares/auth");
 const { loginSchema } = require("./validator");
-const { login, logout, signIn } = require("./services");
+const { login, logout, signIn, checkExistUserName } = require("./services");
 
 router.get("/", function (req, res, next) {
   return res.send({
     mess: "ok user",
   });
+});
+
+router.post("/check", async function (req, res, next) {
+  return res.send(await checkExistUserName(req.body.username));
 });
 
 router.post("/login", async function (req, res, next) {

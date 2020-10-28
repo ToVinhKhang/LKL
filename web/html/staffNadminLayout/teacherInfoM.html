@@ -196,6 +196,7 @@
         <label for="accountStu"><b>Tên tài khoản</b></label>
         <input
           id="username"
+          onblur="checkExistUserName('username')"
           type="text"
           placeholder="Nhập tên tài khoản đăng nhập"
           name="accountStu"
@@ -261,6 +262,7 @@
         <label for="accountStu"><b>Tên tài khoản</b></label>
         <input
           id="edit-username"
+          onblur="checkExistUserName('edit-username')"
           type="text"
           placeholder="Nhập tên tài khoản đăng nhập"
           name="accountStu"
@@ -367,6 +369,7 @@
     <script src="../../js/addTeacher.js"></script>
     <script src="../../js/deleteTeacher.js"></script>
     <script src="../../js/updateTeacherInfor.js"></script>
+    <script src="../../js/checkExistUserName.js"></script>
     <script>
       getTeacher();
 

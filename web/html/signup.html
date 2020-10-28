@@ -39,20 +39,9 @@
     <br /><br /><br /><br />
 
     <!--Signup Form-->
-    <div class="container">
+    <div class="container centroid">
       <!--Format Form-->
-      <div
-        style="
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-          top: 50%;
-          margin-bottom: 50px;
-          margin-top: 150px;
-          min-width: 700px;
-          left: 50%;
-          position: absolute;
-        "
-      >
+      <div style="width: 100%; max-width: 800px; padding-bottom: 100px">
         <!--Form-->
         <h2>Đăng ký tài khoản</h2>
         <div class="form-group">
@@ -114,6 +103,7 @@
           <label for="username">Tên tài khoản:</label>
           <input
             type="text"
+            onblur="checkExistUserName()"
             onclick="ClearErrorMess()"
             class="form-control"
             id="username"
@@ -160,10 +150,12 @@
           style="float: right"
           type="submit"
           class="btn btn-dark"
-          >Back</a
         >
+          Back
+        </a>
       </div>
     </div>
     <script src="../js/signin.js"></script>
+    <script src="../js/checkExistUserName.js"></script>
   </body>
 </html>

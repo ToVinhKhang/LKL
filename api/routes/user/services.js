@@ -1,6 +1,6 @@
 const { User } = require("@models/user");
 const { Student } = require("@models/student");
-const { Teacher } = require("@models/teacher")
+const { Teacher } = require("@models/teacher");
 const { hashPassword } = require("@utils/helper");
 const { v4: uuidv4 } = require("uuid");
 const { Token } = require("@models/token");
@@ -26,10 +26,10 @@ async function login(username, password) {
       });
     }
 
-    let infor = await Student.query().findById(id)
-    if (!infor) infor = await Teacher.query().findById(id)
+    let infor = await Student.query().findById(id);
+    if (!infor) infor = await Teacher.query().findById(id);
 
-    const name = infor? infor.name : "admin"
+    const name = infor ? infor.name : "admin";
 
     trx.commit();
     trx2.commit();
@@ -89,8 +89,18 @@ async function signIn(username, password, role, detail) {
   }
 }
 
+async function checkExistUserName(username) {
+  try {
+    const user = await User.query().where("username", username);
+    return { isExist: user.length > 0 };
+  } catch (error) {
+    throw error;
+  }
+}
+
 module.exports = {
   login,
   logout,
   signIn,
+  checkExistUserName,
 };
