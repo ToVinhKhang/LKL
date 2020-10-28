@@ -1,87 +1,169 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon.png"
+    />
     <script src="../js/checkLoginSignup.js"></script>
     <script src="../js/resetInputValue.js"></script>
     <script src="../js/index.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- loading -->
-    <div id="loading" class="loading ">
-        <div class="loading-overlay"> </div>
-        <div class="spinner"></div>
+    <div id="loading" class="loading">
+      <div class="loading-overlay"></div>
+      <div class="spinner"></div>
     </div>
-
 
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <a href="./home.html">
-            <img id="logo" src="../images/LKLlogo.png">
-        </a>
+      <a href="./home.html">
+        <img id="logo" src="../images/LKLlogo.png" />
+      </a>
     </nav>
-    <br><br><br><br>
+    <br /><br /><br /><br />
 
     <!--Signup Form-->
     <div class="container">
-        <!--Format Form-->
-        <div style="-ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); top: 50%; margin-bottom: 50px; margin-top: 150px; min-width: 700px;left: 50%; position: absolute;">
-            <!--Form-->
-            <h2>Đăng ký tài khoản</h2>
-            <div class="form-group">
-                <label for="fullname">Họ và tên:</label>
-                <input type="text" onclick="ClearErrorMess()" class="form-control" id="fullname" placeholder="Nhập họ và tên" name="fullname">
-            </div>
-            <div class="form-group">
-                <label for="phone">Số điện thoại:</label>
-                <input type="text" onclick="ClearErrorMess()" class="form-control" id="phone" placeholder="Nhập số điện thoại" name="phone">
-            </div>
-            <div class="form-group">
-                <label for="birth">Năm sinh:</label>
-                <input type="text" onclick="ClearErrorMess()" class="form-control" id="birth" placeholder="Nhập năm sinh" name="birth">
-            </div>
-            <div class="form-group">
-                <label for="address">Địa chỉ:</label>
-                <input type="text" onclick="ClearErrorMess()" class="form-control" id="address" placeholder="Nhập địa chỉ" name="address">
-            </div>
-            <div class="form-group">
-                <label for="idnum">Số CMND:</label>
-                <input type="text" onclick="ClearErrorMess()" class="form-control" id="idnum" placeholder="Nhập số CMND" name="idnum">
-            </div>
-            <div class="form-group">
-                <label for="username">Tên tài khoản:</label>
-                <input type="text" onclick="ClearErrorMess()" class="form-control" id="username" placeholder="Nhập tên tài khoản" name="username">
-            </div>
-            <div class="form-group">
-                <label for="pwd">Mật khẩu:</label>
-                <input type="password" onclick="ClearErrorMess()" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
-            </div>
-            <div class="form-group">
-                <label for="cfpwd">Xác nhận mật khẩu:</label>
-                <input type="password" onclick="ClearErrorMess()" class="form-control" id="cfpwd" placeholder="Nhập xác nhận mật khẩu" name="cfpwd">
-            </div>
-
-            <!--Buttons-->
-            <p id="ErrorMess"></p>
-            <button onclick="CheckInputSignUp()" type="submit" class="btn btn-dark" style='width: 120px;'>Đăng ký</button>
-            <button onclick="ResetInput()" type="reset" class="btn">Làm mới</button>
-            <a href="login.html" style='float: right;' type="submit" class="btn btn-dark">Back</a>
+      <!--Format Form-->
+      <div
+        style="
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          top: 50%;
+          margin-bottom: 50px;
+          margin-top: 150px;
+          min-width: 700px;
+          left: 50%;
+          position: absolute;
+        "
+      >
+        <!--Form-->
+        <h2>Đăng ký tài khoản</h2>
+        <div class="form-group">
+          <label for="fullname">Họ và tên:</label>
+          <input
+            type="text"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="fullname"
+            placeholder="Nhập họ và tên"
+            name="fullname"
+          />
         </div>
-    </div>
-    <br><br><br>
-    <br><br><br>
-    <script src="../js/signin.js"></script>
-    
-</body>
-</html>
+        <div class="form-group">
+          <label for="phone">Số điện thoại:</label>
+          <input
+            type="text"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="phone"
+            placeholder="Nhập số điện thoại"
+            name="phone"
+          />
+        </div>
+        <div class="form-group">
+          <label for="birth">Năm sinh:</label>
+          <input
+            type="text"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="birth"
+            placeholder="Nhập năm sinh"
+            name="birth"
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Địa chỉ:</label>
+          <input
+            type="text"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="address"
+            placeholder="Nhập địa chỉ"
+            name="address"
+          />
+        </div>
+        <div class="form-group">
+          <label for="idnum">Số CMND:</label>
+          <input
+            type="text"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="idnum"
+            placeholder="Nhập số CMND"
+            name="idnum"
+          />
+        </div>
+        <div class="form-group">
+          <label for="username">Tên tài khoản:</label>
+          <input
+            type="text"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="username"
+            placeholder="Nhập tên tài khoản"
+            name="username"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pwd">Mật khẩu:</label>
+          <input
+            type="password"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="pwd"
+            placeholder="Nhập mật khẩu"
+            name="pwd"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cfpwd">Xác nhận mật khẩu:</label>
+          <input
+            type="password"
+            onclick="ClearErrorMess()"
+            class="form-control"
+            id="cfpwd"
+            placeholder="Nhập xác nhận mật khẩu"
+            name="cfpwd"
+          />
+        </div>
 
+        <!--Buttons-->
+        <p id="ErrorMess"></p>
+        <button
+          onclick="CheckInputSignUp()"
+          type="submit"
+          class="btn btn-dark"
+          style="width: 120px"
+        >
+          Đăng ký
+        </button>
+        <button onclick="ResetInput()" type="reset" class="btn">Làm mới</button>
+        <a
+          href="login.html"
+          style="float: right"
+          type="submit"
+          class="btn btn-dark"
+          >Back</a
+        >
+      </div>
+    </div>
+    <script src="../js/signin.js"></script>
+  </body>
+</html>

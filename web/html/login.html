@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>LKL Edu</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel ="stylesheet" type="text/css" href="../css/style.css">
-    <link rel='icon' type="image/png" sizes="16x16" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon.png"
+    />
     <script src="../js/checkLoginSignup.js"></script>
     <script src="../js/index.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- loading -->
-    <div id="loading" class="loading ">
-        <div class="loading-overlay"> </div>
-        <div class="spinner"></div>
+    <div id="loading" class="loading">
+      <div class="loading-overlay"></div>
+      <div class="spinner"></div>
     </div>
-
 
     <!--Header-->
     <nav class="navbar navbar-expand-md bg-white navbar-white">
-        <a href="./home.html">
-            <img id="logo" src="../images/LKLlogo.png">
-        </a>
+      <a href="./home.html">
+        <img id="logo" src="../images/LKLlogo.png" />
+      </a>
     </nav>
-    <br><br><br><br>
+    <br /><br /><br /><br />
 
     <!--Login Form-->
     <div class="container centroid">
-        <div class="login-form" style="max-width: 400px;">
-            <!--Button Back Home-->
-            <a href="home.html" style='float: right;' type="submit" class="btn btn-dark">Back</a>
-            
-            <!--Form-->
-            <div>
-                <h2>Đăng nhập</h2>
-                <br>
-                <div class="form-group">
-                    <input type="text" onclick="ClearErrorMess()" class="form-control" id="username" placeholder="Nhập tên tài khoản" name="username">
-                </div>
-                <div class="form-group">
-                    <input type="password" onclick="ClearErrorMess()" class="form-control" id="pwd" placeholder="Nhập mật khẩu" name="pwd">
-                </div>
-                <p id="ErrorMess"></p>
-                <div>
-                    <p>Chưa có tài khoản? <a href='./signup.html'>Tạo ngay</a></p>
-                </div>
-                <button onclick="handleLogin()" type="submit" class="btn btn-primary width100Percent">Đăng nhập</button>
-            </div>
+      <div class="login-form" style="max-width: 400px">
+        <!--Button Back Home-->
+        <a
+          href="home.html"
+          style="float: right"
+          type="submit"
+          class="btn btn-dark"
+          >Back</a
+        >
+
+        <!--Form-->
+        <div>
+          <h2>Đăng nhập</h2>
+          <br />
+          <div class="form-group">
+            <input
+              type="text"
+              onclick="ClearErrorMess()"
+              class="form-control"
+              id="username"
+              placeholder="Nhập tên tài khoản"
+              name="username"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              onclick="ClearErrorMess()"
+              class="form-control"
+              id="pwd"
+              placeholder="Nhập mật khẩu"
+              name="pwd"
+            />
+          </div>
+          <p id="ErrorMess"></p>
+          <div>
+            <p>Chưa có tài khoản? <a href="./signup.html">Tạo ngay</a></p>
+          </div>
+          <button
+            onclick="handleLogin()"
+            type="submit"
+            class="btn btn-primary width100Percent"
+          >
+            Đăng nhập
+          </button>
         </div>
+      </div>
     </div>
     <script src="../js/login.js"></script>
     <script>
-        function handleLogin() {
-            if(CheckInputUser()) {
-                activeElement("loading")
-                var username = document.querySelector("#username").value
-                var password = document.querySelector("#pwd").value
-                login(username, password)
-            }
+      function handleLogin() {
+        if (CheckInputUser()) {
+          activeElement("loading");
+          var username = document.querySelector("#username").value;
+          var password = document.querySelector("#pwd").value;
+          login(username, password);
         }
+      }
     </script>
-</body>
+  </body>
 </html>
-
