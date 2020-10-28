@@ -1,8 +1,9 @@
 var express = require('express');
+const auth = require('../../middlewares/auth');
 var router = express.Router();
 const { getNotify, postNotify, deleteNotify } = require('./services');
 
-router.get("/", async (req, res, ext) => {
+router.get("/", [auth], async (req, res, ext) => {
   res.send(await getNotify ()) 
 })
 
