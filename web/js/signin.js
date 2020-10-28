@@ -24,6 +24,7 @@ function signIn(name, phone, birth, address, idnum, username, password, next) {
     .then((response) => response.text())
     .then((result) => {
       localStorage.setItem("signinStatus", true);
+      console.log(localStorage.getItem("signinStatus"))
       if (next === "#") window.location.reload();
       else window.location.href = next;
     })
