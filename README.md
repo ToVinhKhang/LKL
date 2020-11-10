@@ -10,6 +10,7 @@ Producted by LKL Software Team
 Requirement
 - Node JS
 - Yarn
+- Postgres database
 
 Get code
 ```
@@ -21,6 +22,8 @@ Set up
 cd LKL/api
 yarn
 ```
+Load data by backup file: use file 24102020
+
 
 Run api server
 ```
