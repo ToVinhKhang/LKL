@@ -5,3 +5,29 @@ We have built the course management software with functions such as course regis
 Project software technical documentation and software deployment instructions are both fully included in this software.
 
 Producted by LKL Software Team
+
+#RUN STEP
+Requirement
+- Node JS
+- Yarn
+
+Get code
+```
+git clone https://github.com/ToVinhKhang/LKL.git
+```
+
+Set up
+```
+cd LKL/api
+yarn
+```
+
+Run api server
+```
+yarn start
+```
+
+Host html
+```
+
+```
