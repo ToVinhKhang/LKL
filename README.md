@@ -6,32 +6,31 @@ Project software technical documentation and software deployment instructions ar
 
 Producted by LKL Software Team
 
-# RUN STEP
-Requirement:
+# Requirement:
 - Node JS
 - Yarn
 - Postgres database
 
-Get code
+# RUN STEP
+1/Get code
 ```
 git clone https://github.com/ToVinhKhang/LKL.git
 ```
 
-Set up
+2/Set up
 ```
 cd LKL/api
 yarn
 ```
-Load data by backup file: use file 24102020
+
+3/Load data by backup file: use file 24102020
 
 
-Run api server
+4/Run api server
 ```
 yarn start
 ```
 
-Host html
-```
-drag LKL folder to htdocs folder of Xampp with port:4000
-```
+5/Host html
+
 # END
