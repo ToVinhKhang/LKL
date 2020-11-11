@@ -6,8 +6,8 @@ Project software technical documentation and software deployment instructions ar
 
 Producted by LKL Software Team
 
-#RUN STEP
-Requirement
+# RUN STEP
+Requirement:
 - Node JS
 - Yarn
 - Postgres database
@@ -32,5 +32,6 @@ yarn start
 
 Host html
 ```
-
+drag LKL folder to htdocs folder of Xampp with port:4000
 ```
+# END
