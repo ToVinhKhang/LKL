@@ -26,11 +26,16 @@ yarn
 3/Load data by backup file: use file 24102020
 
 
-4/Run api server
+4/Run api server:
 ```
 yarn start
 ```
 
-5/Host html
+5/Host client:
+```
+yarn serve ../web
+```
+
+6/Go to http://localhost:5000/
 
 # END
